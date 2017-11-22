@@ -1,14 +1,15 @@
 @charset "utf-8";
 /* GERAL */
-body, html, main, div, span, a, ul, li, dl, dt, dd, figure, section, header, p, form, fieldset, button, input{border: none; margin: 0; padding: 0; list-style: none; position: relative; text-decoration: none; outline: none; }
+body, html, main, div, span, a, ul, ol, li, dl, dt, dd, figure, section, header, p, form, fieldset, button, input{border: none; margin: 0; padding: 0; list-style: none; position: relative; text-decoration: none; outline: none; }
 header, section, footer, aside, nav, main, article, figure, a, img, span, :after, :before { display: block; }
 h1,h2,h3,h4,h5,h6{font-weight: normal; margin: 0}
-html object{ display: none; }
+html object, figcaption{ display: none; }
 body{ 
-  font-size:100%; background:#fff; overflow-x: hidden; /*background: url('../images/bg-mirror.jpg') no-repeat center 60px #fff;*/
-  *{ font-family: 'Gotham'; font-weight: 300; }
+  font-size:100%; background:#fff; overflow-x: hidden;
+  *{ font-family: 'Gotham','Arial','Tahoma'; font-weight: 300; color: @d-blue-2;  } 
   strong{ font-weight: bold; }
 }
+sup{ font-weight: bold !important; font-size: 0.5em; }
 
 /*******************************
             GLOBAL
@@ -24,20 +25,285 @@ body{
   -o-transition: @properties @secs; 
   transition: @properties @secs; 
 }
+.rotate(@deg: 1deg){ 
+  -ms-transform: rotate(@deg);
+  -webkit-transform: rotate(@deg);
+  transform: rotate(@deg);
+}
 .d-midle{ display: inline-block; vertical-align: middle; }
 .d-top{ display: inline-block; vertical-align: top; }
 .f-left{ float: left; }
 .f-right{ float: right; }
 .hide{ display: none; }
 .b-sizing{ box-sizing: border-box; }
+#temp{ position: fixed; z-index: 999; font-weight: bold; }
+video::-internal-media-controls-download-button {
+    display:none;
+}
+video::-webkit-media-controls-enclosure {
+    overflow:hidden;
+}
+video::-webkit-media-controls-panel {
+    width: calc(~'100% + 30px'); /* Adjust as needed */
+}
+span._border{ 
+  position: absolute; left:0; top: 0; width: 100%; height: 100%; overflow: hidden;
+  &:before, &:after{  color: @l-blue-1;  }
+  &._top{
+    &:before{
+      content: '\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111'; 
+      font: normal normal normal 4px/1 FontAwesome; .d-midle; width: calc(~'100% - 13px'); height: 4px; overflow: hidden; position: absolute; top: 0; left: 7px; letter-spacing: 0.8em; line-height: 4px;
+    }
+  }
+  &._bottom{
+    &:after{
+      content: '\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111'; 
+      font: normal normal normal 4px/1 FontAwesome; .d-midle; width: calc(~'100% - 18px'); height: 4px; overflow: hidden; position: absolute; bottom: 4px; left: 12px; letter-spacing: 0.8em; line-height: 4px;
+    }
+  }
+  em{
+    position: absolute; left: 0; top: 0; width: 100%; height: 100%; .d-top;
+    &:before, &:after{ color: @l-blue-1; }
+  }
+  font{
+    &:before, &:after{ color: @l-blue-1; }
+  }
+  &._left{
+    em{
+      &:before{
+        content: '\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111'; 
+        font: normal normal normal 4px/1 FontAwesome; .d-midle; width: 200%; height: 4px; overflow: hidden; position: absolute; top: 6px; letter-spacing: 0.9em; line-height: 4px;
+        .rotate(@deg: -90deg); left:calc(~'-100% + 9px');
+      }
+    }
+  }
+  &._right{
+    em{
+      &:after{
+        content: '\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111'; 
+        font: normal normal normal 4px/1 FontAwesome; .d-midle; width: 200%; height: 4px; overflow: hidden; position: absolute; top: 6px; letter-spacing: 0.9em; line-height: 4px;
+        .rotate(@deg: 90deg); right: calc(~'-99.9% + 8px');
+      }
+    }
+  }
+  .fa{
+    position: absolute; font-size: 1em;
+    &.chevron-b-left{
+      left: 0; bottom: -2px; 
+    }
+    &.chevron-b-right{
+      right: 0; bottom: -2px;
+    }
+  }
+  &._dark-blue{
+    &:before, &:after{ color: @d-blue-2; }
+    em,font{
+      &:before, &:after{ color: @d-blue-2; }
+    }
+  }
+}
 
 /*******************************
             MAIN
 *******************************/
-html, body{ height: 100%;  }
+html, body{ height: 100%; }
 main{  
-  max-width: 1024px; margin: 0 auto; background: url('../images/bgs/homer.jpg') 0 0 no-repeat;
-  
+  max-width: 1024px; margin: 0 auto; /*background: url('../images/bgs/quem_faz.jpg') 0px 20px no-repeat;*/
+
+  #loading{
+    position: fixed; top:0; left:0; width: 100%; height: 100%; z-index: 999; text-align: center;
+    &:before{
+      content:''; background: #fff; opacity: 1; width: 100%; height: 100%; position: absolute; left: 0; top:0; .transit(opacity, @secs: 0.5s);
+    }
+    &:after{
+      content:''; width: 0; height: 100%; .d-midle; .transit(height, @secs: 0.7s);
+    }
+    figure{
+      .d-midle; .transit(all, @secs: 0.3s);
+      img{ 
+        width: 100%; 
+      }
+      &.logoH{
+        width: 140px; .rotate(@deg: -28deg); margin: 0 -12em 0 0;
+        &.anima1{ margin: 0 -2em 0 0;  }
+        &.anima2{ margin: 0 -12em 0 0; z-index: 9; }
+        &.anima3{ margin: 0 -15em 0 0; z-index: 0; .rotate(@deg: 67deg); }
+        &.anima4{ margin: 0 -6em 0 0; z-index: 0; .rotate(@deg: 67deg); }
+        &.anima5{ margin: 0 -15em 0 0; z-index: 0; .rotate(@deg: 67deg); }
+        &.anima6{ margin: 0 -12em 0 0; z-index: 0; }
+      }
+      &.logoV{
+        width: 127px; .rotate(@deg: 59deg); margin: -1.3em -3.2em 0 0;
+        &.anima1{  }
+        &.anima2{ }
+        &.anima3{ z-index: 9; .rotate(@deg: 154deg); }
+        &.anima4{ z-index: 9; .rotate(@deg: 154deg); }
+        &.anima5{ z-index: 9; .rotate(@deg: 154deg); }
+        &.anima6{   z-index: 0 }
+      }
+    }
+
+
+    p{ 
+      padding: 1em; position: fixed; top:70%; text-align: center; width: 100%; font-weight:normal; font-size: .9em; .transit(all, @secs: 0.5s);
+        &.anima1{ color:#20a2ae; }
+        &.anima2{ color:#37a237; }
+        &.anima3{ color:#ecd932; }
+        &.anima4{ color:#e89938; }
+        &.anima5{ color:#bf2826; }
+        &.anima6{ color:#c34b8c; }
+    }
+    &.close{
+      &:after{
+        /*height: 36%;*/
+      }
+      &:before, figure{
+        opacity:0;
+      }
+      p{ top:50%; opacity: 0; }
+    }
+    &.complete{
+      figure{
+        opacity:0;
+      }
+    }
+  }
+
+  header{
+    height: 269px; background: #fff;
+    > *{ position: absolute; text-transform: uppercase; }
+    h1{
+      top: 67px; left: calc(~'50% - 181px');
+      img{ width: 362px; }
+    }
+    h2{
+      top: 156px; left:auto; right: 0.7%; color: @l-blue-1; width: 200px; font-size: 1.35em;
+    }
+    p{ 
+      font-weight: bold; top: 10%; left: 2.9%; font-size: 0.85em; letter-spacing: -0.015em;
+      a { .d-top; font-weight: inherit; }
+    }
+    nav{ 
+      top: 10%; right: 3%; 
+      * {
+        color: @d-blue-2; .d-top; font-weight: 500; font-size: 0.85em; 
+      }
+      > a{ 
+        &:after{
+          content:''; height: 15px; width: 1px; background-color: @d-blue-2; .d-top; margin: 0 1px 0 6px;
+        }
+      }
+      ul{
+        margin-top: -0.3em;
+        li a{
+          font-size: 2em; margin-left: 0.4em;
+        }
+      }
+    }
+    > a{ 
+      top: 96px; left: 3.6%; color: @d-blue-2; font-weight: 500; font-size: 0.8em; letter-spacing: -0.05em; width: 50px; text-align: center; line-height: 1.1em;
+      *{ font-weight: inherit; }
+      span{ 
+        background: url('../images/ilustra-360.png') center center no-repeat; width: 47px; height: 48px; margin: 0.5em auto;
+        &:before{
+          content:''; height: 100%; width: 0px; .d-midle;
+        }
+      }
+    }
+  }
+
+  > nav{
+    height: 154px; padding: 0 1.5em; position: relative; background-color: @l-blue-1;
+    &:before{
+      content:''; height: 100%; width: 100%; background-color: @l-blue-1; position: absolute; top: 0; left: -100%;
+    }
+    &:after{
+      content:''; height: 100%; width: 100%; background-color: @l-blue-1; position: absolute; top: 0; right: -100%;
+    }
+    dl{
+      .d-midle; width: 33%; height: 100%; text-align: center; .b-sizing; padding: 2.1em .5em; letter-spacing: -0.05em;
+      dt{ 
+        text-transform: uppercase; font-size: 1.35em; line-height: 1.2em; padding-bottom: 0.3em;
+        strong{ display: block; color:#fff; }
+      }
+      dd{ 
+        font-size: 0.95em; line-height: 1.1em;
+      }
+      a{ 
+        color:#fff; opacity: .5; .transit(opacity, @secs: 0.5s);
+      }
+      &:hover, &.on{
+        a{
+          opacity: 1; 
+        }
+      }
+    }
+    &.sub{
+      background: none; padding: 0; height: auto; margin: 1.765em 0 -1.765em; text-align: center;
+      &:before, &:after{ display:none; }
+      a{
+        width: 285px; height: 57px; text-align: center; margin: 0 0.75em; .d-midle; 
+        &:before{
+          content: ""; width: 100%; height:100%; background: #e2dfde; z-index: 1; position: absolute; left: 0; top: 0; opacity: .6; .transit(opacity, @secs: 1s);
+        }
+        &:after{
+          content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; position: relative; height: 100%; color: @l-blue-1; line-height: 2em; .d-midle; margin: 0 0 0 1em; z-index: 2; opacity: .3; .transit(all, @secs: .5s); 
+          .rotate(@deg: 0deg);
+        }
+        span{ 
+          .d-midle; color: @d-blue-2; text-transform: uppercase; font-size: 1em; font-weight: normal; width: 67%; opacity: .3; .transit(all, @secs: .5s); z-index: 2;
+        }
+        &:hover, &.on{
+          &:before, &:after{
+            opacity: 1;
+          }
+          &:after{
+            .rotate(@deg: 90deg);
+          }
+          span{ width: 67%; opacity: 1; }
+        }
+      }
+    }
+  }
+
+  .box-parallixit{
+    height: 455px; overflow: hidden; margin-top: 1.765em;
+    .bxn-parallixit{ 
+      opacity: 0; .transit(opacity, @secs: 1.75s);
+      &.pltON{ opacity:1; }
+    }
+
+    figure{ 
+      position: absolute; left: 0; bottom: 0; z-index: 1; .transit(bottom, @secs: 0.05s); 
+      figcaption { font-size: 0; display: none; }
+    }
+    *:not(figure){
+      z-index: 2; .d-top;
+    }
+    h4{ font-size: 1.5em; font-weight: bold; color: #fff; position: relative; margin: 10.3em 1.9em 0; width: 590px; text-align: center; line-height: 1.1em; }
+    nav{
+      padding: 0 0 3.25em ; .b-sizing; width: 100%; text-align: center; position: absolute; left: 0; bottom: 0;
+      a{
+        width: 285px; height: 57px; text-align: center; margin: 0 0.75em;
+        &:before{
+          content: ""; width: 100%; height:100%; background: #fff; z-index: 1; position: absolute; left: 0; top: 0; opacity: .6; .transit(opacity, @secs: 1s);
+        }
+        &:after{
+          content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; position: relative; height: 100%; color: @l-blue-1; line-height: 2em; .d-midle; margin: 0 0 0 1em; z-index: 2;
+        }
+        span{ 
+          .d-midle; color: @d-blue-2; text-transform: uppercase; font-size: 1em; font-weight: normal; width: 67%; .transit(width, @secs: .5s);
+        }
+        &:hover, &.on{ 
+          &:before{
+            opacity: 1;
+          }
+          span{ width: 70%; }
+        }
+      }
+    }
+  }
+
   &.comingsoon{
     h1{ 
       width: 100%; 
@@ -48,7 +314,567 @@ main{
   }
 
   &.home{
+    section{
+      &.estrutura{
+        h4{ margin: 1.82em 1.9em 0 20.4em; width: 510px; }
+      }
+      &.desospitalizacao {
+        h4{ margin: 1.82em 2.9em 0; width: 470px; }
+      }
+      &.conceitos{
+        height: 596px; background: #fff;
+        aside{ 
+          position: absolute;
+          &.box-parallixit{
+            overflow: initial; .transit(left, @secs: 0.05s); margin-top: 0;
+          }
+          &.logoH{
+            left: -3.9em; top: 17.6em; height: 298px;
+          }
+          &.logoV{
+            left: 29.1em; top: 3.1em; height: 369px;
+          }
+        }
+        dl{ 
+          position: absolute; text-align: center; z-index: 9; cursor: crosshair;
+          &:nth-child(1){
+            left: 9.3%; top: 4.6%; width: 300px;
+          }
+          &:nth-child(2){
+            left: 61.2%; top: 5.8%; width: 270px;
+          }
+          &:nth-child(3){
+            left: 2.7%; top: 22%; width: 320px;
+          }
+          &:nth-child(4){
+            left: 30.6%; top: 34.4%; width: 240px;
+          }
+          &:nth-child(5){
+            left: 40.8%; top: 52.2%; width: 200px;
+          }
+          &:nth-child(6){
+            left: 71%; top: 54.7%; width: 240px;
+          }
+          &:nth-child(7){
+            left: 4.4%; top: 75.6%; width: 250px;
+          }
+          &:nth-child(8){
+            left: 70.7%; top: 78.7%; width: 270px;
+          }
+          dt{ 
+            color: @l-blue-1; font-weight: bold; font-size: 1.5em; text-transform: uppercase;   .transit(color, @secs: 0.5s);
+          }
+          dd{ color: @d-blue-2; font-weight: normal; font-size: 0.85em; padding: 0.5em 0.6em; line-height: 1.176em; letter-spacing: -0.03em; opacity: 0;  .transit(opacity, @secs: 0.5s); }
+          &:hover{
+            dt{ color: @d-blue-2; }
+            dd{ opacity: 1; }
+          }
+        }
+      }
+    }
+  }
 
+  &.conheca{
+    section{ 
+      margin-bottom: 2.6em;
+      h4{ margin: 11.9em 0 0 20.6em; width: 470px; }
+      &:after{
+        content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: @d-blue-2; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
+      }
+    }
+    article{
+      padding-bottom: 0.5em;
+      section{
+        width: 490px; height: 345px; .d-top; margin: 0;
+        &:nth-child(4n+4){
+          margin: 1.8em 0 0 0;
+        }
+      }
+      aside{
+        .d-top; width: 40%; line-height: 1.45em; margin: 0.6em 2em; font-size: 1.0625em; color: @d-blue-2; letter-spacing: -0.01em;
+        *:not(strong){
+          font-weight: normal;
+        }
+        > p{ margin-bottom: .8em; }
+        &:nth-child(2n+1){
+          margin: 1.95em 2em 2em 5em;
+        }
+      }
+    }
+  }
+
+  &.equipe{
+    article{
+      padding: 1.75em 0 2em 0; text-align: center;
+      h1{
+        padding: 1.6em 0; text-align: center; color: @d-blue-2;
+      }
+      .box-parallixit{
+        .d-top; width: 29.3%; overflow: initial; margin-bottom: 3em; margin-top: 0;
+        dl{ width: 100%; }
+        &:nth-child(2){ height: 618px; } /*628*/
+        &:nth-child(3){ height: 586px; } /*596*/
+        &:nth-child(4){ height: 538px; }
+        &:nth-child(5){ height: 442px; margin-top: 0em; }
+        &:nth-child(6){ height: 570px; margin-top: 2em; }
+        &:nth-child(7){ height: 522px; margin-top:-4.8em; }
+      }
+      dl{ 
+        .d-top; width: 30%; 
+        dt{ 
+          position: absolute; top: 214px; width: 100%;
+          h2{ 
+            font-weight: 500; font-size: 1.0625em; display: block;
+          }
+          em{ 
+            font-weight: normal; font-style:normal; font-size: 1em; display: block;
+          }
+        }
+        dd{
+          figure{
+            margin-bottom: 5.3em; position: relative;
+          }
+          *{ font-weight: normal; font-size: 0.85em; line-height: 1.2em; letter-spacing: -0.03em; }
+          > p{ padding: 0 1em; }
+        }
+        &:nth-child(6){
+          margin-top: 3em;
+        }
+        &:nth-child(7){
+          margin-top:-3.8em;
+        }
+      }
+    }
+  }
+
+  &.filosofia{
+    section{ 
+      h4{ margin: 9.1em 0 0 2.4em; width: 370px; letter-spacing: -0.03em; }
+      &:after{
+        content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: @d-blue-2; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
+      }
+    }
+    article{
+      letter-spacing: -0.03em; text-align: center; padding-bottom: 6em;
+      aside{ 
+        .d-top; text-align: center; width: 29.5%; margin: 1.5em 0 0;
+        h1, h2{ font-size: 1.5em; padding: 0 2em; text-transform: uppercase; line-height: 1.15em; padding-bottom: 0.2em;}
+        &:first-child{
+          width: 40.2%; margin: 2.2em 4.8em 1em 0;
+        }
+        > p{ margin-bottom: .8em; font-size: 1.0625em; font-weight: normal; line-height: 1.5em; }
+      }
+      dl{ 
+        .d-top; text-align: center; width: 27.8%; margin: 0 .8em; 
+        dt{ background: @l-blue-1; color: #fff; font-size: 1.5em; text-transform: uppercase; font-weight: bold; padding: 0.375em; }
+        dd{ font-weight: normal; font-size: 1.0625em; line-height: 1.5em; padding: 0.7em 0.4em;}
+      }
+      .logoH{
+        overflow: initial; margin: -9.2em 0 0 -16.1em; width: 100%; height: 238px; .rotate(@deg: -11deg);  .d-top; /*margin: -6.6em -8.4em 0; */
+      }
+      .graficoManifesto{
+        overflow: initial; margin: 6.6em 0 0 26.1em; width: 100%; height: 133px; .d-top;
+        p{
+          position: absolute; width: 200px; text-align: center; font-size: 1.1em; text-transform: uppercase; line-height: 1.4em;
+          &:nth-child(2){
+            left: -179.5px; top: 77.5px; 
+          }
+          &:nth-child(3){
+            left: 283.5px; top: -10.5px; 
+          }
+          &:nth-child(4){
+            left: 325.5px; top: 196.5px; 
+          }
+        }
+      }
+      .manifesto{
+        overflow: initial; margin:47px 0 0 33.4em; height: 103px; width: 24.8%;  .d-top;
+        dl{ 
+          width: 100%; 
+          dt{ background: none; color: @d-blue-2; }
+          dd{ padding: 0; }
+        }
+      }
+    }
+  }
+
+  &.oquefazemos{
+    section{ 
+      h4{ margin: 10em 0 0 21.9em; width: 410px; letter-spacing: -0.03em; }
+      &:after{
+        content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: @d-blue-2; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
+      }
+    }
+    article{
+      padding: 2em 0; text-align: center; letter-spacing: -0.03em; 
+      h1{
+        &:extend(main.filosofia article aside h1); padding: 0.3em 10em;
+      }
+      ol{
+        li{ 
+          width: 27.8%; .d-top; font-weight:bold; font-size: 1.0625em; .b-sizing; padding: 0.5em 1.8em; margin: 3.5em 0.7em; line-height: 1.45em; background: @l-blue-1; color: #fff;
+          &:nth-child(1){
+            &:before{
+              content: '1'; position: absolute; top: -1.2em; left: 0; font-size: 2em; text-align: center; width: 100%; color: @d-blue-2;
+            }
+          } 
+          &:nth-child(2){
+            &:before{
+              content: '2'; position: absolute; top: -1.2em; left: 0; font-size: 2em; text-align: center; width: 100%; color: @d-blue-2;
+            }
+          } 
+          &:nth-child(3){
+            &:before{
+              content: '3'; position: absolute; top: -1.2em; left: 0; font-size: 2em; text-align: center; width: 100%; color: @d-blue-2;
+            }
+          } 
+        }
+      }
+      aside{
+        .d-top; width: 40%;
+        h2{
+          &:extend(main.filosofia article aside h1); padding: 0;
+        }
+        p{
+          &:extend(main.filosofia article aside > p);
+        }
+        &.bg-filled{
+          background: #a6ccd5; width: 27.8%; box-sizing: border-box; padding: 1.5em; margin: -7.5em 3.5em 0 3.5em;
+        }
+      }
+      .logoH{
+        width: 33.1%; height: 308px; .d-top; overflow: initial; margin: -.3em -2.8em 0px 2.9em; 
+      }
+      .logoV{
+        width: 33.1%; height: 359px; .d-top; overflow: initial; margin:-1.1em 26.2em -3.1em -15.5em; .rotate(@deg: -11deg);
+      }
+    }
+  }
+
+  &.visita360{
+    article{
+      text-align: center; letter-spacing: -0.03em;
+      h1, p{
+        &:extend(main.filosofia article aside h1); 
+      }
+      h1{ padding: 2.8em 11.2em 1.5em; text-transform: none; }
+      p{ padding: 1.3em 11em 1.5em; }
+    }
+  }
+
+  &.quemprecisa{
+    section{ 
+      h4{ margin: 9.1em 0 0 26.6em; width: 341px; letter-spacing: -0.03em; }
+      &:after{
+        content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: #fff; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
+      }
+    }
+    article{
+      text-align: center;
+      aside{
+        .d-top; width: 40%; line-height: 1.45em; margin: 0.6em 2em; font-size: 1.0625em; color: @d-blue-2; letter-spacing: -0.01em;
+        h1{ 
+          padding: 0em 1.3em 0.2em; text-transform: uppercase; font-size: .9em;
+        }
+        *:not(strong){
+          font-weight: normal;
+        }
+        > p{ margin-bottom: .8em; }
+        strong{ font-size: 1.5em; }
+        &:nth-child(1){
+          margin: 2.35em 2em 2em 1.1em;
+        }
+        &:nth-child(4){
+          margin: -5.7em 0em 0em 7.2em; width: 30.4%;
+        }
+        &:nth-child(5){
+          margin: -5.9em 0em 0em 30.2em; width: 30.4%;
+        }
+        &:nth-child(6){
+          margin: -14.8em 0em 0em -0.5em; width: 39%;
+        }
+      }
+      .logoH{
+        &:extend(main.oquefazemos article .logoH); margin: 5.7em 2.2em 0 2em; .rotate(@deg: -16deg);
+      }
+      .logoV{
+        &:extend(main.oquefazemos article .logoV); margin: -5.3em 22.2em -2em -19.3em; .rotate(@deg: -7deg);
+        &.clone{
+          margin: 0.1em -4em -4em 6.7em; .rotate(@deg: -26deg);
+        }
+      }
+    }
+  }
+
+  &.desospitalizacao{ 
+    letter-spacing: -0.03em;
+    section{ 
+      h4{ margin: 13.3em 0 0 21.5em; width: 390px; }
+      &:after{
+        content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: #fff; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
+      }
+    }
+    article{
+      text-align: center; padding-bottom: 4em;
+      aside{
+        line-height: 1.55em; margin: 2.6em 2.3em 2.4em; color: @d-blue-2; letter-spacing: -0.03em;
+        h1{ 
+          padding: 0em 1.3em 0.2em; text-transform: uppercase; font-size: 1.5em;
+        }
+        > p{ margin-bottom: .8em; font-size: 1.0625em; font-weight: normal; padding: 0 6em; }
+      }
+      figure{
+        img{ margin: 0 auto; }
+      }
+      .processo{
+        text-align: center; padding: 3.6em 0 0 0; margin-right: 2.2em; 
+        p{
+          .d-midle; font-size: 0.9375em; text-transform: uppercase; font-weight: 500; color: #fff; 
+          em{ font-weight: 300; font-style: normal; text-transform:lowercase; color: #fff; display: block; }
+        }
+        ul{ 
+           width: 690px; margin: 0 auto;
+          .local{
+            margin: 0 auto 4.15em; width: 153px; 
+            p{
+              font-size: 1.5em; background: @l-blue-1; color: #fff; text-transform: uppercase; font-weight: bold; width: 100%; padding: 0.4em 0; .b-sizing; z-index: 1;
+            }
+            span._border._dark-blue._top._left._right{
+              left: -67px; top: 23px; width: 289px; height: 90px; z-index: 0;
+            }
+            span._border._dark-blue._left._bottom{
+              left: -77px; top: -56px; width: 74px; height: 87px; z-index: 0;
+            }
+            span._border._dark-blue._right._bottom{
+              left: 155px; top: -56px; width: 74px; height: 87px; z-index: 0;
+            }
+          }
+          .tipos{
+            width: 255px; height: 102px; background: @l-blue-1; margin: 0 0.9em; .b-sizing; .d-top;
+            &:after{
+              content: ''; .d-midle; height: 100%; width: 0;  
+            }
+            ._border{
+              left: 114px; top: 102px; z-index: 9; height: 146px;
+            }
+          }
+          .pathOne{
+            position: absolute; top: -58px; right:0; width: 354px; height: 797px; 
+            span._border._right em:after{
+              width: 792px; top: 394px; right: calc(~'-100% + -35px');
+            }
+            span._border._bottom:after{
+              width: calc(~'90.3% - 18px'); left: initial; right: 12px;
+            }
+          }
+          .download{
+            font-size: 0.84375em; color: #fff; text-transform: uppercase; position: absolute; left: -61px; top: 6px;
+            .fa{
+              color: @l-blue-1; font-size: 2.8em; .d-midle;
+            }
+            strong{
+              .d-midle; font-size: 0.95em; width: 100px;
+            }
+          }
+          .iniciaLocal{
+            top: -60px; left: 336px; width: 47px; height: 60px; position: absolute;
+          }
+          .retornaLocal{
+            top: -66px; left: 331px; width: 47px; height: 60px; 
+            p.msg{
+              font-size: 0.84375em; color: #fff; text-transform: uppercase; position: absolute; background: #311d62; width: 148px; left: 143px; top: 38px; padding: 0.45em;
+              strong{ color: #fff; }
+              .fa{
+                background: #311d62; color: @l-blue-1; font-size: 2.8em; position: absolute; left: -62px; top: -9px; border-radius: 45px; width: 45px; height: 45px; line-height: 1.2em;
+              }
+            }
+            p.info{
+              font-size: 1.105em; position: absolute; width: 297px; left: 43px; top: 82px; text-transform: none; color: @d-blue-2; line-height: 1.4em;
+            }
+          }
+          ul.magna{
+            background: #321d60; width: 585px; margin: 2.6em auto 3.5em; display: block;
+            figure{
+              margin: -1.2em 10em 0; display: inline-block;
+            }
+            li{ 
+              .d-top; width: 255px; height: 192px; margin: 0.6em 0.7em 1.2em; padding: 1.5em 0.8em; .b-sizing; overflow: hidden;
+              &:before{
+                content: '\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111'; font: normal normal normal 3px/1 FontAwesome; .d-midle; width: 100%; height: 3px; overflow: hidden; position: absolute; top: 0; left: 0; color: @l-blue-1; letter-spacing: 1.4em; line-height: 3px;
+              }
+              &:after{
+                content: '\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111'; font: normal normal normal 3px/1 FontAwesome; .d-midle; width: 100%; height: 3px; overflow: hidden; position: absolute; bottom: 0; left: 0; color: @l-blue-1; letter-spacing: 1.4em; line-height: 3px;
+              }
+              span{
+                position: absolute; left: 0; top: 0; width: 100%; height: 100%; .d-top; 
+                &:before{
+                  content: '\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111'; font: normal normal normal 3px/1 FontAwesome; .d-midle; width: 100%; height: 3px; overflow: hidden; position: absolute; color: @l-blue-1; letter-spacing: 1.4em; line-height: 3px;
+                  .rotate(@deg: 90deg); top: 70%; left: calc(~'-50% + 1.5px');
+                }
+                &:after{
+                  content: '\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111\f111'; font: normal normal normal 3px/1 FontAwesome; .d-midle; width: 100%; height: 3px; overflow: hidden; position: absolute; color: @l-blue-1; letter-spacing: 1.4em; line-height: 3px;
+                  .rotate(@deg: 90deg); top: 70%; left: calc(~'50% - 1.5px'); 
+                }
+              }
+              &:after{
+                /*content: ''; .d-midle; height: 100%; width: 0;  */
+              }
+            }
+            p{
+              text-transform: none; font-size: 1.0625em; .d-midle; line-height: 1.5em;
+            }
+          }
+        }
+        
+      }
+
+    }
+  }
+
+  &.comoajudar{ 
+    letter-spacing: -0.03em;
+    section{ 
+      h4{ margin: 14.3em 0 0 4.7em; width: 360px; }
+      &:after{
+        content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: #fff; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
+      }
+    }
+    article{
+      text-align: center; line-height: 1.55em; margin: 2.6em 0; color: @d-blue-2; letter-spacing: -0.03em;
+      h1{ padding: 0em 1.3em 0.9em; text-transform: uppercase; font-size: 1.5em; }
+      p{
+        .d-midle; font-size: 0.9375em; text-transform: uppercase; font-weight: 500; color: #fff; 
+        em{ font-weight: 300; font-style: normal; text-transform:lowercase; color: #fff; display: block; }
+      }
+
+      ul{ 
+         margin: 0;
+        .download{
+          line-height: 1.1em; left: 56px;
+          &:extend(main.desospitalizacao article .processo ul .download);
+          .fa{
+            color: @l-blue-1; font-size: 2.8em; .d-midle;
+          }
+          strong{
+            .d-midle; font-size: 0.95em; width: 100px;
+          }
+        }
+        .local{
+          margin: 0 auto 1.75em; width: 170px; 
+          p{
+            font-size: 1.125em; background: @d-blue-2; color: #fff; text-transform: uppercase; font-weight: bold; width: 100%; padding: 0.4em 0; .b-sizing; z-index: 1;
+          }
+          span._border._dark-blue._top._left._right{
+            left: -158px; top: 19px; width: 488px; height: 46px; z-index: 0;
+          }
+        }
+        .tipos{
+          width: 430px; margin: 0 1.4em; .d-top;
+          p{ 
+            font-size: 1.125em; width: 100%; height: 35px; background: @l-blue-1; .b-sizing; 
+            strong{ color: #fff; .d-midle; }
+            &:after{
+              content: ''; .d-midle; height: 100%; width: 0;  
+            }
+          }
+          >ul{
+            margin: .9em 0 0 0; padding-bottom: 0.7em;
+            li{
+              font-size: 1.0625em; font-weight: normal; text-align: left; list-style: disc; margin: 0 1em 0 2.6em; line-height: 1.45em;
+              &:first-child{
+                text-align:center; list-style: none; margin: 0 0 0.7em 0;
+              }
+              strong{
+                background: @d-blue-2; color: #fff; padding: 0.36em 0; font-size: 0.9em; font-weight:500; display: block;
+              }
+            }
+            ._border{
+              top:36px; height: calc(~'100% - 36px'); width: calc(~'100% + 13px'); left: -7px; 
+            }
+            span._border._bottom:after{
+              bottom: -1px;
+            }
+            &:nth-child(2){
+              min-height: 205px;
+            }
+            &:nth-child(3){
+              min-height: 445px;
+            }
+            &:nth-child(4){
+              min-height: 325px;
+            }
+            &:nth-child(5){
+              min-height: 135px;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  &.comochegar{
+    article{
+      text-align: center; line-height: 1.05em; margin: 1.65em 0; color: @d-blue-2; letter-spacing: -0.03em; font-size: 1.5em; font-weight: 500;
+      h1{ 
+        background: @d-blue-2; padding: 0.35em 0; text-transform: uppercase; width: 465px; margin: 0 auto 1.2em; font-size: inherit;
+        strong{ color: #fff; }
+      }
+      >em{ padding: 0.8em 0 1em; display: block; }
+      * { font-style: normal; font-weight: normal; }
+      dl{
+        padding: 1.2em;
+        dt{ padding-bottom: 0.8em; }
+        dd{
+          font-size: 0.7em;
+          p{
+            width: 35.4%; .d-top; .b-sizing; text-align: left; margin: 0 1.6em 0.6em 2.6em;
+          }
+            strong{ font-weight: bold !important; font-size: 1.1em; }
+          > strong{ display: block; }
+        }
+      }
+    }
+  }
+
+
+  footer{
+    max-height: 386px; position: relative; background-color: @l-blue-1; 
+    &:before{
+      content:''; height: 100%; width: 100%; background-color: @l-blue-1; position: absolute; top: 0; left: -100%;
+    }
+    &:after{
+      content:''; height: 100%; width: 100%; background-color: @l-blue-1; position: absolute; top: 0; right: -100%;
+    }
+
+    > *{ .d-top; }
+    h6{
+      margin: 0 -65.4% 0 29.6%;
+      a{
+        margin: 2.2em 44px; width: 330px; 
+        img{ width: 100%; }
+      }
+    }
+    address{
+      margin: 4em 0px 3em;
+      a{ 
+        color: #fff; font-style: normal; font-size: 0.85em; font-weight: bold; text-transform: uppercase; 
+        i{ background: @d-blue-2; padding: 0.4em; font-size: 1.2em; color: #fff; }
+        &.tel{
+          margin: 0.3em 0 0.7em 0;
+        }
+        &.fa{ 
+          margin: 0 0.6em 0.6em 0;
+        }
+      }
+    }
+    nav{ 
+      display: block; text-align: center; padding: 0 1em; line-height: 1.7em; padding-bottom: 2.85em;
+      a{
+        width: 26%; color: #fff; .d-midle; text-transform: uppercase; font-size: 0.8125em; 
+        sup{ color: #fff; font-weight: 300 !important; }
+      }
+    }
   }
 }
 

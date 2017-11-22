@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <title>Está nascendo uma nova solução para cuidados ao paciente em reabilitação e longa permanência.</title>
+  <title>Humana Magna - Excelência no cuidar</title>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="keywords" content="Nova, Solução, Cuidados, Paciente, Reabilitação, Longa, Permanência">
-    <meta name="description" content="Está nascendo uma nova solução para cuidados ao paciente em reabilitação e longa permanência.">
+    <meta name="keywords" content="Humana Magna - Excelência, Cuidar, Nova, Solução, Cuidados, Paciente, Reabilitação, Longa, Permanência">
+    <meta name="description" content="Humana Magna - Excelência no cuidar">
     <meta name="author" content="Rafael Kellows - rafaelkellows@hotmail.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/font-awesome/font-awesome.min.css">
     <link href="css/personal/stylesheet.css" rel="stylesheet" media="screen">
 
-    <link rel="stylesheet" href="css/styles.min.css?vrs=1411171523"/>
+    <link rel="stylesheet" href="css/styles.min.css"/>
 
     <link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="images/icons/apple-icon-60x60.png">
@@ -30,16 +30,37 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <!--script type="text/javascript" src="js/jquery-1.11.3.min.js"></script-->
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
 
   </head>
   <body>
-    
-    <main class="comingsoon">
+    <main class="visita360">
 
-        <h1><img src="images/logoHumanaM.jpg" border="0" alt="" /></h1>
-        <p><strong>Está nascendo</strong> uma nova solução para cuidados ao paciente em reabilitação e longa permanência.</p>
-        <strong>Aguarde</strong>
+        <?php 
+            include_once "inc/contents/header.php";
+            $subpage = "visita360";
+            include_once "inc/contents/nav-main.php";
+            include_once "inc/contents/nav-sub-estrutura.php";
+        ?>
+
+        <article>
+            
+            <h1><strong>Conheça a Humana Magna, clique na imagem e veja o vídeo de apresentação de nossa estrutura e serviços</strong></h1>
+
+            <video width="670" height="380" poster="images/videoPoster.jpg" controls>
+              <source src="videos/estruturaNov2017-media.mp4" type="video/mp4">
+              <source src="videos/estruturaNov2017-web.webm" type="video/webm">
+                Your browser does not support HTML5 video.
+            </video>
+
+            <p><a href="javascript:void();"><strong>GOSTOU? venha nos visitar em nossa primeira unidade, CLIQUE AQUI e saiba como chegar</strong></a></p>
+
+        </article>
+
+        <?php 
+            include_once "inc/contents/footer.php";
+        ?>
 
     </main>
 
