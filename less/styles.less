@@ -108,10 +108,10 @@ span._border{
 *******************************/
 html, body{ height: 100%; }
 main{  
-  max-width: 1024px; margin: 0 auto; /*background: url('../images/bgs/parceiros.jpg') 0px 20px no-repeat;*/
+  max-width: 1024px; margin: 0 auto; /*background: url('../images/bgs/nossaestrutura.jpg') 0px 20px no-repeat; */
 
   #loading{
-    position: fixed; top:0; left:0; width: 100%; height: 100%; z-index: 999; text-align: center;
+    position: fixed; top:0; left:0; width: 100%; height: 100%; z-index: 9999; text-align: center;
     &:before{
       content:''; background: #fff; opacity: 1; width: 100%; height: 100%; position: absolute; left: 0; top:0; .transit(opacity, @secs: 0.5s);
     }
@@ -142,8 +142,6 @@ main{
         &.anima6{   z-index: 0 }
       }
     }
-
-
     p{ 
       padding: 1em; position: fixed; top:70%; text-align: center; width: 100%; font-weight:normal; font-size: .9em; .transit(all, @secs: 0.5s);
         &.anima1{ color:#20a2ae; }
@@ -166,6 +164,22 @@ main{
       figure{
         opacity:0;
       }
+    }
+  }
+  #galeria{
+    position: fixed; top:0; left:0; width: 100%; height: 100%; z-index: 999; text-align: center;
+    a{
+      position: fixed; top: 5%; right: 0%; z-index: 99999;
+      i{
+        border-radius: 35px !important; width: 35px !important; height: 35px !important; font-size: 1.8em !important;
+        &:extend(main.desospitalizacao article .processo ul .retornaLocal p.msg .fa);
+      }
+    }
+    img{
+      position: fixed; top: 5%; left: calc(~'50% - 34%'); width: 68%; height: auto !important; box-sizing: border-box; z-index: 9999;
+    }
+    &:after{
+      content:''; background:#fff; opacity: .8; position: fixed; top: 0; left: 0; width: 100% !important; height: 100% !important; z-index: 9998;
     }
   }
 
@@ -276,6 +290,9 @@ main{
     figure{ 
       position: absolute; left: 0; bottom: 0; z-index: 1; .transit(bottom, @secs: 0.05s); 
       figcaption { font-size: 0; display: none; }
+    }
+    &.bottom{
+     figure{ top: initial; }
     }
     *:not(figure){
       z-index: 2; .d-top;
@@ -884,6 +901,130 @@ main{
       }
     }
   }
+
+  &.nossaestrutura{
+    letter-spacing: -0.03em;
+    > section{ 
+      h4{ margin: 2.7em 0 0 22em; width: 400px; }
+      &:after{
+        content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: @l-blue-1; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
+      }
+    }
+    article{
+      text-align: center; line-height: 1.05em; color: @d-blue-2; letter-spacing: -0.03em; font-size: 1.5em; font-weight: 500;
+      h1{ 
+        text-transform: uppercase; width: 400px; margin: 1.65em 0 1.65em 9.5em; font-size: inherit;
+        strong{ color: @d-blue-2; }
+      }
+      aside{
+        position: relative;
+        figure{
+          cursor: pointer;
+          img{
+            width: 100%; /*.transit(all, @secs: 0.5s);*/
+          }
+        }
+        .galleryG{ 
+          .box-parallixit{ width: 611px; }
+          p{
+            position: absolute; font-size: 0.755em; padding: 0.2760em 1em; z-index: 9; line-height: 1.35em;
+            strong{ 
+              color: #fff; background: @l-blue-1; padding: .5em; text-transform: uppercase; 
+              sup{
+                color: #fff; font-size: .8em;
+              }
+            }
+            &:last-child{
+              font-size: 0.75em; font-weight: normal; text-align: right;
+            }
+          }
+        }
+        .galleryP{ 
+          background: url('../images/estrutura/bgPolaroid.jpg') no-repeat 0 0 #e3e4e2; width: 222px; height: 270px; position: absolute;
+          -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.35); -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.35); box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.35);
+          .box-parallixit{ 
+            width: 201px; height: 201px; margin: 0.5em auto;
+            figure{
+              left: -50%;
+              img{ height: 240px; width: auto; }
+            }
+          }
+          p{
+            position: absolute; font-size: 0.755em; padding: 0.2760em 1em; z-index: 9; line-height: 1.35em;
+            strong{ 
+              color: #fff; background: @l-blue-1; padding: .5em; text-transform: uppercase; 
+              sup{
+                color: #fff; font-size: .8em;
+              }
+            }
+            &:last-child{
+              font-size: 0.75em; font-weight: normal; text-align: right;
+            }
+          }
+        }
+
+        &.estrutura1{
+          .galleryG{ 
+            .box-parallixit{ margin: 0 4.7em; height: 359px; }
+            p{ 
+              top: 224px; right: 95px;
+              &:last-child{ top: 261px; width: 155px; }
+            }
+          }
+          .galleryP{ 
+            top: -70px; right: 57px;
+          }
+        }
+        &.estrutura2{
+          .galleryG{ 
+            .box-parallixit{ margin: 0.35em 0 0.35em 12.6em; height: 325px; }
+            p{
+              top: 13.8px; left: 95px;
+              &:last-child{
+                top: 54px; width: 170px; text-align: center;
+              }
+            }
+          }
+        }
+        &.estrutura3{
+          .galleryG{ 
+            .box-parallixit{ margin: 1.85em 0 0.35em 12.6em; height: 325px; }
+            p{
+              top: 203.8px; left: 95px;
+              &:last-child{
+                top: 247px; width: 120px; text-align: center; left: 128px;
+              }
+            }
+          }
+          .galleryP{ 
+            top: -100px; left: 57px;
+          }
+        }
+        &.estrutura4{
+          .galleryP{ 
+            position: relative; .d-midle; margin: 1.45em 0.45em;
+            p{
+              top: 261px; left:-40px;
+              strong{ padding: .5em .7em; }
+              &:last-child{ top: 261px; width: 155px; }
+            }
+          }
+        }
+        &.estrutura5{
+          padding: 0.2em 0 1.4em;
+          ul{
+            .d-top; width: 36%; text-align: left; margin: 0 0.5em; line-height: .99em;
+            li{
+              font-size: 0.575em; font-weight: normal; text-transform: uppercase; border-bottom: 1px solid #262e6e;
+            }
+            &:last-child{
+              margin-top: -1em;
+            }
+          }
+        }
+      }
+    }
+  } 
 
 
   footer{

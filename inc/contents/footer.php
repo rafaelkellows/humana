@@ -11,7 +11,7 @@
                 <a href="oquefazemos.php" title="O que fazemos">O que fazemos</a>
                 <a href="desospitalizacao.php" title="Processo da desospitalização">Processo da desospitalização</a>
                 <a href="conheca.php" title="Quem Somos">Quem Somos</a>
-                <a href="javascript:void(0);" title="Conheça nossa estrutura">Conheça nossa estrutura</a>
+                <a href="nossaestrutura.php" title="Conheça nossa estrutura">Conheça nossa estrutura</a>
                 <a href="comoajudar.php" title="Como podemos ajudar">Como podemos ajudar</a>
                 <a href="equipe.php" title="A Equipe Humana">A Equipe Humana</a>
                 <a href="visita360.php" title="Faça uma visita 360º">Faça uma visita 360<sup>o</sup></a>

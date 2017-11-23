@@ -1,24 +1,13 @@
 $(function(){ 
 	(function() {
-		var humanamagna = {
+		var _s,int,
+			humanamagna = {
 	        init: function() {
 	            this.loading();
-	            
+	            this.galeria();
 	        },
 	        loading : function(){
-	        	var anima = 6, int=0;
-
-	        	var _s = setInterval(
-	        		function(){
-	        			$('#loading .logoH, #loading .logoV, #loading > p').removeClass('anima'+int);
-	        			if(int<anima){
-	        				int++;
-	        			}else{
-	        				int=1;
-	        			}
-	        			$('#loading .logoH, #loading .logoV, #loading > p').addClass('anima'+int);
-	        		}, 1500
-	        	);
+				humanamagna.animaLoading();
 		    	$(window).load(function(){
 			    	$(document).ready(function(){
 			    		setTimeout( function(){ 
@@ -33,6 +22,86 @@ $(function(){
 						}, 1000 )
 					});
 				});
+	        },
+	        animaLoading : function(){
+	        	var anima = 6; 
+	        	int=0;
+	        	_s = setInterval(
+	        		function(){
+	        			$('#loading .logoH, #loading .logoV, #loading > p').removeClass('anima'+int);
+	        			if(int<anima){
+	        				int++;
+	        			}else{
+	        				int=1;
+	        			}
+	        			$('#loading .logoH, #loading .logoV, #loading > p').addClass('anima'+int);
+	        		}, 1500
+	        	);
+	        },
+	        galeria : function(){
+	        	var loadHTML = '<div id="loading">' + "\n" +
+						        '    <figure class="logoH">' + "\n" +
+						        '        <img src="images/partLogoH.png" alt="" />' + "\n" +
+						        '    </figure>' + "\n" +
+						        '    <figure class="logoV">' + "\n" +
+						        '        <img src="images/partLogoV.png" alt="" />' + "\n" +
+						        '    </figure>' + "\n" +
+						        '    <p>carregando</p>' + "\n" +
+						        '</div>';
+	        	var loadGaleria = '<div id="galeria">' + "\n" +
+						        '    <a href="javascript:void(0);" alt="fechar"><i class="fa fa-times" aria-hidden="true"></i></a>' + "\n" +
+						        '    <figure class="logoH">' + "\n" +
+						        '        <img src="images/partLogoH.png" alt="" />' + "\n" +
+						        '    </figure>' + "\n" +
+						        '</div>';
+				var imgSRC;
+
+	        	var gal = $('.galeria figure img');
+	        		gal.each(function(){
+	        			$(this).click(function(){
+	        				$('main').prepend(loadHTML);
+	        				humanamagna.animaLoading();
+
+	        				imgSRC = $(this).attr('src');
+	        				imgTITLE = $(this).parent().find('figcaption').text();
+	        				galeriaDIV = $(loadGaleria);
+	        				galeriaDIV.find('img').attr('src',imgSRC);
+	        				galeriaDIV.find('img').attr('title',imgTITLE);
+
+	        				$('main').prepend(galeriaDIV);
+	        				
+							// get all images and iframes
+							var $elems = galeriaDIV.find('img');
+
+							// count them
+							var elemsCount = $elems.length;
+
+							// the loaded elements flag
+							var loadedCount = 0;
+
+							// attach the load event to elements
+							$elems.on('load', function () {
+							    // increase the loaded count 
+							    loadedCount++;
+
+							    // if loaded count flag is equal to elements count
+							    if (loadedCount == elemsCount) {
+							        // do what you want
+						    		setTimeout( function(){ 
+										humanamagna.toTop();
+										$('#loading .logoH, #loading .logoV, #loading > p').removeClass('anima'+int);
+										$('#loading').addClass('close');
+										setTimeout( function(){ $('#loading').remove() }, 700 )
+										clearInterval(_s);
+									}, 1000 )
+							    }
+							});
+
+							galeriaDIV.find('a').click(function(){
+								galeriaDIV.remove();
+							});
+	        			});
+	        		});
 	        },
 	        toTop : function(elem){
 		        var offset = 1,

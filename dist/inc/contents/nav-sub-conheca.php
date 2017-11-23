@@ -17,7 +17,7 @@ switch ($subpage) {
         echo '<a class="on" href="filosofia.php" title="Nossa Filosofia"><span>Nossa Filosofia</span></a>';
         break;
     default:
-       echo "i is not equal to 0, 1 or 2";
+       echo "Nothing to Load";
 }
 
 ?>       
