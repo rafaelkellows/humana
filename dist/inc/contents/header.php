@@ -13,7 +13,7 @@
             <p>Fale Conosco: <a href="tel:+551123970229">11 2397 0229</a></p>
             <nav>
                 <a href="comochegar.php" title="Como chegar">Como chegar</a>
-                <a href="javascript:void(0);" title="Parceiros">Parceiros</a>
+                <a href="parceiros.php" title="Parceiros">Parceiros</a>
                 <ul>
                     <li><a href="javascript:void(0);"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>                    
                     <li><a href="javascript:void(0);"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>                    

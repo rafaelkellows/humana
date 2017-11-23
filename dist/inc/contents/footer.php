@@ -12,12 +12,12 @@
                 <a href="desospitalizacao.php" title="Processo da desospitalização">Processo da desospitalização</a>
                 <a href="conheca.php" title="Quem Somos">Quem Somos</a>
                 <a href="javascript:void(0);" title="Conheça nossa estrutura">Conheça nossa estrutura</a>
-                <a href="javascript:void(0);" title="Como podemos ajudar">Como podemos ajudar</a>
+                <a href="comoajudar.php" title="Como podemos ajudar">Como podemos ajudar</a>
                 <a href="equipe.php" title="A Equipe Humana">A Equipe Humana</a>
                 <a href="visita360.php" title="Faça uma visita 360º">Faça uma visita 360<sup>o</sup></a>
                 <a href="comochegar.php" title="Como chegar">Como chegar</a>
                 <a href="filosofia.php" title="Nossa Filosofia">Nossa Filosofia</a>
                 <a href="quemprecisa.php" title="Quem precisa desta assistência">Quem precisa desta assistência</a>
-                <a href="javascript:void(0);" title="Parceiros">Parceiros</a>
+                <a href="parceiros.php" title="Parceiros">Parceiros</a>
             </nav>
         </footer>

@@ -108,7 +108,7 @@ span._border{
 *******************************/
 html, body{ height: 100%; }
 main{  
-  max-width: 1024px; margin: 0 auto; /*background: url('../images/bgs/quem_faz.jpg') 0px 20px no-repeat;*/
+  max-width: 1024px; margin: 0 auto; /*background: url('../images/bgs/parceiros.jpg') 0px 20px no-repeat;*/
 
   #loading{
     position: fixed; top:0; left:0; width: 100%; height: 100%; z-index: 999; text-align: center;
@@ -832,6 +832,54 @@ main{
           }
             strong{ font-weight: bold !important; font-size: 1.1em; }
           > strong{ display: block; }
+        }
+      }
+    }
+  }
+
+  &.parceiros{
+    article{
+      text-align: center; line-height: 1.05em; margin: 2.5em 0 0.3em; color: @d-blue-2; letter-spacing: -0.03em; font-size: 1.5em; font-weight: 500;
+      h1{ 
+        background: @d-blue-2; padding: 0.35em 0; text-transform: uppercase; width: 100%; margin: 0 auto 0.5em; font-size: inherit;
+        strong{ color: #fff; }
+      }
+      >em{ padding: 0.8em 0 1em; display: block; }
+      *:not(strong) { font-style: normal; font-weight: normal; }
+      aside{
+        width: 43.5%; .d-top; margin: 0 0.3em;
+        p {
+          line-height:1.2em;
+          strong{
+            text-transform: uppercase;
+          }
+        }
+      }
+      form{
+        display: block; background: #96cad1; margin: 1.3em 0; text-align: left; padding: 0.6em;
+        label,span{
+          color: @d-blue-2; font-size: 0.75em; font-weight: bold; .f-left; margin: -0.2em 0 0.9em;
+          em{ font-size: 0.8em; }
+        }
+        input{
+          &[type='text']{
+            background: #fff; color: @d-blue-2; font-size: 0.6em; padding: 0.15em 0.30em; .f-right; margin: 0 0 1.3em;
+          }
+          &[name='nome']{ width: 260px; }
+          &[name='cargo']{ width: 350px; }
+          &[name='empresa']{ width: 330px; }
+          &[name='email']{ width: 350px; }
+          &[name='telefone']{ width: 330px; }
+          &[name='celular']{ width: 220px; }
+        }
+        textarea{ width: 328px; height: 63px; max-width: 328px; max-height: 63px; min-width: 328px; min-height: 63px; .f-right; background: #fff; border:none; }
+        ul{ 
+          clear: both;
+          label{ float: none; display: inline-block; width: 100%; margin: 1em 0 -0.1em; }
+          li{ 
+            .d-midle;
+            span, input{ float: none; .d-midle; margin: 0em 0.3em; }
+          }
         }
       }
     }
