@@ -75,7 +75,7 @@
 
             <dl>
                 <dt>Significado</dt>
-                <dd>Humana Magna significa de Grande Relevância Humana. Para nós, ser Humana Magna é dar grande importância ao Ser Humano.</dd>
+                <dd>Humana Magna traduz o nosso maior valor do que achamos realmente relevante: o ser humano.</dd>
             </dl>
 
             <dl>

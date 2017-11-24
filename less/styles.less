@@ -143,7 +143,7 @@ main{
       }
     }
     p{ 
-      padding: 1em; position: fixed; top:70%; text-align: center; width: 100%; font-weight:normal; font-size: .9em; .transit(all, @secs: 0.5s);
+      padding: 1em; position: fixed; top:70%; text-align: center; width: 100%; font-weight:500; font-size: .9em; .transit(all, @secs: 0.5s);
         &.anima1{ color:#20a2ae; }
         &.anima2{ color:#37a237; }
         &.anima3{ color:#ecd932; }
@@ -166,6 +166,7 @@ main{
       }
     }
   }
+
   #galeria{
     position: fixed; top:0; left:0; width: 100%; height: 100%; z-index: 999; text-align: center;
     a{
@@ -218,7 +219,7 @@ main{
       top: 96px; left: 3.6%; color: @d-blue-2; font-weight: 500; font-size: 0.8em; letter-spacing: -0.05em; width: 50px; text-align: center; line-height: 1.1em;
       *{ font-weight: inherit; }
       span{ 
-        background: url('../images/ilustra-360.png') center center no-repeat; width: 47px; height: 48px; margin: 0.5em auto;
+        background: url('../images/ilustra-360.png') center center no-repeat; width: 47px; height: 48px; margin: 0.5em auto; letter-spacing: -0.1em; font-size:0.9em;
         &:before{
           content:''; height: 100%; width: 0px; .d-midle;
         }
@@ -235,7 +236,7 @@ main{
       content:''; height: 100%; width: 100%; background-color: @l-blue-1; position: absolute; top: 0; right: -100%;
     }
     dl{
-      .d-midle; width: 33%; height: 100%; text-align: center; .b-sizing; padding: 2.1em .5em; letter-spacing: -0.05em;
+      .d-midle; width: 33%; height: 100%; text-align: center; .b-sizing; padding: 2.1em 0.3em; letter-spacing: -0.05em;
       dt{ 
         text-transform: uppercase; font-size: 1.35em; line-height: 1.2em; padding-bottom: 0.3em;
         strong{ display: block; color:#fff; }
@@ -244,7 +245,7 @@ main{
         font-size: 0.95em; line-height: 1.1em;
       }
       a{ 
-        color:#fff; opacity: .5; .transit(opacity, @secs: 0.5s);
+        color:#fff; opacity: .5; .transit(opacity, @secs: 0.5s); font-weight: normal;
       }
       &:hover, &.on{
         a{
@@ -265,7 +266,7 @@ main{
           .rotate(@deg: 0deg);
         }
         span{ 
-          .d-midle; color: @d-blue-2; text-transform: uppercase; font-size: 1em; font-weight: normal; width: 67%; opacity: .3; .transit(all, @secs: .5s); z-index: 2;
+          .d-midle; color: @d-blue-2; text-transform: uppercase; font-size: 1em; font-weight: 500; width: 67%; opacity: .3; .transit(all, @secs: .5s); z-index: 2;
         }
         &:hover, &.on{
           &:before, &:after{
@@ -304,12 +305,12 @@ main{
         width: 285px; height: 57px; text-align: center; margin: 0 0.75em;
         &:before{
           content: ""; width: 100%; height:100%; background: #fff; z-index: 1; position: absolute; left: 0; top: 0; opacity: .6; .transit(opacity, @secs: 1s);
-        }
+        } 
         &:after{
           content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; position: relative; height: 100%; color: @l-blue-1; line-height: 2em; .d-midle; margin: 0 0 0 1em; z-index: 2;
         }
         span{ 
-          .d-midle; color: @d-blue-2; text-transform: uppercase; font-size: 1em; font-weight: normal; width: 67%; .transit(width, @secs: .5s);
+          .d-midle; color: @d-blue-2; text-transform: uppercase; font-size: 1em; font-weight: 500; width: 67%; .transit(width, @secs: .5s);
         }
         &:hover, &.on{ 
           &:before{
@@ -361,7 +362,7 @@ main{
             left: 61.2%; top: 5.8%; width: 270px;
           }
           &:nth-child(3){
-            left: 2.7%; top: 22%; width: 320px;
+            left: 2.7%; top: 22%; width: 265px;
           }
           &:nth-child(4){
             left: 30.6%; top: 34.4%; width: 240px;
@@ -370,7 +371,7 @@ main{
             left: 40.8%; top: 52.2%; width: 200px;
           }
           &:nth-child(6){
-            left: 71%; top: 54.7%; width: 240px;
+            left: 72%; top: 54.7%; width: 210px;
           }
           &:nth-child(7){
             left: 4.4%; top: 75.6%; width: 250px;
@@ -379,9 +380,9 @@ main{
             left: 70.7%; top: 78.7%; width: 270px;
           }
           dt{ 
-            color: @l-blue-1; font-weight: bold; font-size: 1.5em; text-transform: uppercase;   .transit(color, @secs: 0.5s);
+            color: @l-blue-1; font-weight: 500; font-size: 1.5em; text-transform: uppercase;   .transit(color, @secs: 0.5s); letter-spacing: -0.05em;
           }
-          dd{ color: @d-blue-2; font-weight: normal; font-size: 0.85em; padding: 0.5em 0.6em; line-height: 1.176em; letter-spacing: -0.03em; opacity: 0;  .transit(opacity, @secs: 0.5s); }
+          dd{ color: @d-blue-2; font-weight: normal; font-size: 0.85em; padding: 0.5em 0.6em; line-height: 1.176em; letter-spacing: -.075em; opacity: 0;  .transit(opacity, @secs: 0.5s); }
           &:hover{
             dt{ color: @d-blue-2; }
             dd{ opacity: 1; }
@@ -392,12 +393,12 @@ main{
   }
 
   &.conheca{
-    section{ 
+    > section{ 
       margin-bottom: 2.6em;
       h4{ margin: 11.9em 0 0 20.6em; width: 470px; }
-      &:after{
+      /*&:after{
         content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: @d-blue-2; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
-      }
+      }*/
     }
     article{
       padding-bottom: 0.5em;
@@ -451,8 +452,8 @@ main{
           figure{
             margin-bottom: 5.3em; position: relative;
           }
-          *{ font-weight: normal; font-size: 0.85em; line-height: 1.2em; letter-spacing: -0.03em; }
-          > p{ padding: 0 1em; }
+          *{ font-weight: normal; font-size: 0.8518em; line-height: 1.3em; letter-spacing: -0.03em; }
+          > p{ padding: 0 1.3em; }
         }
         &:nth-child(6){
           margin-top: 3em;
@@ -467,9 +468,9 @@ main{
   &.filosofia{
     section{ 
       h4{ margin: 9.1em 0 0 2.4em; width: 370px; letter-spacing: -0.03em; }
-      &:after{
+      /*&:after{
         content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: @d-blue-2; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
-      }
+      }*/
     }
     article{
       letter-spacing: -0.03em; text-align: center; padding-bottom: 6em;
@@ -483,7 +484,7 @@ main{
       }
       dl{ 
         .d-top; text-align: center; width: 27.8%; margin: 0 .8em; 
-        dt{ background: @l-blue-1; color: #fff; font-size: 1.5em; text-transform: uppercase; font-weight: bold; padding: 0.375em; }
+        dt{ background: @l-blue-1; color: #fff; font-size: 1.5em; text-transform: uppercase; font-weight: bold; padding: 0 0.375em; line-height: 1.97em; }
         dd{ font-weight: normal; font-size: 1.0625em; line-height: 1.5em; padding: 0.7em 0.4em;}
       }
       .logoH{
@@ -508,8 +509,8 @@ main{
         overflow: initial; margin:47px 0 0 33.4em; height: 103px; width: 24.8%;  .d-top;
         dl{ 
           width: 100%; 
-          dt{ background: none; color: @d-blue-2; }
-          dd{ padding: 0; }
+          dt{ background: none; color: @d-blue-2; line-height: 1.2em; }
+          dd{ padding: 0 1.1em;  }
         }
       }
     }
@@ -518,9 +519,9 @@ main{
   &.oquefazemos{
     section{ 
       h4{ margin: 10em 0 0 21.9em; width: 410px; letter-spacing: -0.03em; }
-      &:after{
+      /*&:after{
         content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: @d-blue-2; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
-      }
+      }*/
     }
     article{
       padding: 2em 0; text-align: center; letter-spacing: -0.03em; 
@@ -529,7 +530,7 @@ main{
       }
       ol{
         li{ 
-          width: 27.8%; .d-top; font-weight:bold; font-size: 1.0625em; .b-sizing; padding: 0.5em 1.8em; margin: 3.5em 0.7em; line-height: 1.45em; background: @l-blue-1; color: #fff;
+          width: 27.8%; .d-top; font-weight:bold; font-size: 1.0625em; .b-sizing; padding: 0.5em 1.4em; margin: 3.5em 0.7em; line-height: 1.45em; background: @l-blue-1; color: #fff;
           &:nth-child(1){
             &:before{
               content: '1'; position: absolute; top: -1.2em; left: 0; font-size: 2em; text-align: center; width: 100%; color: @d-blue-2;
@@ -582,9 +583,9 @@ main{
   &.quemprecisa{
     section{ 
       h4{ margin: 9.1em 0 0 26.6em; width: 341px; letter-spacing: -0.03em; }
-      &:after{
+      /*&:after{
         content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: #fff; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
-      }
+      }*/
     }
     article{
       text-align: center;
@@ -608,7 +609,7 @@ main{
           margin: -5.9em 0em 0em 30.2em; width: 30.4%;
         }
         &:nth-child(6){
-          margin: -14.8em 0em 0em -0.5em; width: 39%;
+          margin: -12.8em 0em 0em -0.5em; width: 39%;
         }
       }
       .logoH{
@@ -627,9 +628,9 @@ main{
     letter-spacing: -0.03em;
     section{ 
       h4{ margin: 13.3em 0 0 21.5em; width: 390px; }
-      &:after{
+      /*&:after{
         content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: #fff; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
-      }
+      }*/
     }
     article{
       text-align: center; padding-bottom: 4em;
@@ -706,7 +707,7 @@ main{
               }
             }
             p.info{
-              font-size: 1.105em; position: absolute; width: 297px; left: 43px; top: 82px; text-transform: none; color: @d-blue-2; line-height: 1.4em;
+              font-size: 1.105em; position: absolute; width: 297px; left: 43px; top: 82px; text-transform: none; color: @d-blue-2; line-height: 1.4em; font-weight: normal; 
             }
           }
           ul.magna{
@@ -752,9 +753,9 @@ main{
     letter-spacing: -0.03em;
     section{ 
       h4{ margin: 14.3em 0 0 4.7em; width: 360px; }
-      &:after{
-        content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: #fff; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
-      }
+      /*&:after{
+        content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: @d-blue-2; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
+      }*/
     }
     article{
       text-align: center; line-height: 1.55em; margin: 2.6em 0; color: @d-blue-2; letter-spacing: -0.03em;
@@ -777,9 +778,9 @@ main{
           }
         }
         .local{
-          margin: 0 auto 1.75em; width: 170px; 
+          margin: 0 auto 1.85em; width: 170px; 
           p{
-            font-size: 1.125em; background: @d-blue-2; color: #fff; text-transform: uppercase; font-weight: bold; width: 100%; padding: 0.4em 0; .b-sizing; z-index: 1;
+            font-size: 1.125em; background: @d-blue-2; color: #fff; text-transform: uppercase; width: 100%; padding: 0; .b-sizing; z-index: 1; line-height: 1.95em;
           }
           span._border._dark-blue._top._left._right{
             left: -158px; top: 19px; width: 488px; height: 46px; z-index: 0;
@@ -788,8 +789,8 @@ main{
         .tipos{
           width: 430px; margin: 0 1.4em; .d-top;
           p{ 
-            font-size: 1.125em; width: 100%; height: 35px; background: @l-blue-1; .b-sizing; 
-            strong{ color: #fff; .d-midle; }
+            font-size: 1.125em; width: 100%; background: @l-blue-1; .b-sizing; line-height: 1.95em;
+            strong{ color: #fff; .d-midle; font-weight: 500; }
             &:after{
               content: ''; .d-midle; height: 100%; width: 0;  
             }
@@ -799,10 +800,10 @@ main{
             li{
               font-size: 1.0625em; font-weight: normal; text-align: left; list-style: disc; margin: 0 1em 0 2.6em; line-height: 1.45em;
               &:first-child{
-                text-align:center; list-style: none; margin: 0 0 0.7em 0;
+                text-align:center; list-style: none; margin: 0 0 0.9em 0; text-transform: uppercase;
               }
               strong{
-                background: @d-blue-2; color: #fff; padding: 0.36em 0; font-size: 0.9em; font-weight:500; display: block;
+                background: @d-blue-2; color: #fff; padding: 0; font-size: 0.9em; font-weight:500; display: block; line-height: 2.2em;
               }
             }
             ._border{
@@ -812,16 +813,16 @@ main{
               bottom: -1px;
             }
             &:nth-child(2){
-              min-height: 205px;
+              min-height: 200px;
             }
             &:nth-child(3){
-              min-height: 445px;
+              min-height: 440px;
             }
             &:nth-child(4){
-              min-height: 325px;
+              min-height: 320px;
             }
             &:nth-child(5){
-              min-height: 135px;
+              min-height: 130px;
             }
           }
         }
@@ -835,7 +836,7 @@ main{
       text-align: center; line-height: 1.05em; margin: 1.65em 0; color: @d-blue-2; letter-spacing: -0.03em; font-size: 1.5em; font-weight: 500;
       h1{ 
         background: @d-blue-2; padding: 0.35em 0; text-transform: uppercase; width: 465px; margin: 0 auto 1.2em; font-size: inherit;
-        strong{ color: #fff; }
+        strong{ color: #fff; font-weight: bold; }
       }
       >em{ padding: 0.8em 0 1em; display: block; }
       * { font-style: normal; font-weight: normal; }
@@ -873,7 +874,7 @@ main{
         }
       }
       form{
-        display: block; background: #96cad1; margin: 1.3em 0; text-align: left; padding: 0.6em;
+        display: block; background: #96cad1; margin: 1.3em 0 2.5em; text-align: left; padding: 0.6em;
         label,span{
           color: @d-blue-2; font-size: 0.75em; font-weight: bold; .f-left; margin: -0.2em 0 0.9em;
           em{ font-size: 0.8em; }
@@ -888,10 +889,14 @@ main{
           &[name='email']{ width: 350px; }
           &[name='telefone']{ width: 330px; }
           &[name='celular']{ width: 220px; }
+          &[type='reset'], &[type='button']{
+            background: @d-blue-2; color: #fff; font-size: 0.75em; padding: 0.45em 0.5em; .f-right; margin: 0 0 0 .5em; cursor: pointer; text-transform: uppercase;
+          }
+
         }
         textarea{ width: 328px; height: 63px; max-width: 328px; max-height: 63px; min-width: 328px; min-height: 63px; .f-right; background: #fff; border:none; }
         ul{ 
-          clear: both;
+          clear: both; padding-bottom: 1em;
           label{ float: none; display: inline-block; width: 100%; margin: 1em 0 -0.1em; }
           li{ 
             .d-midle;
@@ -906,9 +911,9 @@ main{
     letter-spacing: -0.03em;
     > section{ 
       h4{ margin: 2.7em 0 0 22em; width: 400px; }
-      &:after{
+      /*&:after{
         content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: @l-blue-1; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
-      }
+      }*/
     }
     article{
       text-align: center; line-height: 1.05em; color: @d-blue-2; letter-spacing: -0.03em; font-size: 1.5em; font-weight: 500;
@@ -927,11 +932,11 @@ main{
         .galleryG{ 
           .box-parallixit{ width: 611px; }
           p{
-            position: absolute; font-size: 0.755em; padding: 0.2760em 1em; z-index: 9; line-height: 1.35em;
+            position: absolute; font-size: 0.755em; padding: 0 1em; z-index: 9; line-height: 1.35em;
             strong{ 
-              color: #fff; background: @l-blue-1; padding: .5em; text-transform: uppercase; 
+              color: #fff; padding: 0 .8em; text-transform: uppercase; background: @l-blue-1; line-height: 2em; display: block; font-weight: 500;
               sup{
-                color: #fff; font-size: .8em;
+                color: #fff; font-size: .8em; margin-top: -0.4em; display: inline-block; vertical-align: text-bottom;
               }
             }
             &:last-child{
@@ -1048,7 +1053,7 @@ main{
       margin: 4em 0px 3em;
       a{ 
         color: #fff; font-style: normal; font-size: 0.85em; font-weight: bold; text-transform: uppercase; 
-        i{ background: @d-blue-2; padding: 0.4em; font-size: 1.2em; color: #fff; }
+        i{ background: @d-blue-2; padding: 0.35em 0; color: #fff; width: 28px; height: 28px; .b-sizing; text-align: center; }
         &.tel{
           margin: 0.3em 0 0.7em 0;
         }

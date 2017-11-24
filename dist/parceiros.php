@@ -39,6 +39,7 @@
                         <li><input type="checkbox" name="contactby" value="telefone"><span>telefone</span></li>
                         <li><input type="checkbox" name="contactby" value="celular"><span>celular</span></li>
                     </ul>
+                    <input type="button" name="enviar" value="enviar"><input type="reset" name="reset" value="limpar">
                 </form>
             </aside>
             <aside>
@@ -66,6 +67,7 @@
                         <li><input type="checkbox" name="contactby" value="telefone"><span>telefone</span></li>
                         <li><input type="checkbox" name="contactby" value="celular"><span>celular</span></li>
                     </ul>
+                    <input type="button" name="enviar" value="enviar"><input type="reset" name="reset" value="limpar">
                 </form>
             </aside>
         </article>

@@ -18,10 +18,10 @@
             
             <figure class="bxn-parallixit top">
                 <img src="images/box-nav/ilustraFilosofiaInterna.jpg" alt="" />
-                <figcaption>Se traduz em nossa estrutura diferenciada, equipe extremamente especializada, protocolos e processos o que resulta no progresso de nossos pacientes em condições que melhorem seu bem-estar.</figcaption>
+                <figcaption>A nossa filosofia é traduzida em nossa estrutura diferenciada, equipe altamente especializada, protocolos e processos resultando no progresso de nossos pacientes em condições que melhorem seu bem-estar.</figcaption>
             </figure>
 
-            <h4>Se traduz em nossa estrutura diferenciada, equipe extremamente especializada, protocolos e processos o que resulta no progresso de nossos pacientes em condições que melhorem seu bem-estar.</h4>
+            <h4>A nossa filosofia é traduzida em nossa estrutura diferenciada, equipe altamente especializada, protocolos e processos resultando no progresso de nossos pacientes em condições que melhorem seu bem-estar.</h4>
 
         </section>
 
@@ -29,14 +29,14 @@
 
             <aside>
                 <h1><strong>O que consideramos de grande relevância</strong></h1>
-                <p><strong>A humanidade entre as relações e, principalmente, o RESPEITO À BIOGRAFIA de nossos pacientes.</strong></p>
-                <p>Conhecer ao máximo a história do paciente e respeitá-la é o primeiro passo para poder estruturar, com nossa sabedoria e expertise, o melhor plano de tratamento, seja em reabilitação, longa permanência ou finitude. Isto é ser HUMANA MAGNA.</p>
+                <p style="padding: 0 4em"><strong>A humanidade entre as relações e, principalmente, o RESPEITO À BIOGRAFIA de nossos pacientes.</strong></p>
+                <p style="padding: 0 1.5em">Conhecer ao máximo a história do paciente e respeitá-la é o primeiro passo para poder estruturar, com nossa qualificação e experiência, o melhor plano de tratamento, seja em reabilitação, longa permanência ou finitude. Isto é ser HUMANA MAGNA.</p>
             </aside>
             <aside>
                 <h2><strong>Declaração Magna</strong></h2>
-                <p>Não queremos reter pacientes em nossa estrutura que não necessitem de nossos serviços.</p>
+                <p style="padding: 0 1.5em">Não queremos reter pacientes em nossa estrutura que não necessitem de nossos serviços.</p>
                 <h2><strong>Voto de transparência</strong></h2>
-                <p>Garantir, quando possível, a reabilitação do paciente dentro de um tempo pré-determinado e de acordo com a sua condição.</p>
+                <p style="padding: 0 .8em">Garantir, quando possível,<br>a reabilitação do paciente dentro de um tempo pré-determinado e de acordo com a sua condição.</p>
             </aside>
 
             <dl>
@@ -50,7 +50,7 @@
             </dl>
 
             <dl>
-                <dt>Visão</dt>
+                <dt>Valores</dt>
                 <dd>VISIONÁRIA para evoluir<br>INTELIGENTE para propor<br>HUMANA para se relacionar<br>ACOLHEDORA para cuidar<br>RESOLUTIVA para atender<br>DETERMINADA para resolver</dd>
             </dl>
 

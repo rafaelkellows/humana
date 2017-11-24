@@ -351,7 +351,7 @@ main #loading p {
   top: 70%;
   text-align: center;
   width: 100%;
-  font-weight: normal;
+  font-weight: 500;
   font-size: .9em;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -511,6 +511,8 @@ main header > a span {
   width: 47px;
   height: 48px;
   margin: 0.5em auto;
+  letter-spacing: -0.1em;
+  font-size: 0.9em;
 }
 main header > a span:before {
   content: '';
@@ -550,7 +552,7 @@ main > nav dl {
   height: 100%;
   text-align: center;
   box-sizing: border-box;
-  padding: 2.1em .5em;
+  padding: 2.1em 0.3em;
   letter-spacing: -0.05em;
 }
 main > nav dl dt {
@@ -573,6 +575,7 @@ main > nav dl a {
   -webkit-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
   transition: opacity 0.5s;
+  font-weight: normal;
 }
 main > nav dl:hover a,
 main > nav dl.on a {
@@ -636,7 +639,7 @@ main > nav.sub a span {
   color: #262e6e;
   text-transform: uppercase;
   font-size: 1em;
-  font-weight: normal;
+  font-weight: 500;
   width: 67%;
   opacity: .3;
   -webkit-transition: all 0.5s;
@@ -753,7 +756,7 @@ main .box-parallixit nav a span {
   color: #262e6e;
   text-transform: uppercase;
   font-size: 1em;
-  font-weight: normal;
+  font-weight: 500;
   width: 67%;
   -webkit-transition: width 0.5s;
   -o-transition: width 0.5s;
@@ -845,7 +848,7 @@ main.home section.conceitos dl:nth-child(2) {
 main.home section.conceitos dl:nth-child(3) {
   left: 2.7%;
   top: 22%;
-  width: 320px;
+  width: 265px;
 }
 main.home section.conceitos dl:nth-child(4) {
   left: 30.6%;
@@ -858,9 +861,9 @@ main.home section.conceitos dl:nth-child(5) {
   width: 200px;
 }
 main.home section.conceitos dl:nth-child(6) {
-  left: 71%;
+  left: 72%;
   top: 54.7%;
-  width: 240px;
+  width: 210px;
 }
 main.home section.conceitos dl:nth-child(7) {
   left: 4.4%;
@@ -874,12 +877,13 @@ main.home section.conceitos dl:nth-child(8) {
 }
 main.home section.conceitos dl dt {
   color: #00a5b0;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 1.5em;
   text-transform: uppercase;
   -webkit-transition: color 0.5s;
   -o-transition: color 0.5s;
   transition: color 0.5s;
+  letter-spacing: -0.05em;
 }
 main.home section.conceitos dl dd {
   color: #262e6e;
@@ -887,7 +891,7 @@ main.home section.conceitos dl dd {
   font-size: 0.85em;
   padding: 0.5em 0.6em;
   line-height: 1.176em;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.075em;
   opacity: 0;
   -webkit-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
@@ -899,24 +903,15 @@ main.home section.conceitos dl:hover dt {
 main.home section.conceitos dl:hover dd {
   opacity: 1;
 }
-main.conheca section {
+main.conheca > section {
   margin-bottom: 2.6em;
+  /*&:after{
+        content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: @d-blue-2; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
+      }*/
 }
-main.conheca section h4 {
+main.conheca > section h4 {
   margin: 11.9em 0 0 20.6em;
   width: 470px;
-}
-main.conheca section:after {
-  content: "\f054";
-  font: normal normal normal 1.8em/1 FontAwesome;
-  color: #262e6e;
-  -ms-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  position: absolute;
-  right: 3%;
-  bottom: 4.7%;
-  z-index: 2;
 }
 main.conheca article {
   padding-bottom: 0.5em;
@@ -1020,12 +1015,12 @@ main.equipe article dl dd figure {
 }
 main.equipe article dl dd * {
   font-weight: normal;
-  font-size: 0.85em;
-  line-height: 1.2em;
+  font-size: 0.8518em;
+  line-height: 1.3em;
   letter-spacing: -0.03em;
 }
 main.equipe article dl dd > p {
-  padding: 0 1em;
+  padding: 0 1.3em;
 }
 main.equipe article dl:nth-child(6) {
   margin-top: 3em;
@@ -1033,22 +1028,15 @@ main.equipe article dl:nth-child(6) {
 main.equipe article dl:nth-child(7) {
   margin-top: -3.8em;
 }
+main.filosofia section {
+  /*&:after{
+        content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: @d-blue-2; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
+      }*/
+}
 main.filosofia section h4 {
   margin: 9.1em 0 0 2.4em;
   width: 370px;
   letter-spacing: -0.03em;
-}
-main.filosofia section:after {
-  content: "\f054";
-  font: normal normal normal 1.8em/1 FontAwesome;
-  color: #262e6e;
-  -ms-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  position: absolute;
-  right: 3%;
-  bottom: 4.7%;
-  z-index: 2;
 }
 main.filosofia article {
   letter-spacing: -0.03em;
@@ -1098,7 +1086,8 @@ main.filosofia article dl dt {
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: bold;
-  padding: 0.375em;
+  padding: 0 0.375em;
+  line-height: 1.97em;
 }
 main.filosofia article dl dd {
   font-weight: normal;
@@ -1160,26 +1149,20 @@ main.filosofia article .manifesto dl {
 main.filosofia article .manifesto dl dt {
   background: none;
   color: #262e6e;
+  line-height: 1.2em;
 }
 main.filosofia article .manifesto dl dd {
-  padding: 0;
+  padding: 0 1.1em;
+}
+main.oquefazemos section {
+  /*&:after{
+        content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: @d-blue-2; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
+      }*/
 }
 main.oquefazemos section h4 {
   margin: 10em 0 0 21.9em;
   width: 410px;
   letter-spacing: -0.03em;
-}
-main.oquefazemos section:after {
-  content: "\f054";
-  font: normal normal normal 1.8em/1 FontAwesome;
-  color: #262e6e;
-  -ms-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  position: absolute;
-  right: 3%;
-  bottom: 4.7%;
-  z-index: 2;
 }
 main.oquefazemos article {
   padding: 2em 0;
@@ -1196,7 +1179,7 @@ main.oquefazemos article ol li {
   font-weight: bold;
   font-size: 1.0625em;
   box-sizing: border-box;
-  padding: 0.5em 1.8em;
+  padding: 0.5em 1.4em;
   margin: 3.5em 0.7em;
   line-height: 1.45em;
   background: #00a5b0;
@@ -1279,22 +1262,15 @@ main.visita360 article h1 {
 main.visita360 article p {
   padding: 1.3em 11em 1.5em;
 }
+main.quemprecisa section {
+  /*&:after{
+        content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: #fff; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
+      }*/
+}
 main.quemprecisa section h4 {
   margin: 9.1em 0 0 26.6em;
   width: 341px;
   letter-spacing: -0.03em;
-}
-main.quemprecisa section:after {
-  content: "\f054";
-  font: normal normal normal 1.8em/1 FontAwesome;
-  color: #fff;
-  -ms-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  position: absolute;
-  right: 3%;
-  bottom: 4.7%;
-  z-index: 2;
 }
 main.quemprecisa article {
   text-align: center;
@@ -1335,7 +1311,7 @@ main.quemprecisa article aside:nth-child(5) {
   width: 30.4%;
 }
 main.quemprecisa article aside:nth-child(6) {
-  margin: -14.8em 0em 0em -0.5em;
+  margin: -12.8em 0em 0em -0.5em;
   width: 39%;
 }
 main.quemprecisa article .logoH {
@@ -1359,21 +1335,14 @@ main.quemprecisa article .logoV.clone {
 main.desospitalizacao {
   letter-spacing: -0.03em;
 }
+main.desospitalizacao section {
+  /*&:after{
+        content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: #fff; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
+      }*/
+}
 main.desospitalizacao section h4 {
   margin: 13.3em 0 0 21.5em;
   width: 390px;
-}
-main.desospitalizacao section:after {
-  content: "\f054";
-  font: normal normal normal 1.8em/1 FontAwesome;
-  color: #fff;
-  -ms-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  position: absolute;
-  right: 3%;
-  bottom: 4.7%;
-  z-index: 2;
 }
 main.desospitalizacao article {
   text-align: center;
@@ -1568,6 +1537,7 @@ main.desospitalizacao article .processo ul .retornaLocal p.info {
   text-transform: none;
   color: #262e6e;
   line-height: 1.4em;
+  font-weight: normal;
 }
 main.desospitalizacao article .processo ul ul.magna {
   background: #321d60;
@@ -1677,21 +1647,14 @@ main.desospitalizacao article .processo ul ul.magna p {
 main.comoajudar {
   letter-spacing: -0.03em;
 }
+main.comoajudar section {
+  /*&:after{
+        content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: @d-blue-2; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
+      }*/
+}
 main.comoajudar section h4 {
   margin: 14.3em 0 0 4.7em;
   width: 360px;
-}
-main.comoajudar section:after {
-  content: "\f054";
-  font: normal normal normal 1.8em/1 FontAwesome;
-  color: #fff;
-  -ms-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  position: absolute;
-  right: 3%;
-  bottom: 4.7%;
-  z-index: 2;
 }
 main.comoajudar article {
   text-align: center;
@@ -1740,7 +1703,7 @@ main.comoajudar article ul .download strong {
   width: 100px;
 }
 main.comoajudar article ul .local {
-  margin: 0 auto 1.75em;
+  margin: 0 auto 1.85em;
   width: 170px;
 }
 main.comoajudar article ul .local p {
@@ -1748,11 +1711,11 @@ main.comoajudar article ul .local p {
   background: #262e6e;
   color: #fff;
   text-transform: uppercase;
-  font-weight: bold;
   width: 100%;
-  padding: 0.4em 0;
+  padding: 0;
   box-sizing: border-box;
   z-index: 1;
+  line-height: 1.95em;
 }
 main.comoajudar article ul .local span._border._dark-blue._top._left._right {
   left: -158px;
@@ -1770,14 +1733,15 @@ main.comoajudar article ul .tipos {
 main.comoajudar article ul .tipos p {
   font-size: 1.125em;
   width: 100%;
-  height: 35px;
   background: #00a5b0;
   box-sizing: border-box;
+  line-height: 1.95em;
 }
 main.comoajudar article ul .tipos p strong {
   color: #fff;
   display: inline-block;
   vertical-align: middle;
+  font-weight: 500;
 }
 main.comoajudar article ul .tipos p:after {
   content: '';
@@ -1801,15 +1765,17 @@ main.comoajudar article ul .tipos > ul li {
 main.comoajudar article ul .tipos > ul li:first-child {
   text-align: center;
   list-style: none;
-  margin: 0 0 0.7em 0;
+  margin: 0 0 0.9em 0;
+  text-transform: uppercase;
 }
 main.comoajudar article ul .tipos > ul li strong {
   background: #262e6e;
   color: #fff;
-  padding: 0.36em 0;
+  padding: 0;
   font-size: 0.9em;
   font-weight: 500;
   display: block;
+  line-height: 2.2em;
 }
 main.comoajudar article ul .tipos > ul ._border {
   top: 36px;
@@ -1821,16 +1787,16 @@ main.comoajudar article ul .tipos > ul span._border._bottom:after {
   bottom: -1px;
 }
 main.comoajudar article ul .tipos > ul:nth-child(2) {
-  min-height: 205px;
+  min-height: 200px;
 }
 main.comoajudar article ul .tipos > ul:nth-child(3) {
-  min-height: 445px;
+  min-height: 440px;
 }
 main.comoajudar article ul .tipos > ul:nth-child(4) {
-  min-height: 325px;
+  min-height: 320px;
 }
 main.comoajudar article ul .tipos > ul:nth-child(5) {
-  min-height: 135px;
+  min-height: 130px;
 }
 main.comochegar article {
   text-align: center;
@@ -1851,6 +1817,7 @@ main.comochegar article h1 {
 }
 main.comochegar article h1 strong {
   color: #fff;
+  font-weight: bold;
 }
 main.comochegar article > em {
   padding: 0.8em 0 1em;
@@ -1927,7 +1894,7 @@ main.parceiros article aside p strong {
 main.parceiros article form {
   display: block;
   background: #96cad1;
-  margin: 1.3em 0;
+  margin: 1.3em 0 2.5em;
   text-align: left;
   padding: 0.6em;
 }
@@ -1969,6 +1936,17 @@ main.parceiros article form input[name='telefone'] {
 main.parceiros article form input[name='celular'] {
   width: 220px;
 }
+main.parceiros article form input[type='reset'],
+main.parceiros article form input[type='button'] {
+  background: #262e6e;
+  color: #fff;
+  font-size: 0.75em;
+  padding: 0.45em 0.5em;
+  float: right;
+  margin: 0 0 0 .5em;
+  cursor: pointer;
+  text-transform: uppercase;
+}
 main.parceiros article form textarea {
   width: 328px;
   height: 63px;
@@ -1982,6 +1960,7 @@ main.parceiros article form textarea {
 }
 main.parceiros article form ul {
   clear: both;
+  padding-bottom: 1em;
 }
 main.parceiros article form ul label {
   float: none;
@@ -2003,21 +1982,14 @@ main.parceiros article form ul li input {
 main.nossaestrutura {
   letter-spacing: -0.03em;
 }
+main.nossaestrutura > section {
+  /*&:after{
+        content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: @l-blue-1; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
+      }*/
+}
 main.nossaestrutura > section h4 {
   margin: 2.7em 0 0 22em;
   width: 400px;
-}
-main.nossaestrutura > section:after {
-  content: "\f054";
-  font: normal normal normal 1.8em/1 FontAwesome;
-  color: #00a5b0;
-  -ms-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  position: absolute;
-  right: 3%;
-  bottom: 4.7%;
-  z-index: 2;
 }
 main.nossaestrutura article {
   text-align: center;
@@ -2052,19 +2024,25 @@ main.nossaestrutura article aside .galleryG .box-parallixit {
 main.nossaestrutura article aside .galleryG p {
   position: absolute;
   font-size: 0.755em;
-  padding: 0.2760em 1em;
+  padding: 0 1em;
   z-index: 9;
   line-height: 1.35em;
 }
 main.nossaestrutura article aside .galleryG p strong {
   color: #fff;
-  background: #00a5b0;
-  padding: .5em;
+  padding: 0 .8em;
   text-transform: uppercase;
+  background: #00a5b0;
+  line-height: 2em;
+  display: block;
+  font-weight: 500;
 }
 main.nossaestrutura article aside .galleryG p strong sup {
   color: #fff;
   font-size: .8em;
+  margin-top: -0.4em;
+  display: inline-block;
+  vertical-align: text-bottom;
 }
 main.nossaestrutura article aside .galleryG p:last-child {
   font-size: 0.75em;
@@ -2247,9 +2225,12 @@ main footer address a {
 }
 main footer address a i {
   background: #262e6e;
-  padding: 0.4em;
-  font-size: 1.2em;
+  padding: 0.35em 0;
   color: #fff;
+  width: 28px;
+  height: 28px;
+  box-sizing: border-box;
+  text-align: center;
 }
 main footer address a.tel {
   margin: 0.3em 0 0.7em 0;

@@ -24,7 +24,7 @@
                 Your browser does not support HTML5 video.
             </video>
 
-            <p><a href="javascript:void();"><strong>GOSTOU? venha nos visitar em nossa primeira unidade, CLIQUE AQUI e saiba como chegar</strong></a></p>
+            <p><a href="comochegar.php"><strong>GOSTOU? venha nos visitar em nossa primeira unidade, CLIQUE AQUI e saiba como chegar</strong></a></p>
 
         </article>
 

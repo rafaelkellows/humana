@@ -7,7 +7,7 @@
                 <dt><h3><a href="conheca.php" title="Conheça a Humana Magna">Conheça a <strong>Humana Magna</strong></a></h3></dt>
                 <dd><a href="conheca.php" title="Saiba quais são os nossos princípios, a nossa equipe e o que podemos fazer por você">Saiba quais são os nossos princípios, a nossa equipe e o que podemos fazer por você</a></dd>
             </dl>
-            <dl <?php  if ($subpage == "oquefazemos" or $subpage == "estrutura" or $subpage == "visita360") { echo " class='on'"; } ?>>
+            <dl <?php  if ($subpage == "oquefazemos" or $subpage == "nossaestrutura" or $subpage == "visita360") { echo " class='on'"; } ?>>
                 <dt><h3><a href="oquefazemos.php" title="Nossa Estrutura">Nossa <strong>Estrutura</strong></a></h3></dt>
                 <dd><a href="oquefazemos.php" title="A nossa primeira unidade, na Zona Sul de São Paulo, possui 78 leitos equipados">A nossa primeira unidade, na Zona Sul de São Paulo, possui 78 leitos equipados</a></dd>
             </dl>

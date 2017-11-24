@@ -29,14 +29,14 @@
             
             <h1><strong>Confira as vantagens de receber Cuidados Continuados</strong></h1>
             <ol>
-                <li>Recuperação mais rápida e salutar. Possibilidade de voltar para casa com estrutura e autonomia.</li>
-                <li>Qualidade de vida e bem-estar do paciente e da família estão em primeiro lugar na Humana Magna.</li>
+                <li>Recuperação completa e mais eficiente. Possibilidade de voltar para casa com estrutura e autonomia.</li>
+                <li>Qualidade de vida e<br>bem-estar do paciente e da família estão em primeiro lugar na Humana Magna.</li>
                 <li>Estrutura e suporte necessário e completo para continuidade no tratamento com êxito.</li>
             </ol>
 
             <aside>
                 <h2><strong>E como iniciar o processo?</strong></h2>
-                <p>Primeiro, a partir de um serviço que conhece quais pacientes estão internados e clinicamente estáveis, a equipe hospitalar ou do convênio (também conhecida como operadora) entra em contato com os médicos assistentes.<br>Neste momento, há muita conversa e diálogo com a família para analisar sobre esta possibilidade de tratamento longe do hospital. Depois, se a ideia for bem aceita por todos, a alta é programada para dar continuidade no processo do cuidar.</p>
+                <p>Os pacientes que estão clinicamente estáveis mas que ainda necessitam de cuidados médicos, não idealmente dentro da dependência de um hospital de grande complexidade, são identificados por um serviço do próprio hospital ou do convênio (também conhecido como operadora ou seguradora). E este serviço entra em contato com os médicos assistentes.</p>
             </aside>
 
             <div class="logoH box-parallixit">
