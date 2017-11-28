@@ -5,6 +5,7 @@ $(function(){
 	        init: function() {
 	            this.loading();
 	            this.galeria();
+	            
 	        },
 	        loading : function(){
 				humanamagna.animaLoading();
@@ -19,9 +20,66 @@ $(function(){
 							setTimeout( function(){ $('#loading').remove() }, 700 )
 							clearInterval(_s);
 							$('html, body').animate({ scrollTop: 0 }, 100);
-						}, 1000 )
+						}, 1000 );
+						if( $('main.parceiros').length ){
+							humanamagna.parceiros();
+						}
 					});
 				});
+	        },
+	        parceiros : function(){
+
+				var validateEmail = function(email){
+				  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+				  return re.test(email);
+				}
+				var validateInput = function(val){
+				  var re = /^[^]+$/;
+				  return re.test(val);
+				};
+
+				$('.telefone').mask('(00) 0000-0000');
+				$('.celular').mask('(00) 00000-0000');
+
+				$('form input[type=submit]').click(function(e){
+					e.preventDefault();
+					var email = $(this).closest('form').find('input[name=email]'), telefone = $(this).closest('form').find('input[name=telefone]'), celular = $(this).closest('form').find('input[name=celular]');
+
+					switch($(this).closest('form').find('input[name=contactby]:checked').val()) {
+					    case 'e-mail':
+					        if(validateInput(email.val())){
+			  					if (validateEmail(email.val())) {
+			  						$(this).closest('form').submit();
+			  					}else{
+			  						alert('O E-mail inserido parece estar errado! Por favor confira novamente.');
+			  					}
+					        }else{
+					        	alert('O campo E-mail precisa ser preenchido para entrarmos em contato.');
+					        	email.focus();
+					        }
+					        break;
+					    case 'telefone':
+					        if(validateInput(telefone.val())){
+					        	$(this).closest('form').submit();
+					        }else{
+					        	alert('O campo Telefone precisa ser preenchido para entrarmos em contato.');
+					        	telefone.focus();
+					        }
+					        break;
+					    case 'celular':
+					        if(validateInput(celular.val())){
+					        	$(this).closest('form').submit();
+					        }else{
+					        	alert('O campo Celular precisa ser preenchido para entrarmos em contato.');
+					        	celular.focus();
+					        }
+					        break;
+					    default:
+					        break;
+					}
+
+				})
+
 	        },
 	        animaLoading : function(){
 	        	var anima = 6; 

@@ -112,7 +112,7 @@
                     <li>sala de atendimento familiar em cada ala</li>
                     <li>amplo estacionamento</li>
                     <li>EXAMES DE IMAGEM E LABORATORIAIS</li>
-                    <li>ELEVADOR DE MACA</li>
+                    <li>ELEVADOR DE CAMA HOSPITALAR</li>
                 </ul>
             </aside>
         </article>

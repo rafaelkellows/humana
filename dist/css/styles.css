@@ -914,7 +914,7 @@ main.conheca > section h4 {
   width: 470px;
 }
 main.conheca article {
-  padding-bottom: 0.5em;
+  padding-bottom: 1.5em;
 }
 main.conheca article section {
   width: 490px;
@@ -929,7 +929,7 @@ main.conheca article section:nth-child(4n+4) {
 main.conheca article aside {
   display: inline-block;
   vertical-align: top;
-  width: 40%;
+  width: 39.1%;
   line-height: 1.45em;
   margin: 0.6em 2em;
   font-size: 1.0625em;
@@ -1937,7 +1937,8 @@ main.parceiros article form input[name='celular'] {
   width: 220px;
 }
 main.parceiros article form input[type='reset'],
-main.parceiros article form input[type='button'] {
+main.parceiros article form input[type='button'],
+main.parceiros article form input[type='submit'] {
   background: #262e6e;
   color: #fff;
   font-size: 0.75em;

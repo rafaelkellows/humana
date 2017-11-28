@@ -15,10 +15,10 @@
                 <a href="comochegar.php" title="Como chegar">Como chegar</a>
                 <a href="parceiros.php" title="Parceiros">Parceiros</a>
                 <ul>
-                    <li><a href="javascript:void(0);"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>                    
-                    <li><a href="javascript:void(0);"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>                    
-                    <li><a href="javascript:void(0);"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>                    
-                    <li><a href="javascript:void(0);"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>                    
+                    <li><a href="mailto:humana@humanamagna.com.br" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>                    
+                    <li><a href="https://www.facebook.com/Humana-Magna-1744777168888963/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>                    
+                    <li><a href="https://www.instagram.com/humanamagna/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>                    
+                    <li><a href="https://www.linkedin.com/company/redehumanamagna/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>                    
                 </ul>
             </nav>
             <a href="visita360.php">Faça uma visita <span>360<sup>o</sup></span></a>

@@ -51,7 +51,7 @@
                 </figure>
             </div>
             <aside class="bg-filled">
-                <p><strong>*Mas vale lembrar que:</strong><br>O foco do processo da desospitalização não é dar alta precoce ao paciente, e sim, fazer este processo com muita estrutura e segurança para proporcionar qualidade de vida ao paciente e buscar, antes de mais nada, a melhoria de sua condição.</p>
+                <p><strong>*Mas vale lembrar que:</strong><br>O foco da desospitalização não é dar alta precoce ao paciente, e sim, fazer este processo com muita estrutura e segurança para proporcionar qualidade de vida ao paciente e buscar, antes de mais nada, a melhoria de sua condição.</p>
             </aside>
         </article>
 

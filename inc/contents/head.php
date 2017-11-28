@@ -31,6 +31,7 @@
     <meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mask.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
 
   </head>
