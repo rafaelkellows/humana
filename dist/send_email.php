@@ -64,8 +64,8 @@
   //$mail->AddAddress('desenvolvimento@spatula.com.br','Spatula');
   //Campos abaixo são opcionais 
   //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-  $mail->AddBCC('rafaelkellows86@gmail.com', 'Rafael S. Kellows'); // Copia
-  //$mail->AddBCC('rafaelkellows@hotmail.com', 'Rafael S. Kellows');
+  $mail->AddBCC('rafaelkellows86@gmail.com', 'Rafael Gmail'); // Copia
+  $mail->AddBCC('liv@humanamagna.com.br', 'Liv Soban');
   //$mail->AddAttachment('images/phpmailer.gif');      // Adicionar um anexo
 
   //

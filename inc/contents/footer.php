@@ -20,4 +20,5 @@
                 <a href="quemprecisa.php" title="Quem precisa desta assistência">Quem precisa desta assistência</a>
                 <a href="parceiros.php" title="Parceiros">Parceiros</a>
             </nav>
+            <a class="powerby" href="http://www.liv360.com.br" target="_blank" title="Powered by Liv 360º">powered by &bull; <span>Liv360<sup>o</sup></span></a>
         </footer>

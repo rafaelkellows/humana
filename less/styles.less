@@ -1069,6 +1069,13 @@ main{
         sup{ color: #fff; font-weight: 300 !important; }
       }
     }
+    a.powerby{
+      width: 125px; margin: 8px auto; display: block; font-size: 0.7em; font-weight: 500;
+      span{ opacity: 0; .transit(opacity, @secs: 0.5s); .d-midle; font-weight: 500; } 
+      &:hover{
+        span{ opacity: 1; }
+      }
+    }
   }
 }
 

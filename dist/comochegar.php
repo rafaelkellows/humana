@@ -23,9 +23,9 @@
                 <dt>A Humana Magna está localizada a:</dt>
                 <dd>
                     <p><strong>&bull; 20 minutos</strong> da Estação Alto da Boa Vista (Metrô - Linha 5 Lilás)</p>
-                    <p><strong>&bull; 10 minutos</strong> da Estação Granja julieta  (CPtM - Linha 9 Esmeralda)</p>
-                    <p><strong>&bull; 4 minutos</strong> do Ponto de Ônibus da Rua josé Guerra (Chácara Santana, terminal Capelinha, terminal Santo Amaro, Parque Santo Antonio, Vila Cruzeiro, jardim ingá)</p>
-                    <p><strong>&bull; 1 minuto</strong> do Ponto de Ônibus  da Rua Verbo Divino, 1001  (Linhas terminal Santo Amaro,  Metrô São judas e Praça da Sé)</p>
+                    <p><strong>&bull; 10 minutos</strong> da Estação Granja Julieta  (CPTM - Linha 9 Esmeralda)</p>
+                    <p><strong>&bull; 4 minutos</strong> do Ponto de Ônibus da Rua José Guerra (Chácara Santana, Terminal Capelinha, Terminal Santo Amaro, Parque Santo Antonio, Vila Cruzeiro, Jardim Ingá)</p>
+                    <p><strong>&bull; 1 minuto</strong> do Ponto de Ônibus  da Rua Verbo Divino, 1001  (Linhas Terminal Santo Amaro,  Metrô São Judas e Praça da Sé)</p>
                     <strong>Observação: trechos calculados a pé</strong>
                 </dd>
             </dl>

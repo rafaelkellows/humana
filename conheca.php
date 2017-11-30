@@ -40,7 +40,7 @@
 
             <aside>
                 <p><strong>Acreditamos que a evolução positiva do bem-estar do paciente, que é o núcleo de nossa esfera assistencial, só acontece quando há a união de todos os agentes – paciente/família, hospital, médicos, operadoras e a Humana - trabalhando juntos para atingir o quadro desejado: melhor resultado e conforto em todos os estágios de quem cuidamos.</strong></p>
-                <p><strong>Por esta razão, a nossa primeira unidade, na Zona Sul de São Paulo, foi desenvolvida para superar as expectatvias de todos envolvidos neste processo.</strong></p>
+                <p><strong>Por esta razão, a nossa primeira unidade, na Zona Sul de São Paulo, foi desenvolvida para superar as expectativas de todos envolvidos.</strong></p>
                 <p>&nbsp;</p>
             </aside>
 
@@ -57,7 +57,7 @@
             </section>
             
             <aside>
-                <p><strong>Com 78 leitos equipados, sendo que 52 são suítes e 13 quartos duplos,</strong> hotelaria de altopadrão, refeitório, sala de eventos e recreação, solarium (400m²) e amplo estacionamento, a Humana Magna oferece uma estrutura completa de cuidados hospitalares com equipamentos de suporte à vida, rede de gases medicinais, centro de reabilitação totalmente equipado, farmácia, exames laboratoriais e de imagem, para que o processo seja realizado com muita consciência e atenção.</p>
+                <p><strong>Com 78 leitos equipados, sendo que 52 são suítes e 13 quartos duplos,</strong> hotelaria de alto padrão, refeitório, sala de eventos e recreação, solarium (400m²) e amplo estacionamento, a Humana Magna oferece uma estrutura completa de cuidados hospitalares com equipamentos de suporte à vida, rede de gases medicinais, centro de reabilitação totalmente equipado, farmácia, exames laboratoriais e de imagem, para que o processo seja realizado com muita consciência e atenção.</p>
                 <p>E nós não queremos cuidar apenas de nossos pacientes, mas também dos familiares, cuidadores, colaboradores e parceiros.</p>
             </aside>
 

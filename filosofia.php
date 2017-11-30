@@ -18,10 +18,10 @@
             
             <figure class="bxn-parallixit top">
                 <img src="images/box-nav/ilustraFilosofiaInterna.jpg" alt="" />
-                <figcaption>A nossa filosofia é traduzida em nossa estrutura diferenciada, equipe altamente especializada, protocolos e processos resultando no progresso de nossos pacientes em condições que melhorem seu bem-estar.</figcaption>
+                <figcaption>A nossa filosofia é traduzida em uma estrutura diferenciada, equipe altamente especializada, protocolos e processos, resultando no progresso dos pacientes, em condições que melhorem seu bem-estar.</figcaption>
             </figure>
 
-            <h4>A nossa filosofia é traduzida em nossa estrutura diferenciada, equipe altamente especializada, protocolos e processos resultando no progresso de nossos pacientes em condições que melhorem seu bem-estar.</h4>
+            <h4>A nossa filosofia é traduzida em uma estrutura diferenciada, equipe altamente especializada, protocolos e processos, resultando no progresso dos pacientes, em condições que melhorem seu bem-estar.</h4>
 
         </section>
 

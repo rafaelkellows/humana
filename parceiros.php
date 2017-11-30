@@ -23,7 +23,7 @@
                 <h1><strong>Operadoras</strong></h1>
                 <p><strong>Credencie Humana Magna</strong></p>
                 <p>Ligue 11 2397-0229, envie e-mail para vamosfalar@humanamagna.com.br<br>ou preencha o formulário abaixo</p>
-                <form action="test.php" method="post">
+                <form action="send_email.php" method="post">
                     <input type="hidden" id="formName" name="formName" value="operadoras">
                     <label for="nome">Nome Completo</label>
                     <input type="text" id="nome" name="nome" tabindex="1">
@@ -52,7 +52,7 @@
                 <h1><strong>Médicos/Hospitais</strong></h1>
                 <p><strong>Conheçam a Humana Magna</strong></p>
                 <p>agora vocês tem com<br>quem contar no processo<br>de desospitalização</p>
-                <form action="test.php" method="post">
+                <form action="send_email.php" method="post">
                     <input type="hidden" id="formName" name="formName" value="medhospitais">
                     <label for="nome2">Nome Completo</label>
                     <input type="text" id="nome2" name="nome" tabindex="13">

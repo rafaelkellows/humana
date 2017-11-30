@@ -18,11 +18,12 @@
             
             <h1><strong>Conheça a Humana Magna, clique na imagem e veja o vídeo de apresentação de nossa estrutura e serviços</strong></h1>
 
-            <video width="670" height="380" poster="images/videoPoster.jpg" controls>
+            <!--video width="670" height="380" poster="images/videoPoster.jpg" controls>
               <source src="videos/estruturaNov2017-media.mp4" type="video/mp4">
               <source src="videos/estruturaNov2017-web.webm" type="video/webm">
                 Your browser does not support HTML5 video.
-            </video>
+            </video-->
+            <iframe width="670" height="380" src="https://www.youtube.com/embed/KKZIaxaGwrM" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
             <p><a href="comochegar.php"><strong>GOSTOU? venha nos visitar em nossa primeira unidade, CLIQUE AQUI e saiba como chegar</strong></a></p>
 

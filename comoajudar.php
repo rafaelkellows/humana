@@ -83,7 +83,7 @@
                         <li style="margin-top: 1.7em">DPOC grave (Gold 3 ou 4) com mais de duas exacerbações no ano (com traqueostomia)</li>
                         <li>Insuficiência Cardíaca (CF III e IV) com mais de duas internações por ano (com traqueostomia)</li>
                         <li>Esclerose Múltipla totalmente dependente com traqueostomia</li>
-                        <li>Esclerose Lateral Amiotrófica Print_Area dependente com traqueostomia</li>
+                        <li>Esclerose Lateral Amiotrófica dependente com traqueostomia</li>
                         <li>Outras Doenças Neurodegenerativas Progressivas com traqueostomia = Paralisia Supranuclear Progressiva, Distrofias Musculares</li>
                         <li>Sequelas Definitivas de AVE e Imobilidade com traqueostomia</li>
                         <span class="_border _top _right _bottom _left"><em></em></span>

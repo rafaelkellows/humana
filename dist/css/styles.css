@@ -2258,6 +2258,25 @@ main footer nav a sup {
   color: #fff;
   font-weight: 300 !important;
 }
+main footer a.powerby {
+  width: 125px;
+  margin: 8px auto;
+  display: block;
+  font-size: 0.7em;
+  font-weight: 500;
+}
+main footer a.powerby span {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 500;
+}
+main footer a.powerby:hover span {
+  opacity: 1;
+}
 /*******************************
           RESPONSIVE
 *******************************/
