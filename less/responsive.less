@@ -2,38 +2,564 @@
           RESPONSIVE
 *******************************/
 
-@media screen and (min-width: 690px) and (max-width: 890px) {
+@media screen and (max-width: 1024px) {
 	body{
-		main{ 
-		  > p{ font-size: 170%; width: 360px; }
-		}
-	}
-}
-@media screen and (min-width: 590px) and (max-width: 690px) {
-	body{
-		main{ 
-		  > p{ font-size: 150%; width: 330px; }
-		}
-	}
-}
-@media screen and (min-width: 480px) and (max-width: 590px) {
-	body{ 
-		main{ 
-		  > p{ font-size: 120%; width: 270px; }
-		}
-	}
-}
-@media screen and (max-width: 480px) {
-	body{ 
-		main{ 
-			height:100%;
-			h1{ 
-				img{ 
-					margin: -20px 5% 20px; width: 90%; 
+		main{
+			overflow: hidden;
+			> nav {
+				padding: 0 .5em;
+				dl{
+					width: 30%; .transit(all, @secs: 0.75s);
+					dt{
+						font-size: 1.15em;
+					}
+				}
+				&.sub{
+					a span{
+						font-size: 0.9em;
+					}
 				}
 			}
-		  > p{ font-size: 125%; width: 90%; left: auto; top: auto; position: relative; margin: 0 auto; }
-		  > strong{ position: relative; bottom: auto; right: auto; text-align: center; width: 100%; display: block; margin-top:2em; }
+			.box-parallixit{
+				h4{
+					margin: 0 auto !important; padding: 1em; width: 100% !important;
+					background: rgba(0,0,0,0.5);
+					background: -moz-linear-gradient(top, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 100%);
+					background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.5)), color-stop(100%, rgba(255,255,255,0)));
+					background: -webkit-linear-gradient(top, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 100%);
+					background: -o-linear-gradient(top, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 100%);
+					background: -ms-linear-gradient(top, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 100%);
+					background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff', GradientType=0 );
+				}
+				nav{
+					a{
+						&:before{
+							opacity: 0.8;
+						}
+					}
+				}
+			}
+			footer{
+				max-height: none; margin: 4em auto 0;  
+				h6{ 
+					margin: 0; width: 100%; 
+					a{ margin: 2.2em auto; }
+				}
+				address{ 
+					display: block; text-align: center; margin: 1em;
+					a{ 
+						br{ display: none; }
+					}
+				}
+				nav{ 
+					padding: 0 1em 1em; width: 100%; .b-sizing; 
+					a{ width: 31%; }
+				}
+			}
+			/* Internas */
+			&.home section.conceitos dl{
+				background: rgba(0,0,0,0.5); padding: 1em 2em;
+				background: -moz-linear-gradient(top, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
+				background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0.5)), color-stop(100%, rgba(255,255,255,0)));
+				background: -webkit-linear-gradient(top, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
+				background: -o-linear-gradient(top, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
+				background: -ms-linear-gradient(top, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
+				background: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff', GradientType=0 );
+				dt{
+					color: @d-blue-2;
+				}
+				dd{
+					opacity: 1;
+				}
+			}
+			&.conheca article{
+				section{
+					width: 49%;
+				}
+				aside{
+					margin: 0.6em 2em !important;
+				}
+			}
+	  	&.equipe article{
+	  		padding: 0;
+		  	.box-parallixit{
+		  		width: 39.3%; height: auto !important; margin: 0 0 3em 0 !important;
+		  		img{ width: auto; }
+		  	}
+		  }
+		  &.filosofia article{
+		  	.logoH{
+					margin: -9.2em 0 0 -26.1em; 
+		  	}
+		  	.graficoManifesto{ 
+		  		margin: 6.6em 0 0 18em;
+		  	}
+			  aside{
+			  	width: 45% !important; margin: 0 0 1em !important;
+			  }
+		  }
+		  &.quemprecisa article{
+			  aside{
+			  	width: 100% !important; margin: 0 !important; padding: 0 1em; .b-sizing;
+			  }
+			  .box-parallixit{
+			  	opacity: 0.7;
+			  }
+			}
+			&.comoajudar article ul{
+				li{
+					&.download{ left: 6px; }
+					&.tipos{
+						width: 48%; margin: 0 0.4em;
+						> ul li{
+							font-size: 0.9625em;
+							strong{
+								line-height: 2.5em;
+							}
+						}
+					}
+				}
+			}
+			&.visita360 article{
+				h1{
+					padding: 2.8em 1.3em 1.5em;
+				}
+				p{
+					padding: 1.3em 1.3em 1.5em;
+				}
+			}
+			&.nossaestrutura article{
+				h1{ margin: 1.65em 1em 1.65em; width: auto; }
+				.box-parallixit{ margin: 0.5em auto !important; }
+				.galleryP{
+					position: relative; top: auto !important; left: auto !important; right: auto !important; width: 611px; margin: .5em auto !important;
+					.box-parallixit{
+						width: 591px; height: 248px; display: inline-block;
+						figure img{
+							width: 100%; height: auto;
+						}
+					}
+				}
+				.galleryG{
+					p:last-child{
+						padding: 1em; width: 192px !important; right: 113px; border-radius: 25px; text-align: center;
+						background: rgba(255,255,255,0);
+						background: -moz-linear-gradient(top, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.75) 50%, rgba(255,255,255,0.15) 100%);
+						background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0.15)), color-stop(50%, rgba(255,255,255,0.75)), color-stop(100%, rgba(255,255,255,0)));
+						background: -webkit-linear-gradient(top, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.75) 50%, rgba(255,255,255,0.15) 100%);
+						background: -o-linear-gradient(top, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.75) 50%, rgba(255,255,255,0.15) 100%);
+						background: -ms-linear-gradient(top, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.75) 50%, rgba(255,255,255,0.15) 100%);
+						background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.75) 50%, rgba(255,255,255,0.15) 100%);
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );						}
+				}
+				aside{
+					&.estrutura2 .galleryG p:last-child{
+						width: 236px !important; left: 112px;
+					}
+					&.estrutura3 .galleryG p:last-child{
+						width: 183px !important; left: 112px;
+					}
+					&.estrutura4 .galleryP p{
+						top: 881px;
+					}
+					&.estrutura5{
+						padding: 3em 0 1.4em;
+					}
+				}
+			}
+			&.parceiros article{
+				aside{
+					p{ 
+						br{} 
+					}
+				}
+				form{
+					label,span{ margin: -0.2em 0 0; }
+					input[type='text'], textarea{
+						width: calc(~'100% - 0.6em'); max-width: calc(~'100% - 0.6em'); min-width: calc(~'100% - 0.6em'); float: none;
+				  }
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	body{
+		main{ 
+			header{
+				margin-bottom: 5em;
+				h1{ top: 37px; }
+				h2{ 
+					bottom: 37px; width: 100%; text-align: center; right: 0; 
+				}
+				p{ text-align: center; width: 100%; bottom: 5px; left:0; }
+				nav{
+					bottom: -21%; width: 100%; right: 0;
+					ul{
+						display: block; margin-top: 0em;
+					}
+					a:nth-child(2){
+						&:after{
+							background:none;
+						}
+					}
+				}
+				> a{
+					left: calc(~'100% - 55px'); top: -40px;
+				}
+			}
+			> nav:not(.sub){ 
+				top: -269px; width: 45px; height: 45px; overflow: hidden; padding: 0; position: fixed; top: 0; z-index: 999;
+				&:before{
+					content: "\f0c9"; font: normal normal normal 1.8em/1 FontAwesome; position: relative; height: 100%; color: #fff; line-height: 1.6em; left: 0;
+				}
+				&.on{
+					width: 100%; height: auto; padding-bottom: .75em;
+					dl{ 
+						opacity: 1;  width: 100%; padding: .75em 0.3em 0;
+						dt{ padding-bottom: 0; }
+						dd{ display: none; }
+					}
+					&:before{
+						background: @d-blue-2;
+					}
+					&._03{
+						&:before{
+							content: "3"; 
+						}
+					}
+					&._02{
+						&:before{
+							content: "2";
+						}
+					}
+					&._01{
+						&:before{
+							content: "1";
+						}
+					}
+					&._00{
+						&:before{
+							content: "0";
+						}
+					}
+				}
+				dl{
+					opacity: 0;
+				}
+			}
+			> nav.sub{
+				position: fixed; top: -45px; z-index: 999; margin: -1px 0 0; width: 100%; text-align: left; left:0; opacity: 0;
+				a{ 
+					margin: 0; width: 100%; height: 45px; .b-sizing; border-left: 1px solid @d-blue-2; border-right: 1px solid @d-blue-2; border-bottom: 1px solid @d-blue-2;
+					span{ width: 80% !important; }
+					&:after{
+						line-height: 1.6em;
+					}
+					&:before{
+						opacity: 1;
+					}
+					&:hover:after, &.on:after{
+						line-height: 1.8em;
+					}
+				}
+				&.on{
+					top: 227px; opacity: 1;
+					&:before{
+						opacity: 1; height: 5px;
+					}
+				}
+			}
+			> section .box-parallixit{
+				figure{
+					left: -128px; 
+				}
+			}
+			footer{ margin: 1em auto 0; }
+			/* Internas */
+			&.home section.conceitos{
+				height: auto;
+				dl{
+					width: 100% !important; position: relative; left: 0 !important; top: 0 !important;
+					-webkit-transition: background 1.75s, left 0.175s !important; -o-transition: background 1.75s, left 0.175s !important; transition: background 1.75s, left 0.75s !important; 
+	  		}
+	  		aside{
+	  			-webkit-transition: top 0.75s, left 0.75s !important; -o-transition: top 0.75s, left 0.75s !important; transition: top 0.75s, left 0.75s !important; 
+		  		&.logoH{
+						left: -13.9em;
+		  		}
+		  		&.logoV{
+						left: 19.1em;
+		  		}
+		  	}
+  		}
+  		&:not(.home){
+  			> section.box-parallixit{
+  				height: 250px;
+  				figure{
+  					img{ width: 100%; }
+  				}
+  			}
+  		}
+  		&.conheca article{
+	  		section{ width: 490px; margin: 0 auto 1em !important; display: block; }
+	  		aside{ 
+	  			width: 100%; .b-sizing; padding: 0.6em 2em !important; margin: 0 !important; 
+	  			&:nth-child(2n+1){
+	  				p:last-child{ display:none; }
+	  			}
+	  		}
+	  	}
+	  	&.equipe article{
+	  		padding: 0;
+		  	.box-parallixit{
+		  		width: 100%; height: auto !important; margin: 0 0 3em 0 !important;
+		  		.bxn-parallixit{
+		  			top: 0 !important;
+		  		}
+		  		img{ width: auto; }
+		  	}
+		  }
+		  &.filosofia article{
+		  	dl{ width: auto; display: block; }
+		  	.manifesto{
+		  		width: 100%; margin: 0; height: auto;
+		  		dl{
+		  			margin: 0;
+		  			dt:extend(main.filosofia article dl dt){
+		  				
+		  				display: block;
+		  			}
+		  		}
+		  	}
+		  	.graficoManifesto{ 
+		  		margin: -10.4em 35em 0 11em;
+		  	}
+		  	.logoH{
+					margin: -1.2em 0 0 -68.1em; 
+		  	}
+			  aside{
+			  	width: 100% !important; margin: 0 1em 1em 0 !important;
+			  }
+		  }
+		  &.desospitalizacao article{
+		   	aside{
+		   		margin: 2.6em 0 2.4em;
+			   	> p{
+			   		padding: 0 1em;
+			   	}
+		   	}
+			  .processo{
+	    		zoom: 0.6; padding: 6.6em 0 0 0;
+	    		ul{
+	    			li.download{ 
+	    				zoom: 1.9; top: -5.5em; left: calc(~'50% - 106px');
+	    				strong{ width: auto; padding-left: 1em; }
+	    			}
+	    		}
+			  }
+			}
+			&.comoajudar article{
+				ul{
+	  			li.download{ 
+	  				top: -1em; left: calc(~'50% - 106px');
+	  				strong{ width: auto; padding-left: 1em; }
+	  			}
+					.local{
+						display: none;
+					}
+					.tipos{
+						margin: 2em 1.4em 0 !important; width: auto !important; 
+						&:before{
+							content:'Complexidade'; font-size: 1.125em; font-weight: 500; background: #262e6e; color: #fff; text-transform: uppercase; width: 100%; line-height: 1.95em;
+						}
+						>ul{
+							min-height: auto !important;	            
+            }
+					}
+				}
+				> ul{ 
+					padding-top: 2em;
+				}
+			}
+			&.oquefazemos article {
+				aside{
+					margin: 1em !important; width: auto;
+				}
+				h1{
+					padding: 0.3em 1em;
+				}
+				ol li{
+					width: auto; display: block;
+				}
+			}
+			&.visita360 article iframe{
+				width: 95%;
+			}
+			&.nossaestrutura article{
+				.box-parallixit{
+					width: 95% !important;
+				}
+				aside{
+					&.galeria:not(.estrutura4){
+						.galleryG, .galleryP{
+							p{
+								position: relative; top: auto !important; left: auto !important; right: auto !important; width: auto !important;
+								&:last-child{
+									width: auto !important;
+								}
+							}
+						}
+					}
+					&.estrutura1, &.estrutura3, &.estrutura4{
+						.galleryP{ width: 95%; margin: .5em auto 1em !important; }
+					}
+					&.estrutura4{
+						.galleryP{
+							p{
+								top: 901px; left: -20px;
+							}
+						}
+					}
+				}
+			}
+			&.comochegar article{
+				h1{
+	    		width: auto; margin: 0 1em 1.2em;
+				}
+				> iframe{
+					width: 95%;
+				}
+				dl dd p{
+					width: 100%; margin: 0 auto 0.6em;
+				}
+			}
+			&.parceiros article{
+				aside{ width: 95%; margin: 0 auto; }
+			}
+		}
+	}
+}
+@media screen and (max-width: 425px) {
+	span._border._left em:before, span._border._right em:after{
+		top: 269px;
+	}
+	body{
+		main{ 
+			header{
+				height: 224px;
+				h1{ top: 45px; width: 270px; left: calc(~'50% - 135px'); }
+				h2{ font-size: 1.05em; bottom: 25px; }
+				> a{ top: -42px; left: calc(~'100% - 55px'); }
+				p{ bottom: -5px; }
+				nav{ bottom: -29%; }
+			}
+			> nav{
+			}
+			> section .box-parallixit{
+				figure{
+					left: -288px; 
+				}
+			}
+			footer{
+				h6 a{
+					width: 250px;
+				}
+				nav{
+					a{ width: 100%; }
+				}
+			}
+			/* Internas */
+			&.home section.conceitos{
+	  		aside{
+		  		&.logoH{
+						left: -23.9em; top: 31.6em;
+		  		}
+		  		&.logoV{
+						left: 9.1em; top: 9.1em;
+		  		}
+		  	}
+  		}
+  		&:not(.home){
+  			> section.box-parallixit{
+  				height: 250px;
+  				figure{
+  					img{ width: auto; height: 310px; }
+  				}
+  			}
+  		}
+  		&.conheca article{
+	  		section{ 
+	  			width: 100%; height: 250px;
+	  			figure{ 
+	  				img{ width: 100%; }
+	  			}
+	  		}
+	  	}
+		  &.filosofia{
+				section h4{
+					font-size: 1.35em;
+				}
+			  article{
+			  	.graficoManifesto{ 
+			  		margin: -10.4em 35em 0 8em; height: 160px;
+			  		figure{
+			  			img{ display: none; }
+			  		}
+			  		p{ 
+			  			position: relative; top: auto !important; left: auto !important; right: auto !important; width: 100%; text-align: left; 
+				  		&:nth-child(2){
+				  			&:before{
+				  				content:''; width: 15px; height: 15px; line-height: 15px; font-size: 0px; float:left; margin: 4px 0px -2px -18px; background: #c2269e; border-radius: 15px;
+				  			}
+				  		}
+				  		&:nth-child(3){
+				  			&:before{
+				  				content:''; width: 15px; height: 15px; line-height: 15px; font-size: 0px; float:left; margin: 4px 0px -2px -18px; background: #e2642e; border-radius: 15px;
+				  			}
+				  		}
+				  		&:nth-child(4){
+				  			&:before{
+				  				content:''; width: 15px; height: 15px; line-height: 15px; font-size: 0px; float:left; margin: 4px 0px -2px -18px; background: #b01417; border-radius: 15px;
+				  			}
+				  		}
+			  		}
+			  	}
+		  		.logoH{
+		  			margin: -1.2em 0 0 -46.1em; 
+		  		}
+			  }
+			}
+		  &.desospitalizacao article{
+			  .processo{
+	    		zoom: 0.4; 
+	    		ul{
+	    			li.download{ 
+	    				zoom: 2.4;  
+	    			}
+	    		}
+			  }
+			}
+			&.comoajudar article ul .tipos > ul li:first-child{
+				height: 36px;
+				strong{ padding: 0.3em; .d-midle; font-size: 0.8em; line-height: 1.2em;  }
+				&:before{ 
+					content: ''; width: 0; height: 100%; .d-midle;
+				}
+			}
+			&.nossaestrutura article{
+				.box-parallixit{ height: 248px !important; }
+				aside{
+					&.estrutura5 ul{
+						width: 95%; margin: 0 auto !important;
+					}
+					figure{
+						img{ height:308px; width: auto; }
+					}
+				}
+			}
 		}
 	}
 }

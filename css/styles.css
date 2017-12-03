@@ -234,6 +234,7 @@ body {
 main {
   max-width: 1024px;
   margin: 0 auto;
+  padding-bottom: 31px;
   /*background: url('../images/bgs/nossaestrutura.jpg') 0px 20px no-repeat; */
 }
 main #loading {
@@ -347,6 +348,7 @@ main #loading figure.logoV.anima6 {
 }
 main #loading p {
   padding: 1em;
+  box-sizing: border-box;
   position: fixed;
   top: 70%;
   text-align: center;
@@ -422,7 +424,7 @@ main #galeria img {
 main #galeria:after {
   content: '';
   background: #fff;
-  opacity: .8;
+  opacity: .9;
   position: fixed;
   top: 0;
   left: 0;
@@ -433,6 +435,10 @@ main #galeria:after {
 main header {
   height: 269px;
   background: #fff;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  margin-bottom: 0;
 }
 main header > * {
   position: absolute;
@@ -441,24 +447,34 @@ main header > * {
 main header h1 {
   top: 67px;
   left: calc(50% - 181px);
+  width: 362px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 main header h1 img {
-  width: 362px;
+  width: 100%;
 }
 main header h2 {
-  top: 156px;
+  bottom: 61px;
   left: auto;
   right: 0.7%;
   color: #00a5b0;
   width: 200px;
   font-size: 1.35em;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 main header p {
   font-weight: bold;
-  top: 10%;
+  bottom: 84%;
   left: 2.9%;
   font-size: 0.85em;
   letter-spacing: -0.015em;
+  -webkit-transition: bottom 0.5s;
+  -o-transition: bottom 0.5s;
+  transition: bottom 0.5s;
 }
 main header p a {
   display: inline-block;
@@ -466,8 +482,12 @@ main header p a {
   font-weight: inherit;
 }
 main header nav {
-  top: 10%;
+  bottom: 81%;
   right: 3%;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  text-align: center;
 }
 main header nav * {
   color: #262e6e;
@@ -502,6 +522,9 @@ main header > a {
   width: 50px;
   text-align: center;
   line-height: 1.1em;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 main header > a * {
   font-weight: inherit;
@@ -525,7 +548,14 @@ main > nav {
   height: 154px;
   padding: 0 1.5em;
   position: relative;
+  top: 0;
   background-color: #00a5b0;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 main > nav:before {
   content: '';
@@ -535,6 +565,9 @@ main > nav:before {
   position: absolute;
   top: 0;
   left: -100%;
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
 }
 main > nav:after {
   content: '';
@@ -554,12 +587,18 @@ main > nav dl {
   box-sizing: border-box;
   padding: 2.1em 0.3em;
   letter-spacing: -0.05em;
+  -webkit-transition: width 0.5s;
+  -o-transition: width 0.5s;
+  transition: width 0.5s;
 }
 main > nav dl dt {
   text-transform: uppercase;
   font-size: 1.35em;
   line-height: 1.2em;
   padding-bottom: 0.3em;
+  -webkit-transition: font-size 0.5s;
+  -o-transition: font-size 0.5s;
+  transition: font-size 0.5s;
 }
 main > nav dl dt strong {
   display: block;
@@ -588,17 +627,34 @@ main > nav.sub {
   margin: 1.765em 0 -1.765em;
   text-align: center;
 }
-main > nav.sub:before,
 main > nav.sub:after {
   display: none;
 }
+main > nav.sub:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  height: 0;
+  width: 100%;
+  background: #262e6e;
+  opacity: 0;
+  -webkit-transition: all 0.75s;
+  -o-transition: all 0.75s;
+  transition: all 0.75s;
+}
 main > nav.sub a {
-  width: 285px;
+  width: 27.8321%;
   height: 57px;
   text-align: center;
-  margin: 0 0.75em;
+  margin: 0 0.75em 1.5em;
   display: inline-block;
   vertical-align: middle;
+  box-sizing: border-box;
+  opacity: 1;
+  -webkit-transition: all 0.75s;
+  -o-transition: all 0.75s;
+  transition: all 0.75s;
 }
 main > nav.sub a:before {
   content: "";
@@ -658,11 +714,22 @@ main > nav.sub a.on:after {
   -ms-transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
+  color: #262e6e;
 }
 main > nav.sub a:hover span,
 main > nav.sub a.on span {
   width: 67%;
   opacity: 1;
+}
+main > nav.sub a.close {
+  opacity: 0;
+  width: 0;
+}
+main > nav.sub a.close span {
+  font-size: 0;
+}
+main > nav.sub a.close:after {
+  display: none;
 }
 main .box-parallixit {
   height: 455px;
@@ -683,9 +750,9 @@ main .box-parallixit figure {
   left: 0;
   bottom: 0;
   z-index: 1;
-  -webkit-transition: bottom 0.05s;
-  -o-transition: bottom 0.05s;
-  transition: bottom 0.05s;
+  -webkit-transition: opacity 1.75s, left 0.05s !important;
+  -o-transition: opacity 1.75s, left 0.05s !important;
+  transition: opacity 1.75s, left 0.05s !important;
 }
 main .box-parallixit figure figcaption {
   font-size: 0;
@@ -705,12 +772,17 @@ main .box-parallixit h4 {
   color: #fff;
   position: relative;
   margin: 10.3em 1.9em 0;
+  padding: 0;
   width: 590px;
   text-align: center;
   line-height: 1.1em;
+  box-sizing: border-box;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 main .box-parallixit nav {
-  padding: 0 0 3.25em ;
+  padding: 0 0 1.85em ;
   box-sizing: border-box;
   width: 100%;
   text-align: center;
@@ -722,7 +794,7 @@ main .box-parallixit nav a {
   width: 285px;
   height: 57px;
   text-align: center;
-  margin: 0 0.75em;
+  margin: 0 0.75em 1.5em;
 }
 main .box-parallixit nav a:before {
   content: "";
@@ -769,6 +841,10 @@ main .box-parallixit nav a.on:before {
 main .box-parallixit nav a:hover span,
 main .box-parallixit nav a.on span {
   width: 70%;
+}
+main:not(.home) > section,
+main.visita360 article {
+  margin: 0.2em 0 2.6em !important;
 }
 main.comingsoon h1 {
   width: 100%;
@@ -834,6 +910,13 @@ main.home section.conceitos dl {
   text-align: center;
   z-index: 9;
   cursor: crosshair;
+  background: transparent;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 4em;
+  -webkit-transition: all 0.05s;
+  -o-transition: all 0.05s;
+  transition: all 0.05s;
 }
 main.home section.conceitos dl:nth-child(1) {
   left: 9.3%;
@@ -904,7 +987,7 @@ main.home section.conceitos dl:hover dd {
   opacity: 1;
 }
 main.conheca > section {
-  margin-bottom: 2.6em;
+  margin: 0.2em 0 2.6em ;
   /*&:after{
         content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: @d-blue-2; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
       }*/
@@ -922,9 +1005,12 @@ main.conheca article section {
   display: inline-block;
   vertical-align: top;
   margin: 0;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 main.conheca article section:nth-child(4n+4) {
-  margin: 1.8em 0 0 0;
+  margin: 1.8em 0 1em 0px;
 }
 main.conheca article aside {
   display: inline-block;
@@ -935,6 +1021,9 @@ main.conheca article aside {
   font-size: 1.0625em;
   color: #262e6e;
   letter-spacing: -0.01em;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 main.conheca article aside *:not(strong) {
   font-weight: normal;
@@ -961,6 +1050,9 @@ main.equipe article .box-parallixit {
   overflow: initial;
   margin-bottom: 3em;
   margin-top: 0;
+  -webkit-transition: width 0.75s;
+  -o-transition: width 0.75s;
+  transition: width 0.75s;
   /*628*/
   /*596*/
 }
@@ -1029,6 +1121,7 @@ main.equipe article dl:nth-child(7) {
   margin-top: -3.8em;
 }
 main.filosofia section {
+  margin: 0.2em 0 2.6em;
   /*&:after{
         content: "\f054"; font: normal normal normal 1.8em/1 FontAwesome; color: @d-blue-2; .rotate(@deg: 90deg); position: absolute; right: 3%; bottom: 4.7%; z-index: 2;
       }*/
@@ -1049,6 +1142,9 @@ main.filosofia article aside {
   text-align: center;
   width: 29.5%;
   margin: 1.5em 0 0;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 main.filosofia article aside h1,
 main.filosofia article aside h2,
@@ -1114,6 +1210,9 @@ main.filosofia article .graficoManifesto {
   height: 133px;
   display: inline-block;
   vertical-align: top;
+  -webkit-transition: margin 0.5s;
+  -o-transition: margin 0.5s;
+  transition: margin 0.5s;
 }
 main.filosofia article .graficoManifesto p {
   position: absolute;
@@ -1168,14 +1267,22 @@ main.oquefazemos article {
   padding: 2em 0;
   text-align: center;
   letter-spacing: -0.03em;
+  margin-top: -2.6em;
+  position: relative;
 }
 main.oquefazemos article h1 {
   padding: 0.3em 10em;
+  -webkit-transition: padding 0.5s;
+  -o-transition: padding 0.5s;
+  transition: padding 0.5s;
 }
 main.oquefazemos article ol li {
   width: 27.8%;
   display: inline-block;
   vertical-align: top;
+  -webkit-transition: width 0.5s;
+  -o-transition: width 0.5s;
+  transition: width 0.5s;
   font-weight: bold;
   font-size: 1.0625em;
   box-sizing: border-box;
@@ -1219,16 +1326,17 @@ main.oquefazemos article aside {
   display: inline-block;
   vertical-align: top;
   width: 40%;
+  margin-right: 34%;
 }
 main.oquefazemos article aside h2 {
   padding: 0;
 }
 main.oquefazemos article aside.bg-filled {
   background: #a6ccd5;
-  width: 27.8%;
+  width: 285px;
   box-sizing: border-box;
   padding: 1.5em;
-  margin: -7.5em 3.5em 0 3.5em;
+  margin: -2.6em 0 0 50%;
 }
 main.oquefazemos article .logoH,
 main.quemprecisa article .logoH {
@@ -1238,6 +1346,10 @@ main.quemprecisa article .logoH {
   vertical-align: top;
   overflow: initial;
   margin: -0.3em -2.8em 0px 2.9em;
+  z-index: -1;
+  position: absolute;
+  left: 55%;
+  top: 38%;
 }
 main.oquefazemos article .logoV,
 main.quemprecisa article .logoV {
@@ -1250,10 +1362,19 @@ main.quemprecisa article .logoV {
   -ms-transform: rotate(-11deg);
   -webkit-transform: rotate(-11deg);
   transform: rotate(-11deg);
+  z-index: -1;
+  position: absolute;
+  left: 9%;
+  top: 67%;
 }
 main.visita360 article {
   text-align: center;
   letter-spacing: -0.03em;
+}
+main.visita360 article > * {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 main.visita360 article h1 {
   padding: 2.8em 11.2em 1.5em;
@@ -1274,6 +1395,7 @@ main.quemprecisa section h4 {
 }
 main.quemprecisa article {
   text-align: center;
+  position: relative;
 }
 main.quemprecisa article aside {
   display: inline-block;
@@ -1284,6 +1406,9 @@ main.quemprecisa article aside {
   font-size: 1.0625em;
   color: #262e6e;
   letter-spacing: -0.01em;
+  -webkit-transition: width 0.5s;
+  -o-transition: width 0.5s;
+  transition: width 0.5s;
 }
 main.quemprecisa article aside h1 {
   padding: 0em 1.3em 0.2em;
@@ -1300,37 +1425,49 @@ main.quemprecisa article aside strong {
   font-size: 1.5em;
 }
 main.quemprecisa article aside:nth-child(1) {
-  margin: 2.35em 2em 2em 1.1em;
+  margin: 2.35em 40% 2em 1.1em;
 }
 main.quemprecisa article aside:nth-child(4) {
-  margin: -5.7em 0em 0em 7.2em;
+  margin: -3.3em 0em 0em 48%;
   width: 30.4%;
 }
 main.quemprecisa article aside:nth-child(5) {
-  margin: -5.9em 0em 0em 30.2em;
+  margin: 0.5em 0em 0em 48%;
   width: 30.4%;
 }
 main.quemprecisa article aside:nth-child(6) {
-  margin: -12.8em 0em 0em -0.5em;
+  margin: -12em 37.1% 0 0;
   width: 39%;
 }
+main.quemprecisa article .box-parallixit {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  opacity: 1;
+}
 main.quemprecisa article .logoH {
-  margin: 5.7em 2.2em 0 2em;
   -ms-transform: rotate(-16deg);
   -webkit-transform: rotate(-16deg);
   transform: rotate(-16deg);
+  left: 51%;
+  top: 9%;
 }
 main.quemprecisa article .logoV {
-  margin: -5.3em 22.2em -2em -19.3em;
   -ms-transform: rotate(-7deg);
   -webkit-transform: rotate(-7deg);
   transform: rotate(-7deg);
+  left: 6%;
+  top: 31.6%;
 }
 main.quemprecisa article .logoV.clone {
-  margin: 0.1em -4em -4em 6.7em;
   -ms-transform: rotate(-26deg);
   -webkit-transform: rotate(-26deg);
   transform: rotate(-26deg);
+  left: 86%;
+  top: 76%;
 }
 main.desospitalizacao {
   letter-spacing: -0.03em;
@@ -1473,7 +1610,7 @@ main.comoajudar article ul .download {
   color: #fff;
   text-transform: uppercase;
   position: absolute;
-  left: -61px;
+  left: 0;
   top: 6px;
 }
 main.desospitalizacao article .processo ul .download .fa {
@@ -1689,6 +1826,9 @@ main.comoajudar article ul {
 main.comoajudar article ul .download {
   line-height: 1.1em;
   left: 56px;
+  -webkit-transition: left 0.5s;
+  -o-transition: left 0.5s;
+  transition: left 0.5s;
 }
 main.comoajudar article ul .download .fa {
   color: #00a5b0;
@@ -1729,6 +1869,9 @@ main.comoajudar article ul .tipos {
   margin: 0 1.4em;
   display: inline-block;
   vertical-align: top;
+  -webkit-transition: width 0.5s;
+  -o-transition: width 0.5s;
+  transition: width 0.5s;
 }
 main.comoajudar article ul .tipos p {
   font-size: 1.125em;
@@ -1764,12 +1907,12 @@ main.comoajudar article ul .tipos > ul li {
 }
 main.comoajudar article ul .tipos > ul li:first-child {
   text-align: center;
+  background: #262e6e;
   list-style: none;
   margin: 0 0 0.9em 0;
   text-transform: uppercase;
 }
 main.comoajudar article ul .tipos > ul li strong {
-  background: #262e6e;
   color: #fff;
   padding: 0;
   font-size: 0.9em;
@@ -1884,6 +2027,9 @@ main.parceiros article aside {
   display: inline-block;
   vertical-align: top;
   margin: 0 0.3em;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 main.parceiros article aside p {
   line-height: 1.2em;
@@ -1905,6 +2051,9 @@ main.parceiros article form span {
   font-weight: bold;
   float: left;
   margin: -0.2em 0 0.9em;
+  -webkit-transition: margin 0.5s;
+  -o-transition: margin 0.5s;
+  transition: margin 0.5s;
 }
 main.parceiros article form label em,
 main.parceiros article form span em {
@@ -1958,6 +2107,7 @@ main.parceiros article form textarea {
   float: right;
   background: #fff;
   border: none;
+  padding: 0.15em 0.30em;
 }
 main.parceiros article form ul {
   clear: both;
@@ -2008,6 +2158,11 @@ main.nossaestrutura article h1 {
 }
 main.nossaestrutura article h1 strong {
   color: #262e6e;
+}
+main.nossaestrutura article .box-parallixit {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 main.nossaestrutura article aside {
   position: relative;
@@ -2100,6 +2255,9 @@ main.nossaestrutura article aside.estrutura1 .galleryG .box-parallixit {
 main.nossaestrutura article aside.estrutura1 .galleryG p {
   top: 224px;
   right: 95px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 main.nossaestrutura article aside.estrutura1 .galleryG p:last-child {
   top: 261px;
@@ -2167,6 +2325,9 @@ main.nossaestrutura article aside.estrutura5 ul {
   text-align: left;
   margin: 0 0.5em;
   line-height: .99em;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 main.nossaestrutura article aside.estrutura5 ul li {
   font-size: 0.575em;
@@ -2210,6 +2371,9 @@ main footer h6 {
 main footer h6 a {
   margin: 2.2em 44px;
   width: 330px;
+  -webkit-transition: width 0.5s;
+  -o-transition: width 0.5s;
+  transition: width 0.5s;
 }
 main footer h6 a img {
   width: 100%;
@@ -2243,16 +2407,20 @@ main footer nav {
   display: block;
   text-align: center;
   padding: 0 1em;
-  line-height: 1.7em;
   padding-bottom: 2.85em;
 }
 main footer nav a {
   width: 26%;
   color: #fff;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   text-transform: uppercase;
   font-size: 0.8125em;
+  line-height: 1.2em;
+  margin-bottom: 1.2em;
+  -webkit-transition: width 0.75s;
+  -o-transition: width 0.75s;
+  transition: width 0.75s;
 }
 main footer nav a sup {
   color: #fff;
@@ -2260,10 +2428,14 @@ main footer nav a sup {
 }
 main footer a.powerby {
   width: 125px;
-  margin: 8px auto;
+  padding: 8px 0;
+  margin: 0;
   display: block;
   font-size: 0.7em;
   font-weight: 500;
+  position: absolute;
+  left: calc(50% - 62.5px);
+  bottom: -31px;
 }
 main footer a.powerby span {
   opacity: 0;
@@ -2280,47 +2452,677 @@ main footer a.powerby:hover span {
 /*******************************
           RESPONSIVE
 *******************************/
-@media screen and (min-width: 690px) and (max-width: 890px) {
-  body main > p {
-    font-size: 170%;
-    width: 360px;
-  }
-}
-@media screen and (min-width: 590px) and (max-width: 690px) {
-  body main > p {
-    font-size: 150%;
-    width: 330px;
-  }
-}
-@media screen and (min-width: 480px) and (max-width: 590px) {
-  body main > p {
-    font-size: 120%;
-    width: 270px;
-  }
-}
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1024px) {
   body main {
-    height: 100%;
+    overflow: hidden;
+    /* Internas */
   }
-  body main h1 img {
-    margin: -20px 5% 20px;
-    width: 90%;
+  body main > nav {
+    padding: 0 .5em;
   }
-  body main > p {
-    font-size: 125%;
-    width: 90%;
-    left: auto;
-    top: auto;
+  body main > nav dl {
+    width: 30%;
+    -webkit-transition: all 0.75s;
+    -o-transition: all 0.75s;
+    transition: all 0.75s;
+  }
+  body main > nav dl dt {
+    font-size: 1.15em;
+  }
+  body main > nav.sub a span {
+    font-size: 0.9em;
+  }
+  body main .box-parallixit h4 {
+    margin: 0 auto !important;
+    padding: 1em;
+    width: 100% !important;
+    background: rgba(0, 0, 0, 0.5);
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.5)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#ffffff', GradientType=0);
+  }
+  body main .box-parallixit nav a:before {
+    opacity: 0.8;
+  }
+  body main footer {
+    max-height: none;
+    margin: 4em auto 0;
+  }
+  body main footer h6 {
+    margin: 0;
+    width: 100%;
+  }
+  body main footer h6 a {
+    margin: 2.2em auto;
+  }
+  body main footer address {
+    display: block;
+    text-align: center;
+    margin: 1em;
+  }
+  body main footer address a br {
+    display: none;
+  }
+  body main footer nav {
+    padding: 0 1em 1em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  body main footer nav a {
+    width: 31%;
+  }
+  body main.home section.conceitos dl {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1em 2em;
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.5)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#ffffff', GradientType=0);
+  }
+  body main.home section.conceitos dl dt {
+    color: #262e6e;
+  }
+  body main.home section.conceitos dl dd {
+    opacity: 1;
+  }
+  body main.conheca article section {
+    width: 49%;
+  }
+  body main.conheca article aside {
+    margin: 0.6em 2em !important;
+  }
+  body main.equipe article {
+    padding: 0;
+  }
+  body main.equipe article .box-parallixit {
+    width: 39.3%;
+    height: auto !important;
+    margin: 0 0 3em 0 !important;
+  }
+  body main.equipe article .box-parallixit img {
+    width: auto;
+  }
+  body main.filosofia article .logoH {
+    margin: -9.2em 0 0 -26.1em;
+  }
+  body main.filosofia article .graficoManifesto {
+    margin: 6.6em 0 0 18em;
+  }
+  body main.filosofia article aside {
+    width: 45% !important;
+    margin: 0 0 1em !important;
+  }
+  body main.quemprecisa article aside {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 1em;
+    box-sizing: border-box;
+  }
+  body main.quemprecisa article .box-parallixit {
+    opacity: 0.7;
+  }
+  body main.comoajudar article ul li.download {
+    left: 6px;
+  }
+  body main.comoajudar article ul li.tipos {
+    width: 48%;
+    margin: 0 0.4em;
+  }
+  body main.comoajudar article ul li.tipos > ul li {
+    font-size: 0.9625em;
+  }
+  body main.comoajudar article ul li.tipos > ul li strong {
+    line-height: 2.5em;
+  }
+  body main.visita360 article h1 {
+    padding: 2.8em 1.3em 1.5em;
+  }
+  body main.visita360 article p {
+    padding: 1.3em 1.3em 1.5em;
+  }
+  body main.nossaestrutura article h1 {
+    margin: 1.65em 1em 1.65em;
+    width: auto;
+  }
+  body main.nossaestrutura article .box-parallixit {
+    margin: 0.5em auto !important;
+  }
+  body main.nossaestrutura article .galleryP {
     position: relative;
-    margin: 0 auto;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 611px;
+    margin: .5em auto !important;
   }
-  body main > strong {
-    position: relative;
-    bottom: auto;
-    right: auto;
+  body main.nossaestrutura article .galleryP .box-parallixit {
+    width: 591px;
+    height: 248px;
+    display: inline-block;
+  }
+  body main.nossaestrutura article .galleryP .box-parallixit figure img {
+    width: 100%;
+    height: auto;
+  }
+  body main.nossaestrutura article .galleryG p:last-child {
+    padding: 1em;
+    width: 192px !important;
+    right: 113px;
+    border-radius: 25px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0);
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.15) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.15)), color-stop(50%, rgba(255, 255, 255, 0.75)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.15) 100%);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.15) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.15) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.15) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0);
+  }
+  body main.nossaestrutura article aside.estrutura2 .galleryG p:last-child {
+    width: 236px !important;
+    left: 112px;
+  }
+  body main.nossaestrutura article aside.estrutura3 .galleryG p:last-child {
+    width: 183px !important;
+    left: 112px;
+  }
+  body main.nossaestrutura article aside.estrutura4 .galleryP p {
+    top: 881px;
+  }
+  body main.nossaestrutura article aside.estrutura5 {
+    padding: 3em 0 1.4em;
+  }
+  body main.parceiros article form label,
+  body main.parceiros article form span {
+    margin: -0.2em 0 0;
+  }
+  body main.parceiros article form input[type='text'],
+  body main.parceiros article form textarea {
+    width: calc(100% - 0.6em);
+    max-width: calc(100% - 0.6em);
+    min-width: calc(100% - 0.6em);
+    float: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  body main {
+    /* Internas */
+  }
+  body main header {
+    margin-bottom: 5em;
+  }
+  body main header h1 {
+    top: 37px;
+  }
+  body main header h2 {
+    bottom: 37px;
+    width: 100%;
+    text-align: center;
+    right: 0;
+  }
+  body main header p {
     text-align: center;
     width: 100%;
+    bottom: 5px;
+    left: 0;
+  }
+  body main header nav {
+    bottom: -21%;
+    width: 100%;
+    right: 0;
+  }
+  body main header nav ul {
     display: block;
-    margin-top: 2em;
+    margin-top: 0em;
+  }
+  body main header nav a:nth-child(2):after {
+    background: none;
+  }
+  body main header > a {
+    left: calc(100% - 55px);
+    top: -40px;
+  }
+  body main > nav:not(.sub) {
+    top: -269px;
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+  }
+  body main > nav:not(.sub):before {
+    content: "\f0c9";
+    font: normal normal normal 1.8em/1 FontAwesome;
+    position: relative;
+    height: 100%;
+    color: #fff;
+    line-height: 1.6em;
+    left: 0;
+  }
+  body main > nav:not(.sub).on {
+    width: 100%;
+    height: auto;
+    padding-bottom: .75em;
+  }
+  body main > nav:not(.sub).on dl {
+    opacity: 1;
+    width: 100%;
+    padding: .75em 0.3em 0;
+  }
+  body main > nav:not(.sub).on dl dt {
+    padding-bottom: 0;
+  }
+  body main > nav:not(.sub).on dl dd {
+    display: none;
+  }
+  body main > nav:not(.sub).on:before {
+    background: #262e6e;
+  }
+  body main > nav:not(.sub).on._03:before {
+    content: "3";
+  }
+  body main > nav:not(.sub).on._02:before {
+    content: "2";
+  }
+  body main > nav:not(.sub).on._01:before {
+    content: "1";
+  }
+  body main > nav:not(.sub).on._00:before {
+    content: "0";
+  }
+  body main > nav:not(.sub) dl {
+    opacity: 0;
+  }
+  body main > nav.sub {
+    position: fixed;
+    top: -45px;
+    z-index: 999;
+    margin: -1px 0 0;
+    width: 100%;
+    text-align: left;
+    left: 0;
+    opacity: 0;
+  }
+  body main > nav.sub a {
+    margin: 0;
+    width: 100%;
+    height: 45px;
+    box-sizing: border-box;
+    border-left: 1px solid #262e6e;
+    border-right: 1px solid #262e6e;
+    border-bottom: 1px solid #262e6e;
+  }
+  body main > nav.sub a span {
+    width: 80% !important;
+  }
+  body main > nav.sub a:after {
+    line-height: 1.6em;
+  }
+  body main > nav.sub a:before {
+    opacity: 1;
+  }
+  body main > nav.sub a:hover:after,
+  body main > nav.sub a.on:after {
+    line-height: 1.8em;
+  }
+  body main > nav.sub.on {
+    top: 227px;
+    opacity: 1;
+  }
+  body main > nav.sub.on:before {
+    opacity: 1;
+    height: 5px;
+  }
+  body main > section .box-parallixit figure {
+    left: -128px;
+  }
+  body main footer {
+    margin: 1em auto 0;
+  }
+  body main.home section.conceitos {
+    height: auto;
+  }
+  body main.home section.conceitos dl {
+    width: 100% !important;
+    position: relative;
+    left: 0 !important;
+    top: 0 !important;
+    -webkit-transition: background 1.75s, left 0.175s !important;
+    -o-transition: background 1.75s, left 0.175s !important;
+    transition: background 1.75s, left 0.75s !important;
+  }
+  body main.home section.conceitos aside {
+    -webkit-transition: top 0.75s, left 0.75s !important;
+    -o-transition: top 0.75s, left 0.75s !important;
+    transition: top 0.75s, left 0.75s !important;
+  }
+  body main.home section.conceitos aside.logoH {
+    left: -13.9em;
+  }
+  body main.home section.conceitos aside.logoV {
+    left: 19.1em;
+  }
+  body main:not(.home) > section.box-parallixit {
+    height: 250px;
+  }
+  body main:not(.home) > section.box-parallixit figure img {
+    width: 100%;
+  }
+  body main.conheca article section {
+    width: 490px;
+    margin: 0 auto 1em !important;
+    display: block;
+  }
+  body main.conheca article aside {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.6em 2em !important;
+    margin: 0 !important;
+  }
+  body main.conheca article aside:nth-child(2n+1) p:last-child {
+    display: none;
+  }
+  body main.equipe article {
+    padding: 0;
+  }
+  body main.equipe article .box-parallixit {
+    width: 100%;
+    height: auto !important;
+    margin: 0 0 3em 0 !important;
+  }
+  body main.equipe article .box-parallixit .bxn-parallixit {
+    top: 0 !important;
+  }
+  body main.equipe article .box-parallixit img {
+    width: auto;
+  }
+  body main.filosofia article dl {
+    width: auto;
+    display: block;
+  }
+  body main.filosofia article .manifesto {
+    width: 100%;
+    margin: 0;
+    height: auto;
+  }
+  body main.filosofia article .manifesto dl {
+    margin: 0;
+  }
+  body main.filosofia article .manifesto dl dt {
+    display: block;
+  }
+  body main.filosofia article .graficoManifesto {
+    margin: -10.4em 35em 0 11em;
+  }
+  body main.filosofia article .logoH {
+    margin: -1.2em 0 0 -68.1em;
+  }
+  body main.filosofia article aside {
+    width: 100% !important;
+    margin: 0 1em 1em 0 !important;
+  }
+  body main.desospitalizacao article aside {
+    margin: 2.6em 0 2.4em;
+  }
+  body main.desospitalizacao article aside > p {
+    padding: 0 1em;
+  }
+  body main.desospitalizacao article .processo {
+    zoom: 0.6;
+    padding: 6.6em 0 0 0;
+  }
+  body main.desospitalizacao article .processo ul li.download {
+    zoom: 1.9;
+    top: -5.5em;
+    left: calc(50% - 106px);
+  }
+  body main.desospitalizacao article .processo ul li.download strong {
+    width: auto;
+    padding-left: 1em;
+  }
+  body main.comoajudar article ul li.download {
+    top: -1em;
+    left: calc(50% - 106px);
+  }
+  body main.comoajudar article ul li.download strong {
+    width: auto;
+    padding-left: 1em;
+  }
+  body main.comoajudar article ul .local {
+    display: none;
+  }
+  body main.comoajudar article ul .tipos {
+    margin: 2em 1.4em 0 !important;
+    width: auto !important;
+  }
+  body main.comoajudar article ul .tipos:before {
+    content: 'Complexidade';
+    font-size: 1.125em;
+    font-weight: 500;
+    background: #262e6e;
+    color: #fff;
+    text-transform: uppercase;
+    width: 100%;
+    line-height: 1.95em;
+  }
+  body main.comoajudar article ul .tipos > ul {
+    min-height: auto !important;
+  }
+  body main.comoajudar article > ul {
+    padding-top: 2em;
+  }
+  body main.oquefazemos article aside {
+    margin: 1em !important;
+    width: auto;
+  }
+  body main.oquefazemos article h1 {
+    padding: 0.3em 1em;
+  }
+  body main.oquefazemos article ol li {
+    width: auto;
+    display: block;
+  }
+  body main.visita360 article iframe {
+    width: 95%;
+  }
+  body main.nossaestrutura article .box-parallixit {
+    width: 95% !important;
+  }
+  body main.nossaestrutura article aside.galeria:not(.estrutura4) .galleryG p,
+  body main.nossaestrutura article aside.galeria:not(.estrutura4) .galleryP p {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: auto !important;
+  }
+  body main.nossaestrutura article aside.galeria:not(.estrutura4) .galleryG p:last-child,
+  body main.nossaestrutura article aside.galeria:not(.estrutura4) .galleryP p:last-child {
+    width: auto !important;
+  }
+  body main.nossaestrutura article aside.estrutura1 .galleryP,
+  body main.nossaestrutura article aside.estrutura3 .galleryP,
+  body main.nossaestrutura article aside.estrutura4 .galleryP {
+    width: 95%;
+    margin: .5em auto 1em !important;
+  }
+  body main.nossaestrutura article aside.estrutura4 .galleryP p {
+    top: 901px;
+    left: -20px;
+  }
+  body main.comochegar article h1 {
+    width: auto;
+    margin: 0 1em 1.2em;
+  }
+  body main.comochegar article > iframe {
+    width: 95%;
+  }
+  body main.comochegar article dl dd p {
+    width: 100%;
+    margin: 0 auto 0.6em;
+  }
+  body main.parceiros article aside {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 425px) {
+  span._border._left em:before,
+  span._border._right em:after {
+    top: 269px;
+  }
+  body main {
+    /* Internas */
+  }
+  body main header {
+    height: 224px;
+  }
+  body main header h1 {
+    top: 45px;
+    width: 270px;
+    left: calc(50% - 135px);
+  }
+  body main header h2 {
+    font-size: 1.05em;
+    bottom: 25px;
+  }
+  body main header > a {
+    top: -42px;
+    left: calc(100% - 55px);
+  }
+  body main header p {
+    bottom: -5px;
+  }
+  body main header nav {
+    bottom: -29%;
+  }
+  body main > section .box-parallixit figure {
+    left: -288px;
+  }
+  body main footer h6 a {
+    width: 250px;
+  }
+  body main footer nav a {
+    width: 100%;
+  }
+  body main.home section.conceitos aside.logoH {
+    left: -23.9em;
+    top: 31.6em;
+  }
+  body main.home section.conceitos aside.logoV {
+    left: 9.1em;
+    top: 9.1em;
+  }
+  body main:not(.home) > section.box-parallixit {
+    height: 250px;
+  }
+  body main:not(.home) > section.box-parallixit figure img {
+    width: auto;
+    height: 310px;
+  }
+  body main.conheca article section {
+    width: 100%;
+    height: 250px;
+  }
+  body main.conheca article section figure img {
+    width: 100%;
+  }
+  body main.filosofia section h4 {
+    font-size: 1.35em;
+  }
+  body main.filosofia article .graficoManifesto {
+    margin: -10.4em 35em 0 8em;
+    height: 160px;
+  }
+  body main.filosofia article .graficoManifesto figure img {
+    display: none;
+  }
+  body main.filosofia article .graficoManifesto p {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100%;
+    text-align: left;
+  }
+  body main.filosofia article .graficoManifesto p:nth-child(2):before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    font-size: 0px;
+    float: left;
+    margin: 4px 0px -2px -18px;
+    background: #c2269e;
+    border-radius: 15px;
+  }
+  body main.filosofia article .graficoManifesto p:nth-child(3):before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    font-size: 0px;
+    float: left;
+    margin: 4px 0px -2px -18px;
+    background: #e2642e;
+    border-radius: 15px;
+  }
+  body main.filosofia article .graficoManifesto p:nth-child(4):before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    font-size: 0px;
+    float: left;
+    margin: 4px 0px -2px -18px;
+    background: #b01417;
+    border-radius: 15px;
+  }
+  body main.filosofia article .logoH {
+    margin: -1.2em 0 0 -46.1em;
+  }
+  body main.desospitalizacao article .processo {
+    zoom: 0.4;
+  }
+  body main.desospitalizacao article .processo ul li.download {
+    zoom: 2.4;
+  }
+  body main.comoajudar article ul .tipos > ul li:first-child {
+    height: 36px;
+  }
+  body main.comoajudar article ul .tipos > ul li:first-child strong {
+    padding: 0.3em;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0.8em;
+    line-height: 1.2em;
+  }
+  body main.comoajudar article ul .tipos > ul li:first-child:before {
+    content: '';
+    width: 0;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  body main.nossaestrutura article .box-parallixit {
+    height: 248px !important;
+  }
+  body main.nossaestrutura article aside.estrutura5 ul {
+    width: 95%;
+    margin: 0 auto !important;
+  }
+  body main.nossaestrutura article aside figure img {
+    height: 308px;
+    width: auto;
   }
 }
