@@ -29,7 +29,7 @@
             <h1><strong>ALGUNS CASOS QUE PODEMOS ATENDER EM NOSSA ESTRUTURA</strong></h1>
             
             <ul>
-                <li class="download"><a href="javascript:void(0);"><i class="fa fa-plus" aria-hidden="true"></i><strong>Clique para download</strong></a></li>
+                <li class="download"><a href="downloads/comoajudar.pdf" target="_blank"><i class="fa fa-plus" aria-hidden="true"></i><strong>Clique para download</strong></a></li>
                 <li class="local"><p>Complexidade</p><span class="_border _dark-blue _top _left _right"><em><font class="fa fa-chevron-down chevron-b-left" aria-hidden="true"></font><font class="fa fa-chevron-down chevron-b-right" aria-hidden="true"></font></em></span></li>
                 <li class="tipos">
                     <p><strong>sem ventilação</strong></p>

@@ -536,6 +536,8 @@ main header > a span {
   margin: 0.5em auto;
   letter-spacing: -0.1em;
   font-size: 0.9em;
+  display: inline-block;
+  vertical-align: middle;
 }
 main header > a span:before {
   content: '';
@@ -1432,12 +1434,12 @@ main.quemprecisa article aside:nth-child(4) {
   width: 30.4%;
 }
 main.quemprecisa article aside:nth-child(5) {
-  margin: 0.5em 0em 0em 48%;
-  width: 30.4%;
+  margin: 1.5em 37% 0em 0;
+  width: 39%;
 }
 main.quemprecisa article aside:nth-child(6) {
-  margin: -12em 37.1% 0 0;
-  width: 39%;
+  margin: -29.9em 0 0 46.2%;
+  width: 30.4%;
 }
 main.quemprecisa article .box-parallixit {
   position: absolute;
@@ -1780,6 +1782,9 @@ main.desospitalizacao article .processo ul ul.magna p {
   display: inline-block;
   vertical-align: middle;
   line-height: 1.5em;
+}
+main.desospitalizacao article .processo ul li:last-child {
+  display: none;
 }
 main.comoajudar {
   letter-spacing: -0.03em;
@@ -2687,8 +2692,9 @@ main footer a.powerby:hover span {
     background: none;
   }
   body main header > a {
-    left: calc(100% - 55px);
-    top: -40px;
+    left: calc(100% - 175px);
+    width: 175px;
+    top: 0px !important;
   }
   body main > nav:not(.sub) {
     top: -269px;
@@ -2878,17 +2884,29 @@ main footer a.powerby:hover span {
     padding: 0 1em;
   }
   body main.desospitalizacao article .processo {
-    zoom: 0.6;
-    padding: 6.6em 0 0 0;
+    margin: 0 11%;
+  }
+  body main.desospitalizacao article .processo ul {
+    width: 100%;
+  }
+  body main.desospitalizacao article .processo ul > * {
+    display: none !important;
   }
   body main.desospitalizacao article .processo ul li.download {
-    zoom: 1.9;
     top: -5.5em;
     left: calc(50% - 106px);
+    display: block !important;
   }
   body main.desospitalizacao article .processo ul li.download strong {
     width: auto;
     padding-left: 1em;
+  }
+  body main.desospitalizacao article .processo ul li:last-child {
+    display: block !important;
+    width: 100%;
+  }
+  body main.desospitalizacao article .processo ul li:last-child img {
+    width: 100%;
   }
   body main.comoajudar article ul li.download {
     top: -1em;
@@ -2996,10 +3014,6 @@ main footer a.powerby:hover span {
     font-size: 1.05em;
     bottom: 25px;
   }
-  body main header > a {
-    top: -42px;
-    left: calc(100% - 55px);
-  }
   body main header p {
     bottom: -5px;
   }
@@ -3090,12 +3104,6 @@ main footer a.powerby:hover span {
   }
   body main.filosofia article .logoH {
     margin: -1.2em 0 0 -46.1em;
-  }
-  body main.desospitalizacao article .processo {
-    zoom: 0.4;
-  }
-  body main.desospitalizacao article .processo ul li.download {
-    zoom: 2.4;
   }
   body main.comoajudar article ul .tipos > ul li:first-child {
     height: 36px;

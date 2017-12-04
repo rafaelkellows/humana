@@ -35,7 +35,7 @@
             
             <aside>
                 <p>Não importando a sua condição – seja reabilitação por incapacidade temporária ou definitiva, longa permanência ou finitude —, o foco essencial da Humana Magna é <strong>buscar continuamente a melhoria do paciente, garantindo melhor qualidade de vida.</strong></p>
-                <p>Com um corpo clínico qualificado de alto nível, equipe técnica especializada e uma assistência transdisciplinar, a Humana Magna nasce com um propósito de sempre aperfeiçoar-se tornando-se melhor para assegurar que o paciente resgate uma condição ideal de convívio social, cultural e familiar.</p>
+                <p>Com um corpo clínico qualificado de alto nível, equipe técnica especializada e uma assistência transdisciplinar, a Humana Magna nasce com um propósito de sempre aperfeiçoar-se, tornando-se melhor para assegurar que o paciente resgate uma condição ideal de convívio social, cultural e familiar.</p>
             </aside>
 
             <aside>

@@ -29,7 +29,7 @@
             
             <aside>
                 <h1><strong>Você sabe o que SÃO Cuidados CONTINUADOS?</strong></h1>
-                <p>Cuidados Continuados são aqueles que são feitos após a alta hospitalar. Muitas vezes o paciente ainda precisa de atenção. Seja em uma instituição como a Humana Magna, seja em casas de retaguarda ou na sua própria casa. Este processo já acontece no mundo todo há muito tempo. Como na Europa e nos Estados Unidos, onde o grande hospital atende o paciente na fase crítica e não na estável.</p>
+                <p>Cuidados Continuados são aqueles que são feitos após a alta hospitalar. Muitas vezes o paciente ainda precisa de atenção. Seja em uma instituição como a Humana Magna, seja em casas de retaguarda ou na sua própria casa. Este processo já acontece no mundo todo há muito tempo, como na Europa e nos Estados Unidos, onde o grande hospital atende o paciente na fase crítica e não na estável.</p>
             </aside>
 
             <div class="logoH box-parallixit">
@@ -50,15 +50,15 @@
             </aside>
             
             <aside>
+                <p><strong>Trocando em miúdos,<br>o que isso significa?</strong></p>
+                <p>Imagine um paciente com AVC e está na fase aguda. Ele vai ficar aproximadamente cinco dias no CTI – ou UTI como é conhecido – e depois será removido para uma unidade de menor complexidade, mas ainda dentro do hospital. O paciente, que estará com sequela do AVC precisa de suporte médico de enfermagem e reabilitação fisioterápica.<br>Nos EUA e na Europa, o paciente seria encaminhado (desospitalização) para instituições de reabilitação, chamadas de "Nursing Homes", "Skilled Nursing Facilities" ou "Rehab Hospitals". Depois disso, ele termina o tratamento de recuperação e recebe alta para casa. Da saída do hospital até a casa, qualquer cuidado que receber estará dentro dos Cuidados Continuados.</p>
+            </aside>
+
+            <aside>
                 <p><strong>Mas e no Brasil?</strong></p>
                 <p>O paciente fará sua recuperação em unidades como a Humana Magna. E sabe por quê? Por estar 100% focada em cuidar do paciente neste contexto e conseguir que ele atinja uma melhoria significativa de sua qualidade de vida. </p>
             </aside>
             
-            <aside>
-                <p><strong>Trocando em miúdos,<br>o que isso significa?</strong></p>
-                <p>Imagine um paciente com AVC e está na fase aguda. Ele vai ficar aproximadamente cinco dias no CTI – ou UTI como é conhecido – e depois será removido para uma unidade de menor complexidade, mas ainda dentro do hospital. O paciente, que estará com sequela do AVC precisa de suporte médico de enfermagem e reabilitação fisioterápica.<br>Nos EUA e na Europa, o paciente seria encaminhado (desospitalização) para instituições de reabilitação, chamadas de "Nursing Homes", "Skilled Nurse Facilities" ou "Rehab Hospitals". Depois disso, ele termina o tratamento de recuperação e recebe alta para casa. Da saída do hospital até a casa, qualquer cuidado que receber, estará dentro dos Cuidados Continuados.</p>
-            </aside>
-
             <div class="logoV clone box-parallixit">
                 <figure class="bxn-parallixit to-left">
                     <img src="images/partLogoV.png" alt="" />

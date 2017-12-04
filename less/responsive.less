@@ -207,7 +207,7 @@
 					}
 				}
 				> a{
-					left: calc(~'100% - 55px'); top: -40px;
+					left: calc(~'100% - 175px'); width: 175px; top: 0px !important;
 				}
 			}
 			> nav:not(.sub){ 
@@ -352,12 +352,20 @@
 			   	}
 		   	}
 			  .processo{
-	    		zoom: 0.6; padding: 6.6em 0 0 0;
+			  	margin: 0 11%;
 	    		ul{
-	    			li.download{ 
-	    				zoom: 1.9; top: -5.5em; left: calc(~'50% - 106px');
-	    				strong{ width: auto; padding-left: 1em; }
-	    			}
+	    			width: 100%;
+		    		> *{ display: none !important; }
+	    			li{
+		    			&.download{ 
+		    				top: -5.5em; left: calc(~'50% - 106px'); display: block !important;
+		    				strong{ width: auto; padding-left: 1em; }
+		    			}
+		    			&:last-child{ 
+		    				display: block !important; width: 100%; 
+		    				img{ width: 100%; }
+		    			}
+		    		}
 	    		}
 			  }
 			}
@@ -452,11 +460,8 @@
 				height: 224px;
 				h1{ top: 45px; width: 270px; left: calc(~'50% - 135px'); }
 				h2{ font-size: 1.05em; bottom: 25px; }
-				> a{ top: -42px; left: calc(~'100% - 55px'); }
 				p{ bottom: -5px; }
 				nav{ bottom: -29%; }
-			}
-			> nav{
 			}
 			> section .box-parallixit{
 				figure{
@@ -530,16 +535,6 @@
 		  		.logoH{
 		  			margin: -1.2em 0 0 -46.1em; 
 		  		}
-			  }
-			}
-		  &.desospitalizacao article{
-			  .processo{
-	    		zoom: 0.4; 
-	    		ul{
-	    			li.download{ 
-	    				zoom: 2.4;  
-	    			}
-	    		}
 			  }
 			}
 			&.comoajudar article ul .tipos > ul li:first-child{

@@ -35,7 +35,7 @@
             <section class="processo">
                 
                 <ul>
-                    <li class="download"><a href="javascript:void(0);"><i class="fa fa-plus" aria-hidden="true"></i><strong>Clique para download</strong></a></li>
+                    <li class="download"><a href="downloads/desospitalizacao.pdf" target="_blank"><i class="fa fa-plus" aria-hidden="true"></i><strong>Clique para download</strong></a></li>
                     <li class="iniciaLocal"><span class="_border _dark-blue _left"><em><font class="fa fa-chevron-down chevron-b-left" aria-hidden="true"></font></em></span></li>
                     <li class="local"><p>Hospital</p><span class="_border _dark-blue _top _left _right"><em><font class="fa fa-chevron-down chevron-b-left" aria-hidden="true"></font><font class="fa fa-chevron-down chevron-b-right" aria-hidden="true"></font></em></span></li>
                     <li class="tipos"><p>Pacientes que precisam de reabilitação<em>(por incapacidade temporária ou incapacidade definitiva)</em></p><span class="_border _left"><em><font class="fa fa-chevron-down chevron-b-left" aria-hidden="true"></font></em></span></li>
@@ -53,6 +53,11 @@
                         <span class="_border _dark-blue _left _bottom"><em><font class="fa fa-chevron-right chevron-b-right" aria-hidden="true"></font></em></span>
                         <p class="msg"><i class="fa fa-times" aria-hidden="true"></i><strong>Evitar se possível</strong></p>
                         <p class="info">A Humana Magna quer também evitar com que o paciente, uma vez reabilitado, volte ao hospital. </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="images/desospitalizacao/desospitalizacao.jpg" title="" />
+                        </figure>
                     </li>
                 </ul>
             </section>
