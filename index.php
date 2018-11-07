@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<?php
+    $page = "Home";
+    include_once "inc/contents/head.php";
+?>
   <body>
-    <?php
-        $page = "Home";
-        include_once "inc/contents/head.php";
-    ?>
     <main class="home">
         <?php 
             include_once "inc/contents/header.php";

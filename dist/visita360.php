@@ -23,7 +23,7 @@
               <source src="videos/estruturaNov2017-web.webm" type="video/webm">
                 Your browser does not support HTML5 video.
             </video-->
-            <iframe width="670" height="380" src="https://www.youtube.com/embed/KKZIaxaGwrM" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+            <iframe width="670" height="380" src="https://www.youtube.com/embed/yRuKDR6JwNk" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
             <p><a href="comochegar.php"><strong>GOSTOU? venha nos visitar em nossa primeira unidade, CLIQUE AQUI e saiba como chegar</strong></a></p>
 

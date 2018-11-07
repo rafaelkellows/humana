@@ -235,7 +235,7 @@ main {
   max-width: 1024px;
   margin: 0 auto;
   padding-bottom: 31px;
-  /*background: url('../images/bgs/nossaestrutura.jpg') 0px 20px no-repeat; */
+  /*background: url('../images/bgs/nossaestrutura_b.jpg') 0px 20px no-repeat; */
 }
 main #loading {
   position: fixed;
@@ -391,6 +391,204 @@ main #loading.close p {
 main #loading.complete figure {
   opacity: 0;
 }
+main #lbox {
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  box-sizing: border-box;
+  display: block;
+  margin: 1em 0;
+}
+main #lbox * {
+  z-index: 2;
+  position: relative;
+}
+main #lbox form .success {
+  color: #aebf4a;
+}
+main #lbox form legend {
+  text-align: center;
+}
+main #lbox form section {
+  border: 1px solid #96cad1;
+  width: 100%;
+  margin: 1em auto;
+  font-size: 1em;
+}
+main #lbox form section ul {
+  text-align: center;
+}
+main #lbox form section ul li {
+  width: 9%;
+  display: inline-block;
+  vertical-align: middle;
+  border-top: 1px solid #ccc;
+  margin-right: -2px;
+  box-sizing: border-box;
+  padding: 0 .5em;
+}
+main #lbox form section ul li span {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 400;
+}
+main #lbox form section ul li span.ft-veryunsatisfied {
+  background: url('../images/facetypes.png') -129px -126px #d7cbf3;
+  text-indent: -9999em;
+  width: 45px;
+  height: 45px;
+  border-radius: 30px;
+}
+main #lbox form section ul li span.ft-unsatisfied {
+  background: url('../images/facetypes.png') -76px -126px #fda191;
+  text-indent: -9999em;
+  width: 45px;
+  height: 45px;
+  border-radius: 30px;
+}
+main #lbox form section ul li span.ft-indifferent {
+  background: url('../images/facetypes.png') -76px -183px #eaeaea;
+  text-indent: -9999em;
+  width: 45px;
+  height: 45px;
+  border-radius: 30px;
+}
+main #lbox form section ul li span.ft-satisfied {
+  background: url('../images/facetypes.png') -75px -16px #f7e6aa;
+  text-indent: -9999em;
+  width: 45px;
+  height: 45px;
+  border-radius: 30px;
+}
+main #lbox form section ul li span.ft-verysatisfied {
+  background: url('../images/facetypes.png') -75px -68px #d5f3cb;
+  text-indent: -9999em;
+  width: 45px;
+  height: 45px;
+  border-radius: 30px;
+}
+main #lbox form section ul li:before {
+  content: '';
+  width: 0;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+}
+main #lbox form section ul li:nth-child(1) {
+  width: 8%;
+}
+main #lbox form section ul li:nth-child(2) {
+  width: 40%;
+}
+main #lbox form section ul.ul-header li:before {
+  content: '';
+  width: 0;
+  height: 60px;
+  display: inline-block;
+  vertical-align: middle;
+}
+main #lbox form section ul.ul-header li span {
+  font-weight: 500;
+}
+main #lbox form section ul.ul-content li:nth-child(2) {
+  text-align: left;
+}
+main #lbox form section ul.ul-content li input[type=radio] {
+  cursor: pointer;
+}
+main #lbox form section ul.ul-content.error {
+  background: #fff0f0;
+}
+main #lbox form section ul:first-child li {
+  border-top: none;
+}
+main #lbox form fieldset > div {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1em;
+  background: #96cad1;
+  padding: 1.2em 0.6em 0;
+  box-sizing: border-box;
+}
+main #lbox form fieldset > div label {
+  color: #262e6e;
+  font-size: 1em;
+  font-weight: bold;
+  margin: -0.2em 0 0.8em;
+  width: 18%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+}
+main #lbox form fieldset > div label:nth-child(6) {
+  width: 15%;
+}
+main #lbox form fieldset > div input {
+  background: #fff;
+  color: #262e6e;
+  font-size: 1em;
+  padding: 0.15em 0.30em;
+  margin: 0 0 1.3em;
+  width: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+main #lbox form fieldset > div input:last-child {
+  width: 11%;
+}
+main #lbox form fieldset > div input:nth-child(2) {
+  width: 78%;
+}
+main #lbox form fieldset > div textarea {
+  background: #fff;
+  color: #262e6e;
+  font-size: 1em;
+  border: none;
+  padding: 0.15em 0.30em;
+  margin-bottom: 1.2em;
+  width: 78%;
+  height: 6em;
+  display: inline-block;
+  vertical-align: middle;
+  resize: none;
+}
+main #lbox form fieldset > div.info {
+  background: #fff;
+  border: 1px solid #96cad1;
+  padding: 1.2em 0.6em;
+}
+main #lbox form fieldset > div.info label {
+  margin: 0;
+  width: 22%;
+}
+main #lbox form fieldset > div.info p {
+  color: #262e6e;
+  font-size: 1em;
+  padding: 0.15em 0.30em;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+main #lbox form input[type=submit],
+main #lbox form input[type=reset] {
+  margin-top: 1em !important;
+  font-size: 1em !important;
+}
+main #lbox h3 {
+  text-align: center;
+  padding: 1em 0;
+}
+main #lbox:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: #fff;
+  opacity: .95;
+}
 main #galeria {
   position: fixed;
   top: 0;
@@ -472,6 +670,7 @@ main header p {
   left: 2.9%;
   font-size: 0.85em;
   letter-spacing: -0.015em;
+  top: 2em;
   -webkit-transition: bottom 0.5s;
   -o-transition: bottom 0.5s;
   transition: bottom 0.5s;
@@ -480,6 +679,10 @@ main header p a {
   display: inline-block;
   vertical-align: top;
   font-weight: inherit;
+}
+main header p a:last-child {
+  font-weight: 500;
+  display: block;
 }
 main header nav {
   bottom: 81%;
@@ -495,6 +698,24 @@ main header nav * {
   vertical-align: top;
   font-weight: 500;
   font-size: 0.85em;
+}
+main header nav div {
+  font-size: 1em;
+  position: relative;
+}
+main header nav div span {
+  cursor: pointer;
+}
+main header nav div div {
+  position: absolute;
+  left: 0;
+  text-align: left;
+}
+main header nav div a {
+  display: none;
+}
+main header nav div:hover a {
+  display: block;
 }
 main header nav > a:after {
   content: '';
@@ -960,7 +1181,8 @@ main.home section.conceitos dl:nth-child(8) {
   top: 78.7%;
   width: 270px;
 }
-main.home section.conceitos dl dt {
+main.home section.conceitos dl dt,
+main #lbox h3 {
   color: #00a5b0;
   font-weight: 500;
   font-size: 1.5em;
@@ -1999,7 +2221,8 @@ main.comochegar article dl dd strong {
 main.comochegar article dl dd > strong {
   display: block;
 }
-main.parceiros article {
+main.parceiros article,
+main.trabalhe article {
   text-align: center;
   line-height: 1.05em;
   margin: 2.5em 0 0.3em;
@@ -2008,7 +2231,8 @@ main.parceiros article {
   font-size: 1.5em;
   font-weight: 500;
 }
-main.parceiros article h1 {
+main.parceiros article h1,
+main.trabalhe article h1 {
   background: #262e6e;
   padding: 0.35em 0;
   text-transform: uppercase;
@@ -2016,18 +2240,22 @@ main.parceiros article h1 {
   margin: 0 auto 0.5em;
   font-size: inherit;
 }
-main.parceiros article h1 strong {
+main.parceiros article h1 strong,
+main.trabalhe article h1 strong {
   color: #fff;
 }
-main.parceiros article > em {
+main.parceiros article > em,
+main.trabalhe article > em {
   padding: 0.8em 0 1em;
   display: block;
 }
-main.parceiros article *:not(strong) {
+main.parceiros article *:not(strong),
+main.trabalhe article *:not(strong) {
   font-style: normal;
   font-weight: normal;
 }
-main.parceiros article aside {
+main.parceiros article aside,
+main.trabalhe article aside {
   width: 43.5%;
   display: inline-block;
   vertical-align: top;
@@ -2036,13 +2264,16 @@ main.parceiros article aside {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-main.parceiros article aside p {
+main.parceiros article aside p,
+main.trabalhe article aside p {
   line-height: 1.2em;
 }
-main.parceiros article aside p strong {
+main.parceiros article aside p strong,
+main.trabalhe article aside p strong {
   text-transform: uppercase;
 }
-main.parceiros article form {
+main.parceiros article form,
+main.trabalhe article form {
   display: block;
   background: #96cad1;
   margin: 1.3em 0 2.5em;
@@ -2050,21 +2281,32 @@ main.parceiros article form {
   padding: 0.6em;
 }
 main.parceiros article form label,
-main.parceiros article form span {
+main.parceiros article form span,
+main.trabalhe article form label,
+main.trabalhe article form span {
   color: #262e6e;
   font-size: 0.75em;
   font-weight: bold;
   float: left;
-  margin: -0.2em 0 0.9em;
+  margin: -0.2em 0 0.8em;
   -webkit-transition: margin 0.5s;
   -o-transition: margin 0.5s;
   transition: margin 0.5s;
 }
 main.parceiros article form label em,
-main.parceiros article form span em {
+main.parceiros article form span em,
+main.trabalhe article form label em,
+main.trabalhe article form span em {
   font-size: 0.8em;
 }
-main.parceiros article form input[type='text'] {
+main.parceiros article form label,
+main.trabalhe article form label {
+  line-height: 1.6em;
+}
+main.parceiros article form input[type='text'],
+main.parceiros article form input[type='file'],
+main.trabalhe article form input[type='text'],
+main.trabalhe article form input[type='file'] {
   background: #fff;
   color: #262e6e;
   font-size: 0.6em;
@@ -2072,27 +2314,43 @@ main.parceiros article form input[type='text'] {
   float: right;
   margin: 0 0 1.3em;
 }
-main.parceiros article form input[name='nome'] {
+main.parceiros article form input[name='nome'],
+main.trabalhe article form input[name='nome'] {
   width: 260px;
 }
-main.parceiros article form input[name='cargo'] {
+main.parceiros article form input[name='cargo'],
+main.trabalhe article form input[name='cargo'] {
   width: 350px;
 }
-main.parceiros article form input[name='empresa'] {
+main.parceiros article form input[name='empresa'],
+main.trabalhe article form input[name='empresa'] {
+  width: 325px;
+}
+main.parceiros article form input[name='email'],
+main.trabalhe article form input[name='email'] {
+  width: 345px;
+}
+main.parceiros article form input[name='telefone'],
+main.trabalhe article form input[name='telefone'] {
   width: 330px;
 }
-main.parceiros article form input[name='email'] {
-  width: 350px;
-}
-main.parceiros article form input[name='telefone'] {
-  width: 330px;
-}
-main.parceiros article form input[name='celular'] {
+main.parceiros article form input[name='celular'],
+main.trabalhe article form input[name='celular'] {
   width: 220px;
+}
+main.parceiros article form input[name='arquivo'],
+main.trabalhe article form input[name='arquivo'] {
+  width: 100%;
+  padding: 0;
 }
 main.parceiros article form input[type='reset'],
 main.parceiros article form input[type='button'],
-main.parceiros article form input[type='submit'] {
+main.parceiros article form input[type='submit'],
+main #lbox form input[type=submit],
+main #lbox form input[type=reset],
+main.trabalhe article form input[type='reset'],
+main.trabalhe article form input[type='button'],
+main.trabalhe article form input[type='submit'] {
   background: #262e6e;
   color: #fff;
   font-size: 0.75em;
@@ -2102,38 +2360,53 @@ main.parceiros article form input[type='submit'] {
   cursor: pointer;
   text-transform: uppercase;
 }
-main.parceiros article form textarea {
-  width: 328px;
+main.parceiros article form textarea,
+main.trabalhe article form textarea {
+  width: 325px;
   height: 63px;
-  max-width: 328px;
-  max-height: 63px;
-  min-width: 328px;
-  min-height: 63px;
+  resize: none;
   float: right;
   background: #fff;
   border: none;
   padding: 0.15em 0.30em;
 }
-main.parceiros article form ul {
+main.parceiros article form ul,
+main.trabalhe article form ul {
   clear: both;
   padding-bottom: 1em;
 }
-main.parceiros article form ul label {
+main.parceiros article form ul label,
+main.trabalhe article form ul label {
   float: none;
   display: inline-block;
   width: 100%;
   margin: 1em 0 -0.1em;
 }
-main.parceiros article form ul li {
+main.parceiros article form ul li,
+main.trabalhe article form ul li {
   display: inline-block;
   vertical-align: middle;
 }
 main.parceiros article form ul li span,
-main.parceiros article form ul li input {
+main.parceiros article form ul li input,
+main.trabalhe article form ul li span,
+main.trabalhe article form ul li input {
   float: none;
   display: inline-block;
   vertical-align: middle;
   margin: 0em 0.3em;
+}
+main.trabalhe article form input[name='cargo'] {
+  width: 250px;
+}
+main.trabalhe article form input[name='email'] {
+  width: 335px;
+}
+main.trabalhe article form input[name='celular'] {
+  width: 335px;
+}
+main.trabalhe article form textarea {
+  width: 308px;
 }
 main.nossaestrutura {
   letter-spacing: -0.03em;
@@ -2219,17 +2492,18 @@ main.nossaestrutura article aside .galleryP {
   -moz-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.35);
   box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.35);
 }
-main.nossaestrutura article aside .galleryP .box-parallixit {
+main.nossaestrutura article aside .galleryP > div {
   width: 201px;
   height: 201px;
   margin: 0.5em auto;
+  overflow: hidden;
+}
+main.nossaestrutura article aside .galleryP > div figure img {
+  height: 240px;
+  width: auto;
 }
 main.nossaestrutura article aside .galleryP .box-parallixit figure {
   left: -50%;
-}
-main.nossaestrutura article aside .galleryP .box-parallixit figure img {
-  height: 240px;
-  width: auto;
 }
 main.nossaestrutura article aside .galleryP p {
   position: absolute;
@@ -2272,6 +2546,17 @@ main.nossaestrutura article aside.estrutura1 .galleryP {
   top: -70px;
   right: 57px;
 }
+main.nossaestrutura article aside.estrutura1._b {
+  margin-bottom: 1.7em;
+}
+main.nossaestrutura article aside.estrutura1._b .galleryG .box-parallixit {
+  margin: 0 2.1em;
+}
+main.nossaestrutura article aside.estrutura1._b .galleryP {
+  top: 157px;
+  right: 117px;
+  z-index: 2;
+}
 main.nossaestrutura article aside.estrutura2 .galleryG .box-parallixit {
   margin: 0.35em 0 0.35em 12.6em;
   height: 325px;
@@ -2302,6 +2587,12 @@ main.nossaestrutura article aside.estrutura3 .galleryG p:last-child {
 main.nossaestrutura article aside.estrutura3 .galleryP {
   top: -100px;
   left: 57px;
+}
+main.nossaestrutura article aside.estrutura3._b {
+  margin-bottom: 1.8em;
+}
+main.nossaestrutura article aside.estrutura3._b .galleryP {
+  top: 0;
 }
 main.nossaestrutura article aside.estrutura4 .galleryP {
   position: relative;
@@ -2344,7 +2635,7 @@ main.nossaestrutura article aside.estrutura5 ul:last-child {
   margin-top: -1em;
 }
 main footer {
-  max-height: 386px;
+  max-height: 416px;
   position: relative;
   background-color: #00a5b0;
 }
@@ -2646,11 +2937,15 @@ main footer a.powerby:hover span {
     padding: 3em 0 1.4em;
   }
   body main.parceiros article form label,
-  body main.parceiros article form span {
+  body main.parceiros article form span,
+  body main.trabalhe article form label,
+  body main.trabalhe article form span {
     margin: -0.2em 0 0;
   }
   body main.parceiros article form input[type='text'],
-  body main.parceiros article form textarea {
+  body main.parceiros article form textarea,
+  body main.trabalhe article form input[type='text'],
+  body main.trabalhe article form textarea {
     width: calc(100% - 0.6em);
     max-width: calc(100% - 0.6em);
     min-width: calc(100% - 0.6em);
@@ -2678,6 +2973,7 @@ main footer a.powerby:hover span {
     width: 100%;
     bottom: 5px;
     left: 0;
+    top: initial;
   }
   body main header nav {
     bottom: -21%;
@@ -2688,7 +2984,7 @@ main footer a.powerby:hover span {
     display: block;
     margin-top: 0em;
   }
-  body main header nav a:nth-child(2):after {
+  body main header nav a:nth-child(4):after {
     background: none;
   }
   body main header > a {
@@ -2872,6 +3168,7 @@ main footer a.powerby:hover span {
   }
   body main.filosofia article .logoH {
     margin: -1.2em 0 0 -68.1em;
+    z-index: -1;
   }
   body main.filosofia article aside {
     width: 100% !important;
@@ -2989,7 +3286,8 @@ main footer a.powerby:hover span {
     width: 100%;
     margin: 0 auto 0.6em;
   }
-  body main.parceiros article aside {
+  body main.parceiros article aside,
+  body main.trabalhe article aside {
     width: 95%;
     margin: 0 auto;
   }
@@ -3006,19 +3304,19 @@ main footer a.powerby:hover span {
     height: 224px;
   }
   body main header h1 {
-    top: 45px;
-    width: 270px;
-    left: calc(50% - 135px);
+    top: 65px;
+    width: 210px;
+    left: calc(50% - 105px);
   }
   body main header h2 {
-    font-size: 1.05em;
-    bottom: 25px;
+    font-size: 0.95em;
+    bottom: 35px;
   }
   body main header p {
     bottom: -5px;
   }
   body main header nav {
-    bottom: -29%;
+    bottom: -34%;
   }
   body main > section .box-parallixit figure {
     left: -288px;

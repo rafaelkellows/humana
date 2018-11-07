@@ -1,5 +1,20 @@
 $(function(){ 
 	(function() {
+		var validateEmail = function(email){
+		  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		  return re.test(email);
+		}
+		var validateInput = function(val){
+		  var re = /^[^]+$/;
+		  return re.test(val);
+		};
+		var d = new Date();
+		var month = d.getMonth()+1;
+		var day = d.getDate();
+
+		$('.telefone').mask('(00) 0000-0000');
+		$('.celular').mask('(00) 00000-0000');
+		$('.mdata').mask('00/00/0000');
 		var _s,int,wW,
 			humanamagna = {
 	        init: function() {
@@ -96,42 +111,66 @@ $(function(){
 							humanamagna.menu();
 							$('html, body').animate({ scrollTop: 0 }, 100);
 						}, 1000 );
-						if( $('main.parceiros').length ){
+						if( $('main.parceiros').length || $('main.trabalhe').length ){
 							humanamagna.parceiros();
+						}
+						if( $('main.survey').length ){
+							humanamagna.survey();
+							var output =  (day<10 ? '0' : '') + day + '/' + (month<10 ? '0' : '') + month + '/' + d.getFullYear();
+					    	$('input[name=currentDate]').val(output);
 						}
 					});
 				});
 	        },
 	        parceiros : function(){
 
-				var validateEmail = function(email){
-				  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-				  return re.test(email);
-				}
-				var validateInput = function(val){
-				  var re = /^[^]+$/;
-				  return re.test(val);
-				};
-
-				$('.telefone').mask('(00) 0000-0000');
-				$('.celular').mask('(00) 00000-0000');
-
 				$('form input[type=submit]').click(function(e){
 					e.preventDefault();
-					var email = $(this).closest('form').find('input[name=email]'), telefone = $(this).closest('form').find('input[name=telefone]'), celular = $(this).closest('form').find('input[name=celular]');
+					var nome = $(this).closest('form').find('input[name=nome]'), 
+					email = $(this).closest('form').find('input[name=email]'), 
+					telefone = $(this).closest('form').find('input[name=telefone]'), 
+					celular = $(this).closest('form').find('input[name=celular]'),
+					arquivo = $(this).closest('form').find('input[name=arquivo]');
+
+					var _vNome = function(){
+				        if(!validateInput(nome.val())){
+		  					alert('O campo Nome precisa ser preenchido.');
+		  					nome.focus();
+		  					return false;
+				        }else{
+				        	return true;	
+				        }
+					};
+
+					if( !_vNome() ) return;
+
+					var _vEmail = function(_t){
+				        if(validateInput(email.val())){
+		  					if (validateEmail(email.val())) {
+		  						_t.closest('form').submit();
+		  					}else{
+		  						alert('O E-mail inserido parece estar errado! Por favor confira novamente.');
+		  					}
+				        }else{
+				        	alert('O campo E-mail precisa ser preenchido para entrarmos em contato.');
+				        	email.focus();
+				        	return false;
+				        }
+					};
+
+					var _vCelular = function(_t){
+				        if(validateInput(celular.val())){
+				        	_t.closest('form').submit();
+				        }else{
+				        	alert('O campo Celular precisa ser preenchido para entrarmos em contato.');
+				        	celular.focus();
+				        	return false;
+				        }
+					};
 
 					switch($(this).closest('form').find('input[name=contactby]:checked').val()) {
 					    case 'e-mail':
-					        if(validateInput(email.val())){
-			  					if (validateEmail(email.val())) {
-			  						$(this).closest('form').submit();
-			  					}else{
-			  						alert('O E-mail inserido parece estar errado! Por favor confira novamente.');
-			  					}
-					        }else{
-					        	alert('O campo E-mail precisa ser preenchido para entrarmos em contato.');
-					        	email.focus();
-					        }
+					        _vEmail($(this)); return;
 					        break;
 					    case 'telefone':
 					        if(validateInput(telefone.val())){
@@ -139,20 +178,98 @@ $(function(){
 					        }else{
 					        	alert('O campo Telefone precisa ser preenchido para entrarmos em contato.');
 					        	telefone.focus();
+					        	return;
 					        }
 					        break;
 					    case 'celular':
-					        if(validateInput(celular.val())){
-					        	$(this).closest('form').submit();
-					        }else{
-					        	alert('O campo Celular precisa ser preenchido para entrarmos em contato.');
-					        	celular.focus();
-					        }
+					    	_vCelular($(this)); return;
 					        break;
 					    default:
-					        break;
+					        null;
 					}
+					if($('main').hasClass('trabalhe')){
+						if(email.val().length === 0){
+							_vEmail();
+							return;
+						}
+						if(celular.val().length === 0){
+							_vCelular();
+							return;
+						}
+						if(arquivo.val().length === 0){
+							alert('Você precisa nos enviar um arquivo em .doc ou .pdf de até 2MB.');
+							return;
+						}
+					}
+					$(this).closest('form').submit();
+				})
+	        },
+	        survey : function(){
 
+				$('form input[type=submit]').click(function(e){
+					e.preventDefault();
+					var patientName = $(this).closest('form').find('input[name=patientName]'), 
+					companyName = $(this).closest('form').find('input[name=companyName]'), 
+					currentDate = $(this).closest('form').find('input[name=currentDate]');
+
+					var _vpatientName = function(){
+				        if(!validateInput(patientName.val())){
+		  					alert('O campo Nome do Paciente precisa ser preenchido.');
+		  					patientName.focus();
+		  					return false;
+				        }else{
+				        	return true;	
+				        }
+					};
+					if( !_vpatientName() ) return;
+					var _vcompanyName = function(){
+				        if(!validateInput(companyName.val())){
+		  					alert('O campo Nome da Empresa precisa ser preenchido.');
+		  					companyName.focus();
+		  					return false;
+				        }else{
+				        	return true;	
+				        }
+					};
+					if( !_vcompanyName() ) return;
+					
+					var _contLength = $(this).closest('form').find('ul.ul-content').length;
+
+					for(var c= 0; c < _contLength; c++){
+						_tmpChecked = false;
+						_this = $(this).closest('form').find('ul.ul-content').eq(c);
+						$(this).closest('form').find('ul.ul-content').removeClass('error');
+						_this.find('input[type=radio]').each(function(){
+							if($(this).is(":checked")){
+								_tmpChecked = true;
+							}
+						});
+						if(!_tmpChecked){
+							_this.addClass('error');
+		  					alert('Você precisa definir suas respostas. Por favor, certifique de que todas foram respondidas.');
+							$('html, body').animate({ scrollTop: _this.offset().top-1 }, 100);
+		  					break;
+						}
+						if(c === (_contLength-1) ){
+							$(this).closest('form').submit();
+						}
+					}
+					//
+					/*$(this).closest('form').find('ul.ul-content').each(function(){
+						_tmpChecked = false;
+						$(this).find('input[type=radio]').each(function(){
+							if($(this).is(":checked")){
+								_tmpChecked = true;
+							}
+						});
+						if(!_tmpChecked){
+							$(this).addClass('error');
+		  					alert('Você precisa definir suas respostas. Por favor, certifique de que todas foram respondidas.');
+							$('html, body').animate({ scrollTop: $(this).offset().top-1 }, 100);
+		  					return false;
+						}
+						$(this).closest('form').submit();
+					});*/
 				})
 	        },
 	        animaLoading : function(){

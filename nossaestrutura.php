@@ -30,7 +30,7 @@
                 <section class="galleryG">
                     <div class="box-parallixit"> 
                         <figure class="bxn-parallixit bottom">
-                            <img src="images/estrutura/FotosEstrutura01.jpg" alt="Clique para ver a imagem ampliada." title="Clique para ver a imagem ampliada." />
+                            <img src="images/estrutura/FotosEstrutura01b.jpg?v20180320" alt="Clique para ver a imagem ampliada." title="Clique para ver a imagem ampliada." />
                             <figcaption>78 LEITOS EQUIPADOS - Sendo 52 suítes e 13 quartos duplo</figcaption>
                         </figure>
                     </div>
@@ -40,7 +40,39 @@
                 <section class="galleryP">
                     <div class="box-parallixit"> 
                         <figure class="bxn-parallixit top">
-                            <img src="images/estrutura/FotosEstrutura02.jpg" alt="Clique para ver a imagem ampliada." title="Clique para ver a imagem ampliada." />
+                            <img src="images/estrutura/FotosEstrutura02.jpg?v20180320" alt="Clique para ver a imagem ampliada." title="Clique para ver a imagem ampliada." />
+                        </figure>
+                    </div>
+                </section>
+            </aside>
+            <aside class="estrutura3 _b galeria">
+                <section class="galleryG">
+                    <div class="box-parallixit"> 
+                        <figure class="bxn-parallixit bottom">
+                            <img src="images/estrutura/FotosEstrutura09.jpg?v20180320" alt="Clique para ver a imagem ampliada." title="Clique para ver a imagem ampliada." />
+                        </figure>
+                    </div>
+                </section>
+                <section class="galleryP">
+                    <div class="box-parallixit"> 
+                        <figure class="bxn-parallixit top">
+                            <img src="images/estrutura/FotosEstrutura10.jpg?v20180320" alt="Clique para ver a imagem ampliada." title="Clique para ver a imagem ampliada." />
+                        </figure>
+                    </div>
+                </section>
+            </aside>
+            <aside class="estrutura1 _b galeria">
+                <section class="galleryG">
+                    <div class="box-parallixit"> 
+                        <figure class="bxn-parallixit bottom">
+                            <img src="images/estrutura/FotosEstrutura03.jpg?v20180320" alt="Clique para ver a imagem ampliada." title="Clique para ver a imagem ampliada." />
+                        </figure>
+                    </div>
+                </section>
+                <section class="galleryP">
+                    <div class="box-parallixit"> 
+                        <figure class="bxn-parallixit top">
+                            <img src="images/estrutura/FotosEstrutura11.jpg?v20180320" alt="Clique para ver a imagem ampliada." title="Clique para ver a imagem ampliada." />
                         </figure>
                     </div>
                 </section>
@@ -49,7 +81,7 @@
                 <section class="galleryG">
                     <div class="box-parallixit"> 
                         <figure class="bxn-parallixit bottom">
-                            <img src="images/estrutura/FotosEstrutura03.jpg" alt="Clique para ver a imagem ampliada." title="Clique para ver a imagem ampliada." />
+                            <img src="images/estrutura/FotosEstrutura12.jpg?v20180320" alt="Clique para ver a imagem ampliada." title="Clique para ver a imagem ampliada." />
                             <figcaption>Centro de Reabilitação - Fisioterapia Motora e Respiratória, Terapia Ocupacional e Fonoaudiologia</figcaption>
                         </figure>
                     </div>
@@ -61,7 +93,7 @@
                 <section class="galleryG">
                     <div class="box-parallixit"> 
                         <figure class="bxn-parallixit bottom">
-                            <img src="images/estrutura/FotosEstrutura05.jpg" alt="Clique para ver a imagem ampliada." title="Clique para ver a imagem ampliada." />
+                            <img src="images/estrutura/FotosEstrutura05.jpg?v20180320" alt="Clique para ver a imagem ampliada." title="Clique para ver a imagem ampliada." />
                             <figcaption>Solarium de 400m2 - Amplo espaço para relaxamento</figcaption>
                         </figure>
                     </div>
@@ -71,7 +103,7 @@
                 <section class="galleryP">
                     <div class="box-parallixit"> 
                         <figure class="bxn-parallixit top">
-                            <img src="images/estrutura/FotosEstrutura04.jpg" alt="Clique para ver a imagem ampliada." title="Clique para ver a imagem ampliada." />
+                            <img src="images/estrutura/FotosEstrutura04.jpg?v20180320" alt="Clique para ver a imagem ampliada." title="Clique para ver a imagem ampliada." />
                         </figure>
                     </div>
                 </section>
@@ -81,21 +113,21 @@
                     <p><strong>E mais:</strong></p>
                     <div class="box-parallixit"> 
                         <figure class="bxn-parallixit top">
-                            <img src="images/estrutura/FotosEstrutura06.jpg" alt="Clique para ver a imagem ampliada." title="Clique para ver a imagem ampliada." />
+                            <img src="images/estrutura/FotosEstrutura06.jpg?v20180320" alt="Clique para ver a imagem ampliada." title="Clique para ver a imagem ampliada." />
                         </figure>
                     </div>
                 </section>
                 <section class="galleryP">
                     <div class="box-parallixit"> 
                         <figure class="bxn-parallixit bottom">
-                            <img src="images/estrutura/FotosEstrutura07.jpg" alt="Clique para ver a imagem ampliada." title="Clique para ver a imagem ampliada." />
+                            <img src="images/estrutura/FotosEstrutura07.jpg?v20180320" alt="Clique para ver a imagem ampliada." title="Clique para ver a imagem ampliada." />
                         </figure>
                     </div>
                 </section>
                 <section class="galleryP">
                     <div class="box-parallixit"> 
                         <figure class="bxn-parallixit top">
-                            <img src="images/estrutura/FotosEstrutura08.jpg" alt="Clique para ver a imagem ampliada." title="Clique para ver a imagem ampliada." />
+                            <img src="images/estrutura/FotosEstrutura08.jpg?v20180320" alt="Clique para ver a imagem ampliada." title="Clique para ver a imagem ampliada." />
                         </figure>
                     </div>
                 </section>

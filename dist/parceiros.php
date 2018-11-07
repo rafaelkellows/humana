@@ -15,13 +15,21 @@
 
         <article>
             <?php 
-                if( isset($_REQUEST['fid']) ){
-                    echo "<p style='color:#eb903d;'>Email enviado com sucesso!<br><br></p>";
+                $submitReturn = (!isset($_GET["msg"]) ? -1 : $_GET["msg"]);
+                switch ($submitReturn) {
+                    case 'ok':
+                    echo "<p style='color:#539e37;'>Seu formulário foi enviado com sucesso.<br><br></p>";
+                        break;
+                    case 'errorSend':
+                    echo "<p style='color:#eb903d;'>Seu formulário não pode ser enviado.<br>Tente novamente por favor.<br><br></p>";
+                        break;
+                    default:
+                        break;
                 }
             ?>
             <aside>
                 <h1><strong>Operadoras</strong></h1>
-                <p><strong>Credencie Humana Magna</strong></p>
+                <p><strong>Credencie a Humana Magna</strong></p>
                 <p>Ligue 11 2397-0229, envie e-mail para vamosfalar@humanamagna.com.br<br>ou preencha o formulário abaixo</p>
                 <form action="send_email.php" method="post">
                     <input type="hidden" id="formName" name="formName" value="operadoras">
